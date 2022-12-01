@@ -1,0 +1,32 @@
+.listStyle1 {
+    list-style-type: lower-latin;
+}
+.image{
+    list-style-type: none;
+    list-style-image: url(../icon/batman.png);
+    width: 20px; height: 20px;
+}
+#parent{
+    width: 80%;
+    margin: auto;
+    background-color: gray;
+    border: 2px solid black
+}
+#child_1 {
+    background-color: blue;
+    height: 50px;
+    color: red;
+    /*margin: 20px 0px 20px 0px;*/ 
+    /*margin: 20px */
+    /*margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;*/
+    margin: 20px 50px 10px 40px; /* вверх вправо вниз влево */
+}
+#child_2 {
+    background-color: yellow;
+    height: 50px;
+    font-size: bold ;
+    padding: 30px 5% 10em 10rem;
+}
