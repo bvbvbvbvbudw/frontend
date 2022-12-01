@@ -1,0 +1,23 @@
+.winter{
+    list-style-type: none;
+    list-style-image: url(../homework/image/winter.png);
+
+}
+.spring{
+    list-style-type: none;
+    list-style-image: url(../homework/image/spring.png);
+
+}
+.summer{
+    list-style-type: none;
+    list-style-image: url(../homework/image/summer.png);
+
+}
+.autumn{
+    list-style-type: none;
+    list-style-image: url(../homework/image/autumn.png);
+}
+.seas{
+    list-style-type: none;
+    list-style-image: url(../homework/image/right.png);
+}
