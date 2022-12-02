@@ -1,0 +1,20 @@
+.blue{
+    color: rgb(0, 47, 255);
+}
+.a{
+    list-style:upper-roman;
+
+}
+.b {
+    list-style: decimal;
+
+}
+.c{
+    list-style:lower-alpha;
+    font-size-adjust: inherit;
+}
+.black{
+    color: black;
+}
+/* буду благдарен, если подскажите как так сделать, чтобы число списка цвет не меняло. Я уже все варианты перепробовал, в интернете ответа не нашел,
+можно конечно сделать так: <ul class="b"><li class="black"><span class="blue">HTTP</span></li> ; но это уже не практично как по мне*/

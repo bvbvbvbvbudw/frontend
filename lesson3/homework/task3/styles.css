@@ -1,0 +1,19 @@
+.title{
+    background-color:rgb(14,73,78); block-size: 30px;inline-size: auto;
+    margin: auto; padding: 10px 20px 0px 20px;color: white;
+}
+.text{
+    background-color: rgb(35,97,103);
+    margin: auto; padding: 10px 20px 0px 20px;
+    color: whitesmoke;
+}
+.num{
+    color: rgb(223,139,134);
+}
+.title1{
+    background-color:rgb(14,73,78); block-size: 30px;inline-size: auto;
+    margin: 20px 0px 0px 0px; padding: 10px 20px 0px 20px; color: aliceblue;
+}
+.num2{
+    list-style:decimal; font-style: initial;
+}
