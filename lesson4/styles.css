@@ -1,1 +1,21 @@
+.main {
+    background-color: grey;
+}
+img {
+    border: solid 2px black;
+    box-shadow: 0 0 16px greenyellow /*rgba(0,0,0,0.7)*/;
+    float: left;
+    margin: 0 0 0 15px;
+    border-radius: 50%;
+}
+main{
+    background-image: url("image/backg.png"); width: 1920px; height: 1080px;
+
+}
+.clear{
+    clear: both;
+}
+img {
+
+}
 
