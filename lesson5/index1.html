@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>H1 animation</title>
+</head>
+    <style>
+    h1{
+        background-color: #d4c4ff;
+        width: 30vw;
+        color: #fff;
+        /*animation: myAnim 5s linear alternate infinite; ease plavno / linear rezko*/
+        animation-name: myAnim;
+        animation-duration: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count:infinite;
+        animation-direction:alternate ;
+    }@keyframes myAnim{
+        from{
+            margin-left: 0px;
+        }
+        to{
+            margin-left: 500px;
+        }
+    }
+    h2{
+        background-color: #d4c4ff;
+        width: 30vw;
+        color: #fff;
+        /*animation: myAnim 5s linear alternate infinite; ease plavno / linear rezko*/
+        animation-name: myAnim1;
+        animation-duration: 5s;
+        animation-timing-function: ease;
+        animation-iteration-count:infinite;
+        animation-direction:alternate ;
+        z-index: 2;
+    }@keyframes myAnim1{ 
+        from{
+            margin-left: 0px;
+            z-index: 2;
+        }
+        to{
+            padding-top: 500px;
+            z-index: 1;
+        }
+    }
+    }
+    h3{
+        background: chartreuse;
+        border: solid 2px black;
+        z-index: 2;
+    }
+    </style>
+<body>
+    <h1>Some news</h1>
+    <h2>Some news</h2>
+    <h3>Some news</h3>
+</body>
+</html>
