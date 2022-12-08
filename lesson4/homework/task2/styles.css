@@ -1,0 +1,50 @@
+li{
+    border: solid 2px grey;
+    color: rgb(255, 255, 255);
+    background-color: grey;
+    padding-bottom: 20px;
+}
+.edit{
+    list-style-type: none;
+    list-style-image: url(../task2/image/icons8-карандаш-15.png);
+}
+.edit:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(99, 99, 99);
+    transition:500ms
+}
+.fav{
+    list-style-type: none;
+    list-style-image: url(../task2/image/icons8-червы-15.png);
+}
+.fav:hover{
+    color: white;
+    background-color: rgb(99, 99, 99);
+    transition:500ms
+}
+.his{list-style-type: none;
+    list-style-image: url(../task2/image/icons8-прошедшее-время-15.png);
+}
+.his:hover{
+    color: white;
+    background-color: rgb(99, 99, 99);
+    transition:500ms
+}
+.sec{
+    list-style-type: none;
+    list-style-image: url(../task2/image/icons8-security-shield-green-15.png);
+}
+.sec:hover{
+    color: white;
+    background-color: rgb(99, 99, 99);
+    transition:500ms
+}
+.set{
+    list-style-type: none;
+    list-style-image: url(../task2/image/icons8-привод-15.png);
+}
+.set:hover{
+    color: white;
+    background-color: rgb(99, 99, 99);
+    transition:500ms
+}

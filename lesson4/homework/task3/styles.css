@@ -1,0 +1,266 @@
+html{
+    background-image: url(image/backg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.clear{
+    clear: both;
+}
+header{
+    position: absolute;
+    inset-inline-start: 0px;
+    inset-block-start: 0px;
+    display: block;
+    inline-size: 110%;
+    position: fixed;
+    block-size: 64px;
+    background: rgba(153, 153, 153,0.77);
+    border: 1px solid #000000;
+}    
+footer{
+    position: absolute;
+    inset-inline-start: 0px;
+    inset-block-end: 0px;
+    display: block;
+    inline-size: 110%;
+    position: fixed;
+    block-size: 64px;
+    background: rgba(153, 153, 153,0.77);
+    border: 1px solid #000000;
+}
+.search{
+    margin-block-start: 60px;
+    margin-inline-start: 45%;
+    margin-block-end: -30px;
+    margin-block-end: 20px;;
+    padding: 10px;
+    padding-inline-end: 30px;
+    padding-inline-start: 15px;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: #C5C5C5;
+    inline-size: 180px;
+    block-size: 40px;
+    border-radius: 15px;
+    inline-size: 300px;
+}
+.sec{
+    position: absolute;
+inline-size: 946px;
+block-size: 237px;
+background: rgba(245, 255, 254, 0.61);
+margin-inline-start: 100px;
+margin-inline-end:1px;
+margin-block-start: -6px;
+display: block;
+}
+.logo{
+    position:relative;
+    inset-inline-start: 490px;
+    inset-block-start: -870px;
+    inline-size: 600px;
+    block-size: 600px;
+
+}
+.sec1{
+    position: absolute;
+    background: rgba(252, 255, 122, 0.62);
+    border: solid 2px black;
+    margin: 14%;
+    margin-block-start: -160px;
+    margin-inline-start: 120px;
+    padding-inline-end: 20px;
+    padding-block-end: 13px;
+}
+.sec1:hover{
+    position: absolute;
+    background: rgba(255, 255, 255, 100);
+    border: solid 2px black;
+    margin: 10%;
+    margin-block-start: -160px;
+    margin-inline-start: 120px;
+    padding-inline-end: 20px;
+    padding-block-end: 13px;
+    transition: 500ms;
+}
+.sec11{
+    position: relative;
+    padding-block-start: 60px;
+    padding-inline-start: 940px;
+    color: rgb(0, 0, 255);
+    z-index:1;
+}
+.sec2{
+    position: absolute;
+    background: rgba(252, 255, 122, 0.62);
+    border: solid 2px black;
+    margin: 10%;
+    margin-block-start: -160px;
+    margin-inline-start: 240px;
+    padding-inline-end: 20px;
+    padding-block-end: 13px;
+}
+.sec3{
+    position: absolute;
+    background: rgba(252, 255, 122, 0.62);
+    border: solid 2px black;
+    margin: 10%;
+    margin-block-start: -160px;
+    margin-inline-start: 340px;
+    padding-inline-end: 20px;
+    padding-block-end: 13px;
+}
+.sec4{
+    position: absolute;
+    background: rgba(252, 255, 122, 0.62);
+    border: solid 2px black;
+    margin: 10%;
+    margin-block-start: -160px;
+    margin-inline-start: 440px;
+    padding-inline-end: 20px;
+    padding-block-end: 13px;
+}
+.sec5{
+    position: absolute;
+    background: rgba(252, 255, 122, 0.62);
+    border: solid 2px black;
+    margin: -4%;
+    margin-inline-start: 113px;
+    padding-inline-end: 20px;
+    padding-block-end: 13px;
+}
+.sec6{
+    position: absolute;
+    background: rgba(252, 255, 122, 0.62);
+    border: solid 2px black;
+    margin: -4%;
+    margin-inline-start: 230px;
+    padding-inline-end: 20px;
+    padding-block-end: 13px;
+}
+.sec111{
+    position: relative;
+    z-index: 1;
+    margin-block-end: 100px;
+    padding-inline-start: 110px;
+    margin-block-start: -110px;
+}
+.ob{
+    padding-inline-start: 200px;
+    background-color: rgba(204, 204, 204, 0.69);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    block-size: 100px;
+    background-image: url(image/rozetka.png);
+    background-repeat: no-repeat;
+    margin-block-start: 110px;
+}
+.wh{
+    color: rgb(88, 88, 88);
+}
+.ob1{
+    padding-inline-start: 200px;
+    background-color: rgba(204, 204, 204, 0.69);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    block-size: 100px;
+    margin-block-start: 15px;
+    background-image: url(image/atb.png);
+    background-repeat: no-repeat;
+}
+.reklama{
+    background-image: url(image/vodaf.png);
+    inline-size: 700px;
+    block-size: 201px;
+    display: block;
+    margin-inline-start: 1100px;
+    margin-block-start: -80px;
+    
+}
+.ob2{
+    padding-inline-start: 200px;
+    background-color: rgba(204, 204, 204, 0.69);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin-block-start: 15px;
+    background-image: url(image/imgcomfy.png);
+    display:block;
+    background-repeat: no-repeat;
+}
+.ser{
+    margin-block-start: -30px;
+    padding-block-start: 10px;
+    padding-block-end: 0px;
+    margin-inline-start: -10px;
+    padding-inline-end: 20px;
+    inline-size: 310px;
+    border-radius: 20px;
+    block-size: 35px;
+    background-image: url(image/Vector.png);
+    background-repeat: no-repeat;
+}
+.home{
+    margin-block-start: 20px;
+    font-size: 20px;
+    margin-inline-start: 40px;
+}
+.about{font-size: 20px;
+    margin-block-start: -23px;
+    margin-inline-start: 170px;
+}
+.news{
+    font-size: 20px;
+    margin-block-start: -22px;
+    margin-inline-start: 280px;
+}
+.add{
+    border: solid 2px white;
+    inline-size: 200px;
+    block-size: 30px;
+    text-align: center;
+    font-size: 20px;
+    margin-block-start: -30px;
+    margin-inline-start:600px ;
+    color: white;
+}
+.rev{
+    font-size: 20px;
+    margin-block-start: -26px;
+    margin-inline-start: 1100px;
+}
+.like{
+    font-size: 20px;
+    margin-block-start: -24px;
+    margin-inline-start: 1300px;
+}
+.number{
+    font-size: 15px;
+    margin-inline-start: 15px;
+    margin-block-start: 15px;
+}
+.faq{
+    font-size: 20px;
+    margin-block-start: -20px;
+    margin-inline-start: 400px;
+}
+.sup{
+    font-size: 20px;
+    margin-block-start: -23px;
+    margin-inline-start: 540px;
+}
+.ter{
+    font-size: 20px;
+    margin-block-start: -24px;
+    margin-inline-start:870px ;
+}
+.idea{
+    font-size: 20px;
+    margin-block-start: -24px;
+    margin-inline-start: 1200px;
+}

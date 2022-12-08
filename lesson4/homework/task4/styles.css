@@ -1,0 +1,115 @@
+.home{
+    color: white;
+    background-color: rgb(42,79,110);
+    margin-top: 20px;
+    padding-top: 50px;
+    padding-left: 70px;
+    padding-bottom: 130px;
+    width: 900px; height: 120px;
+}
+.about{
+    color: white;
+    position: absolute;
+    top: 100px;
+    padding-left: 70px;
+    padding-bottom: 10px;
+}
+.gallery{
+    color: white;
+    position: absolute;
+    top: 130px;
+    padding-left: 70px;
+    padding-bottom: 10px;
+}
+.news{
+    color: white;
+    position: absolute;
+    top: 160px;
+    padding-left: 70px;
+    padding-bottom: 10px;
+}
+.blog{
+    color: white;
+    position: absolute;
+    top: 70px;
+    left: 400px;
+    padding-left: 70px;
+    padding-bottom: 10px;
+}
+.faq{
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    padding-left: 70px;
+    padding-bottom: 10px;
+}
+.cont{
+    color: white;
+    position: absolute;
+    top: 130px;
+    left: 400px;
+    padding-left: 70px;
+    padding-bottom: 10px;
+}
+.pri{
+    color: white;
+    position: absolute;
+    top: 160px;
+    left: 400px;
+    padding-left: 70px;
+    padding-bottom: 10px;
+}
+div:hover{
+    text-decoration-line: underline;
+}
+.you{
+    background-image: url(image/youtube_gray.png);
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    left:660px;
+    top: 60px;
+}
+.you:hover{
+    background-image: url(image/youtube.png);
+}
+
+.face{
+    background-image: url(image/fb_gray.png);
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    left:740px;
+    top: 60px;
+}
+.face:hover{
+    background-image: url(image/fb.png);
+}
+.insta{
+    background-image: url(image/insta_gray.png);
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    left:820px;
+    top: 60px;
+}
+.insta:hover{
+    background-image: url(image/insta.png);
+}
+#aaa{
+    margin-left: 30px;
+    margin-top: -90px;
+    width: 900px;float: left;
+}
+.cop{
+    color: white;
+    margin-left: 19%;
+    margin-top: -50px;
+}
