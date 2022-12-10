@@ -1,0 +1,46 @@
+.first{
+    display: block;
+    background-color: red;
+    inline-size: 400px;
+    block-size: 300px;
+    border: solid 2px black;
+}
+.second{
+    display: block;
+    background-color: red;
+    inline-size: 400px;
+    block-size: 300px;
+    margin-inline-start: 400px;
+    margin-block-start: -304px;
+    border: solid 2px black;
+}
+.second:hover{
+    transition-timing-function: 2s;
+    transform: rotateY(-50deg);
+    transform-origin: right;
+    transition: all 1s;
+}
+.first:hover{
+    transform: rotateY(-50deg);
+    transform-origin: left;
+    transition: all 1s;
+}
+.wrap {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    perspective: 1000px;}
+.wrap:hover > .first {
+    transform: rotateY(50deg);
+      }
+      
+  .wrap:hover > .second {
+   transform: rotateY(-50deg);
+      }
+.hel{
+    font-size: 30px;
+    margin-block-start: -150px;
+    margin-inline-start: 350px;
+}

@@ -1,0 +1,197 @@
+
+.sphere{
+    background-color: rgb(75, 70, 70);
+    border: solid 2px rgb(138, 136, 136);
+    border-radius: 50%;
+    inline-size: 200px;
+    block-size: 200px;
+    display: block;
+}
+#hour{
+    inline-size: 6px;
+    block-size: 60px;
+    display: block;
+    border-radius: 2px;
+    margin-block-start: 65px;
+    margin-inline-start: 107px;
+    background-color: rgb(111,171,224);
+    animation-name: hour;
+    animation-duration: 43200s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    transform-origin: 0 0;
+}
+#min{
+    inline-size: 4px;
+    border-radius: 2px;
+    block-size: 89px;
+    display: block;
+    margin-block-start: -64px;
+    margin-inline-start: 106px;
+    background-color: rgb(111,171,224);
+    transform: rotate(90deg);
+    animation-name: min;
+    animation-duration: 3600s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    transform-origin: 0 0;
+}
+#sec{
+    inline-size: 3px;
+    block-size: 70px;
+    display: block;
+    background-color: rgb(185,146,114);
+    border-radius: 5px;
+    margin-block-start: -90px;
+    margin-inline-start: 106px;
+    animation-name: sec;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction:normal;
+    transform-origin: 0 0;
+}
+@keyframes sec{
+    from{
+        transform: rotate(180deg);
+    }
+    to{
+        transform: rotate(540deg);
+    }
+}
+@keyframes min{
+    from{
+        transform: rotate(180deg);
+        transform-origin: 0 0;
+    }
+    to{
+        transform: rotate(540deg);
+    }
+}
+@keyframes hour{
+    from{
+        transform: rotate(180deg);
+        transform-origin: 0 0;
+    }
+    to{
+        transform: rotate(540deg)
+    }
+}
+#one{
+    inline-size: 4px;
+    block-size: 25px;
+    display: block;
+    background-color: rgb(200,200,201);
+    margin-block-start: -12px;
+    margin-inline-start: 147px;
+    transform: rotate(30deg);
+}
+#two{
+    inline-size: 4px;
+    block-size: 25px;
+    display: block;
+    background-color: rgb(200,200,201);
+    margin-block-start: 15px;
+    margin-inline-start: 182px;
+    transform: rotate(60deg);
+}
+#three{
+    inline-size: 4px;
+    block-size: 25px;
+    display: block;
+    background-color: rgb(68,173,73);
+    margin-block-start: 14px;
+    margin-inline-start: 188px;
+    transform: rotate(90deg);
+}
+#four{
+    inline-size: 4px;
+    block-size: 25px;
+    display: block;
+    background-color: rgb(200,200,201);
+    margin-block-start: 21px;
+    margin-inline-start: 174px;
+    transform: rotate(120deg);
+}
+#five{
+    inline-size: 4px;
+    block-size: 25px;
+    display: block;
+    background-color: rgb(200,200,201);
+    margin-block-start: 1px;
+    margin-inline-start: 146px;
+    transform: rotate(150deg);
+}
+#six{
+    inline-size: 4px;
+    block-size: 25px;
+    display: block;
+    background-color: rgb(68,173,73);
+    margin-block-start: -11px;
+    margin-inline-start: 103px;
+    transform: rotate(180deg);
+}
+#seven{
+    inline-size: 4px;
+    block-size: 25px;
+    display: block;
+    background-color: rgb(200,200,201);
+    margin-block-start: -35px;
+    margin-inline-start: 59px;
+    transform: rotate(210deg);
+}
+#eight{
+    inline-size: 4px;
+    block-size: 25px;
+    display: block;
+    background-color: rgb(200,200,201);
+    margin-block-start: -53px;
+    margin-inline-start: 27px;
+    transform: rotate(240deg);
+}
+#nine{
+    inline-size: 4px;
+    block-size: 25px;
+    display: block;
+    background-color: rgb(68,173,73);
+    margin-block-start: -73px;
+    margin-inline-start: 12px;
+    transform: rotate(270deg);
+}
+#ten{
+    inline-size: 4px;
+    block-size: 25px;
+    display: block;
+    background-color: rgb(200,200,201);
+    margin-block-start: -65px;
+    margin-inline-start: 19px;
+    transform: rotate(300deg);
+}
+#eleven{
+    inline-size: 4px;
+    block-size: 25px;
+    display: block;
+    background-color: rgb(200,200,201);
+    margin-block-start: -59px;
+    margin-inline-start: 48px;
+    transform: rotate(330deg);
+}
+#twelve{
+    inline-size: 4px;
+    block-size: 25px;
+    display: block;
+    background-color: rgb(68,173,73);
+    margin-block-start: -117px;
+    margin-inline-start: 101px;
+}
+.dot{
+    background-color: rgb(77, 81, 99);
+    display: block;
+    border: solid 2px rgb(77,81,99);
+    margin-block-start: -111px;
+    inline-size: 20px;block-size: 20px;
+    border-radius: 50%;
+    margin-inline-start: 92px;
+}
