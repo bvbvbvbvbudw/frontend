@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 6</title>
+
+
+    <style>
+        table, tr, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            border-radius: 5px;
+        }
+        table{
+            background-color: blue;
+        }
+        tr:first-child{
+            background-color: yellow;
+        }
+        th:first-child{
+            background-color: green;
+        }
+        td:nth-child(3){
+            background-color: purple;
+            /* background-image: url(../lesson4/image/apple.jpg); */
+        }
+        td{
+            color: rosybrown;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+            <th>Header 4</th>
+            <th>Header 5</th>
+            <th>Header 6</th>
+        </tr>
+
+        <tr>
+            <td colspan="2">colspan 2 (1/2)</td>
+            <td>Row 1</td>
+            <td>Row 1</td>
+            <td>Row 1</td>
+            <td>Row 1</td>
+        </tr>
+
+        <tr>
+            <td>Row 2</td>
+            <td>Row 2</td>
+            <td>Row 2</td>
+            <td>Row 2</td>
+            <td>Row 2</td>
+            <td>Row 2</td>
+        </tr>
+
+        <tr>
+            <td>Row 3</td>
+            <td>Row 3</td>
+            <td>Row 3</td>
+            <td>Row 3</td>
+            <td>Row 3</td>
+            <td>Row 3</td>
+        </tr>
+        <tr>
+            <td>Row 4</td>
+            <td rowspan="3">rowspan 3 (4/5/6)</td>
+            <td>Row 4</td>
+            <td>Row 4</td>
+            <td>Row 4</td>
+            <td>Row 4</td>
+        </tr>
+        <tr>
+            <td>Row 5</td>
+            <td>Row 5</td>
+            <td>Row 5</td>
+            <td>Row 5</td>
+            <td>Row 5</td>
+        </tr>
+        <tr>
+            <td>Row 6</td>
+            <td>Row 6</td>
+            <td>Row 6</td>
+            <td>Row 6</td>
+            <td>Row 6</td>
+        </tr>
+
+    </table>
+
+
+    <hr>
+    <hr>
+    <hr>
+
+    <table style="width: 100%;">
+        <tr>
+            <td>
+                <table style="width: 100%;">
+                    <tr>
+                        <td>Logo</td>
+                        <td>Links</td>
+                        <td>Sign up/in</td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+         <td style="height: 600px;">
+            
+            Body
+        
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <table style="width: 100%;">
+                    <tr>
+                        <td>Block 1</td>
+                        <td>Block 2</td>
+                        <td>Block 3</td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
