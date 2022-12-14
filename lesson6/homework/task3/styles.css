@@ -1,0 +1,103 @@
+div{
+    display: block;
+    width: 190px;
+    height: 280px;
+    position: absolute;
+    text-align: center; 
+    box-shadow: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 7px rgba(0,0,0,0.5);
+    transition-duration: 1s;
+}
+div:hover{
+    width: 200px;
+    height: 300px;
+    font-size: 17px;
+}
+span{
+    position: relative;
+    top: -20px;
+    font-size: 30px;
+}
+.mon{
+    color: rgb(155, 152, 152);
+    position: relative;
+    top:-20px;
+    text-align:center;
+}
+h3{
+    position: relative;
+    top: -20px;
+}
+.red{
+    border: none;
+    height: 2px;
+    background-color: red;
+    position: relative;
+    top: -20px;
+}
+.one{
+
+}
+.two{
+    margin-left: 220px;
+}
+.three{
+    margin-left: 440px;
+}
+.four{
+    margin-left: 660px
+}
+.p{
+    margin:auto;
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    background-color: rgb(231, 129, 146);
+    color: white;
+}
+.orange{
+    border: none;
+    height: 2px;
+    background-color: orange;
+    position: relative;
+    top: -20px;
+}
+.borange{
+    margin: auto;
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    background-color: rgb(212, 151, 20);
+    color: white;
+}
+.blue{
+    border: none;
+    height: 2px;
+    background-color: blue;
+    position: relative;
+    top: -20px;
+} 
+.bblue{
+    margin: auto;
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    background-color: rgb(74, 211, 230);
+    color: white;
+}
+.green{
+    border: none;
+    height: 2px;
+    background-color:green;
+    position: relative;
+    top: -20px;
+}
+.bgreen{
+    margin: auto;
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    background-color: rgb(129, 231, 168);
+    color:white;
+}

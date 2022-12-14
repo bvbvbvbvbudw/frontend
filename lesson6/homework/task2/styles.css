@@ -1,0 +1,83 @@
+.sit{
+    display: block;
+    position: fixed;
+    border: 2px solid black;
+    margin: -7px;
+    margin-top: -40px;
+    width: 40px;
+    height:320px;
+    background-color: grey;
+    transition-duration: 1s;
+    overflow: hidden;
+    transition: 0.6s;
+}
+.sit:hover{
+    width: 200px;
+
+}
+.menu{
+    margin-left: -38px;
+    list-style-type: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.edit{
+    margin-top: 40px;
+    list-style-type: none;
+    list-style-image: url(image/icons8-карандаш-15.png);
+    height: 30px;
+}
+.edit:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(99, 99, 99);
+    transition:500ms;
+}
+span:hover{
+    overflow: hidden;
+    transition-delay: 2s;
+}
+.fav{
+    margin-top: 10px;
+    list-style-type: none;
+    list-style-image: url(image/icons8-червы-15.png);
+    height: 30px;
+}
+.fav:hover{
+    color: white;
+    background-color: rgb(99, 99, 99);
+    transition:500ms
+}
+.his{list-style-type: none;
+    margin-top: 10px;
+    list-style-image: url(image/icons8-прошедшее-время-15.png);
+    height: 30px;
+}
+.his:hover{
+    color: white;
+    background-color: rgb(99, 99, 99);
+    transition:500ms
+}
+.sec{
+    margin-top: 10px;
+    list-style-type: none;
+    list-style-image: url(image/icons8-security-shield-green-15.png);
+    height: 30px;
+}
+.sec:hover{
+    color: white;
+    background-color: rgb(99, 99, 99);
+    transition:500ms
+}
+.set{
+    margin-top: 10px;
+    list-style-type: none;
+    list-style-image: url(image/icons8-привод-15.png);
+    height: 30px;
+}
+.set:hover{
+    color: white;
+    background-color: rgb(99, 99, 99);
+    transition:500ms
+}
