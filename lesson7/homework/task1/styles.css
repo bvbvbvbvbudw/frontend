@@ -1,0 +1,32 @@
+div{
+    border:1px dotted grey   ;
+    inline-size: 200px;
+    block-size: 160px;
+    float:left;
+    margin-inline-start: 20px;
+    margin-block-end: 20px;
+}
+span{
+    color: grey;
+    position: relative;
+    inset-block-start: -10px;
+    inset-inline-start: 13px;
+    font-size: 15px;
+}
+h5{
+    text-align: center;
+    color: grey;
+}
+a{
+    border: 1px dotted grey;
+    font-size: large;
+    position: relative;
+    inset-block-start: -40px;
+    inset-inline-end: -15px;
+    padding: 8px;
+}
+p{
+    font-size: 13px;
+    position: relative;
+    inset-block-start: -30px;
+}
