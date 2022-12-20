@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .row{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: larger;
+    }
+    .row::first-letter{
+        color: grey;
+    }
+     p::first-line{ /*если много р , то так, если надо одну выделить - класс row */
+        color: red;
+    }
+    p::first-letter{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 40px;
+        color: royalblue;
+    }
+    /* p:first-child{
+        color: sienna;
+    } */
+        </style>
+</head>
+<body>
+    
+    <div class="row">
+        <p>
+            Some textSome textSome textSome textSome textSome textSome textSome text
+            
+            Some textSome textSome textSome textSome textSome text
+
+            Some textSome textSome textSome textSome textSome text
+        </p>
+        <p>
+            Some textSome textSome textSome textSome textSome textSome textSome text
+            
+            Some textSome textSome textSome textSome textSome text
+
+            Some textSome textSome textSome textSome textSome text
+        </p>
+        <p>
+            Some textSome textSome textSome textSome textSome textSome textSome text
+            
+            Some textSome textSome textSome textSome textSome text
+
+            Some textSome textSome textSome textSome textSome text
+        </p>
+
+    </div>
+
+</body>
+</html>

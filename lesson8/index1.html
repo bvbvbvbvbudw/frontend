@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Columns inline-block</title>
+    <style>
+
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #bcbcbc;
+}
+
+.wrap {
+    max-width: 1200px;
+    width: 90%;
+    min-width: 768px;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+         /* .product {
+             box-sizing: border-box;
+            display:inline-block;
+            width:25%-3px);
+            background-color: #fff;
+            margin-right: 2%;
+            vertical-align: top;
+            padding: 0 15px;
+        } */
+
+        
+.product {
+            box-sizing: border-box;
+            display:inline-block;
+            /* float: right; */
+            width: calc(23% - 3px);
+            background-color: #fff;
+            margin-right: 2%;
+            vertical-align: top;
+            padding: 0 15px;
+        }
+        
+        .product:last-child {
+            margin-right: 0;
+        }
+        
+        .product-title {
+            text-align: center;
+            border-bottom: 2px dashed;
+            padding-bottom: 10px;
+        }
+        
+        .product-descr {
+            font-family: Cambria, serif;
+        }
+        
+        .price {
+            font-weight: bold;
+        }
+        
+        .price:after {
+            content: "$"attr(data-price);
+            color: red;
+            margin-right: 7px;
+            float: right;
+        }
+        
+        .btn {
+            text-decoration: none;
+            background-color: #f00;
+            color: #fff;
+            display: block;
+            width: 100px;
+            padding: 7px 20px;
+            border-bottom: 2px solid black;
+            margin: 15px auto 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--    .wrap>h1{The Best Offer}+.product*4>h2.product-title{Product $}+.product-descr>p*2>lorem12^^.price[data-price]{Price}+a.btn[#]>{Add to cart}-->
+
+    <div class="wrap">
+        <h1>The Best Offer</h1>
+        <div class="product">
+            <h2 class="product-title">Product 1</h2>
+            <div class="product-descr">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sapiente maxime ab!</p>
+                <p>Perferendis cum accusantium ducimus, ea magni vitae. Veritatis sequi asperiores dolores consequuntur!</p>
+
+            </div>
+            <div class="price" data-price="22.99">Price</div>
+            <a href="#" class="btn">Add to cart</a>
+        </div>
+        <div class="product">
+            <h2 class="product-title">Product 2</h2>
+            <div class="product-descr">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quae, eligendi nihil?</p>
+                <p>Voluptatum corporis debitis enim doloribus, quisquam amet totam! Non, consectetur, fugit. Doloribus.</p>
+
+            </div>
+            <div class="price" data-price="14.99">Price</div>
+            <a href="#" class="btn">Add to cart</a>
+        </div>
+        <div class="product">
+            <h2 class="product-title">Product 3</h2>
+            <div class="product-descr">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dicta iusto ipsum?</p>
+                <p>Accusamus itaque quo dolore architecto vero debitis quidem labore odit sed rerum!</p>
+
+            </div>
+            <div class="price" data-price="16.59">Price</div>
+            <a href="#" class="btn">Add to cart</a>
+        </div>
+        <div class="product">
+            <h2 class="product-title">Product 4</h2>
+            <div class="product-descr">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ab dignissimos quos!</p>
+                <p>Deleniti in repellat corporis dolorem similique quam necessitatibus commodi dolor architecto hic.</p>
+
+            </div>
+            <div class="price" data-price="17.99">Price</div>
+            <a href="#" class="btn">Add to cart</a>
+        </div>
+    </div>
+</body>
+
+</html>

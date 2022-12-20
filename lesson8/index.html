@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Real elements width</title>
+    <style>
+        .wrap {
+            width: 1000px;
+            margin: 10px auto;
+            border: 1px solid #aaa;
+            overflow: hidden;
+            font-family: Calibri, sans-serif;
+        }
+
+        .elem {
+            width: 500px;
+            padding: 15px;
+            border: 2px solid #ccc;
+            margin: 20px;
+            float: left;
+        }
+
+        .elem-parent {
+            width: 500px;
+            float: left;
+        }
+
+        .inner-elem {
+            padding: 15px;
+            border: 2px solid #ccc;
+            margin: 20px;
+        }
+
+        .elem-real {
+            width: 426px;
+            /* 500 - 2*15 - 2*2- 2*20 = 426*/
+            padding: 15px;
+            border: 2px solid #ccc;
+            margin: 20px;
+            float: left;
+        }
+
+        .elem-sizing {
+            box-sizing:border-box;
+            width: 460px;
+            padding: 15px;
+            border: 2px solid #ccc;
+            margin: 20px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!--    .wrap>.elem*2>h2{Element $}+p*2>lorem20-->
+    <div class="wrap">
+        <div class="elem">
+            <h2>Element 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet qui nihil assumenda sed explicabo nulla. Repudiandae, qui, sunt. Consequuntur, non.</p>
+            <p>Nobis inventore, sint odio sed modi explicabo labore at odit repellat officiis rem id perferendis eius hic molestias voluptatibus ipsam!</p>
+        </div>
+        <div class="elem">
+            <h2>Element 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit tempora iure doloribus iusto quia eveniet voluptatem numquam aut, molestiae hic.</p>
+            <p>Ex laborum accusantium quod, accusamus eaque sequi, maxime odit perspiciatis distinctio recusandae fuga, aliquid nisi architecto! Nemo neque expedita quisquam?</p>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="elem-real">
+            <h2>Element 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet qui nihil assumenda sed explicabo nulla. Repudiandae, qui, sunt. Consequuntur, non.</p>
+            <p>Nobis inventore, sint odio sed modi explicabo labore at odit repellat officiis rem id perferendis eius hic molestias voluptatibus ipsam!</p>
+        </div>
+        <div class="elem-real">
+            <h2>Element 4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit tempora iure doloribus iusto quia eveniet voluptatem numquam aut, molestiae hic.</p>
+            <p>Ex laborum accusantium quod, accusamus eaque sequi, maxime odit perspiciatis distinctio recusandae fuga, aliquid nisi architecto! Nemo neque expedita quisquam?</p>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="elem-parent">
+            <div class="inner-elem">
+                <h2>Element 1 inner</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet qui nihil assumenda sed explicabo nulla. Repudiandae, qui, sunt. Consequuntur, non.</p>
+                <p>Nobis inventore, sint odio sed modi explicabo labore at odit repellat officiis rem id perferendis eius hic molestias voluptatibus ipsam!</p>
+            </div>
+        </div>
+        <div class="elem-parent">
+            <div class="inner-elem">
+                <h2>Element 2 inner</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit tempora iure doloribus iusto quia eveniet voluptatem numquam aut, molestiae hic.</p>
+                <p>Ex laborum accusantium quod, accusamus eaque sequi, maxime odit perspiciatis distinctio recusandae fuga, aliquid nisi architecto! Nemo neque expedita quisquam?</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrap">
+        <div class="elem-sizing">
+            <h2>Element 3 with box-sizing</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet qui nihil assumenda sed explicabo nulla. Repudiandae, qui, sunt. Consequuntur, non.</p>
+            <p>Nobis inventore, sint odio sed modi explicabo labore at odit repellat officiis rem id perferendis eius hic molestias voluptatibus ipsam!</p>
+        </div>
+        <div class="elem-sizing">
+            <h2>Element 4 with box-sizing</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit tempora iure doloribus iusto quia eveniet voluptatem numquam aut, molestiae hic.</p>
+            <p>Ex laborum accusantium quod, accusamus eaque sequi, maxime odit perspiciatis distinctio recusandae fuga, aliquid nisi architecto! Nemo neque expedita quisquam?</p>
+        </div>
+    </div>
+</body>
+
+</html>
