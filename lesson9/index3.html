@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        .container{
+         display: flex; /*если flex то в ряд,  inline-flex как и было flex-direction   same */
+         /* flex-direction: column-reverse; */
+         /* flex-direction:column; */
+        gap: 20px;
+        /* расположение контента => */
+        /* justify-content: center; */
+        justify-content: space-between;
+        /* width: 1200px; если задать, информация будет статичной */
+        height: 150px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .one{
+        background-color: yellow;
+        height: 60px;width: 20%;
+        /* order: 9; */
+    }
+    .two{
+        background-color: blue;
+        height: 60px;width: 20%;
+        /* order: 10; */
+    }
+    .three{
+        background-color: blueviolet;
+        height: 60px;width: 20%;
+    }
+    .four{
+        background-color: chocolate;
+        height: 60px;width: 20%;
+        /* order: 8; */
+    }
+    
+    </style>
+<body>
+    <div class="container">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="one">5</div>
+        <div class="two">6</div>
+        <div class="three">7</div>
+        <div class="four">8</div>
+    </div>
+</body>
+</html>
