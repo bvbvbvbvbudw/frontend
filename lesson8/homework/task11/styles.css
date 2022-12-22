@@ -1,0 +1,55 @@
+h1{
+    border: 2px solid black;
+    text-align: center;
+    color: orange;
+    height: 600px;
+    width: 1000px;
+}
+h3{
+    position: relative;
+    bottom: -250px;
+}
+
+.cor{
+    color: grey;
+    position: relative;
+    bottom: -260px;
+}
+.dis{
+    position: relative;
+    bottom: -250px;
+}
+.one{
+    background-image: url(image/road1.jpg);
+    background-size: 260px;
+    background-repeat: no-repeat;
+
+
+    width: 260px; height: 400px;
+    margin-top: -490px;
+    margin-left:20px;
+    text-align:start;
+
+    z-index: 0;
+
+
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+    transition: 2s;
+}
+.one:hover{
+    background-size: 300px;
+    width: 280px; height: 420px;
+}
+.cor:hover{
+    color: white;
+    display: flex;
+}
+.dis:hover{
+}
+h3:hover{
+
+}
