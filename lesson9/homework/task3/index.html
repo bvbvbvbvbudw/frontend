@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+</head>
+    <style>
+        @media screen and (min-width:550px) and (max-width:800px) {
+            .message{
+                padding-top: 20px;
+                width: 600px;
+                height: 60px;
+            }
+            .messag{
+                color: black;
+                margin-bottom: 30px;
+                margin-top: 25px;
+                margin-left: -120px;
+            }
+            .text_grey{
+                position: relative;
+                top: 20px; left: -100px;
+            }
+            .date{
+                margin-top: -100px;
+            }
+            .li{
+                display: flex;
+                margin-top: 15px;
+            }
+        }
+        @media screen and (max-width:550px) {
+            .message{
+                padding-top: 20px;
+                width: 600px;
+                height: 60px;
+            }
+            .messag{
+                color: black;
+                margin-bottom: 30px;
+                margin-top: 25px;
+                margin-left: -120px;
+            }
+            .text_grey{
+                position: relative;
+                top: 20px; left: -100px;
+            }
+            .date{
+                margin-top: -100px;
+                margin-right: 200px;
+            }
+        .li{
+            display: none;
+        }
+        a{
+            margin-top: 20px;
+            width: 50px;
+        }
+        #container{
+            margin: -200px 60px;
+        }
+    }
+    </style>
+<header>
+    <p id="header"><img src="image/mail.png"> <span>MY MAIL</span></p>
+    <div class="my_acc">user@mygmail.com<img src="image/account.png"></div>
+    <hr id="line_header">
+</header>
+<body>
+    <aside>
+        <div class="container_bar">
+            <a href=""><img src="image/incom.png"><span class="li">Incoming</span></a>
+            <a href=""><img src="image/outcom.png"><span class="li">Outgoing</span></a>
+            <a href=""><img src="image/draft.png"><span class="li">Drafts</span></a>
+            <a href=""><img src="image/spam.png"><span class="li">Spam</span></a>
+        </div>
+    </aside>
+
+    <div id="container">
+        <div class="message">
+            <li class="star_off">me, Alex</li>
+            <div class="messag"><p class="message_pos">Trip to South America 
+            <span class="text_grey">- Suspendisse ut sapien non arcu retrum t...</span></div>
+            <li class="date">12 apr.</li></p>
+            <hr class="message_line">
+        </div>
+
+        <div class="message">
+            <li class="star_off">me, John</li>
+            <div class="messag"><p class="message_pos">Santa Monica trip
+            <span class="text_grey">-Cras accumsan Iacus quis urna ultricies, vel fi...</span></div>
+            <li class="date">12 apr.</li></p>
+            <hr class="message_line">
+        </div>
+        
+        <div class="message">
+            <li class="star_off">me, John, Alex</li>
+            <div class="messag"><p class="message_pos">Birthday party
+            <span class="text_grey">-20.04.2019</span></div>
+            <li class="date">11 apr.</li></p>
+            <hr class="message_line">
+        </div>
+       
+        <div class="message">
+            <li class="star_on">Mari White</li>
+            <div class="messag"><p class="message_pos">Report (march 2019)</div>
+            <li class="date">10 apr.</li></p>
+            <hr class="message_line">
+        </div>
+
+        <div class="message">
+            <li class="star_off">me, Elena </li>
+            <div class="messag"><p class="message_pos">Duis semper augue
+            <span class="text_grey">- Nunc finibus sem vel odio mattis</span></div>
+            <li class="date">10 apr.</li></p>
+            <hr class="message_line">
+        </div>
+
+        <div class="message">
+            <li class="star_off">Bill, John</li>
+            <div class="messag"><p class="message_pos">Ut congue purus
+            <span class="text_grey">- Ut sit amet eros henderit, posuere acru sed,v... </span></div>
+            <li class="date">5 apr.</li></p>
+            <hr class="message_line">
+        </div>
+
+        <div class="message">
+            <li class="star_on">Stive</li>
+            <div class="messag"><p class="message_pos">Phasellus quis velit tincidunt</div>
+            <li class="date">1 apr.</li></p>
+            <hr class="message_line">
+        </div>
+
+        <div class="message">
+            <li class="star_on">Mari White</li>
+            <div class="messag"> <p class="message_pos">Report(february 2019)</div>
+            <li class="date">10 mar.</li></p>
+            <hr class="message_line">
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+.logo{
+    font-size: 24px;
+    border: 2px solid black;
+    width: 100px;
+}
+#cop{
+    position: relative;
+    bottom: -160px;
+}
+header{
+    display: flex;
+    gap: 70px;
+    border: 2px solid black;
+}
+.search{
+    margin-left: 55%;
+    border: 2px solid black;
+}
+main{
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 900px;
+}
+.big_photo{
+    border: 2px solid black;
+    height: 400px; width: 650px;
+    margin-left: 3%;
+    background-color: grey;
+}
+.item_list{
+    color: red;
+    border: 2px solid black;
+    width: 230px;
+    font-size: 30px;
+    margin-top: -700px;
+    margin-left: 1000px;
+}
+.photo_aside{
+    border: 2px solid black;
+    height: 180px; width: 250px;
+    margin-left: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+h3{
+        position: relative;
+        left: 1020px;
+        top: -200px;
+}
+.photo{
+    margin-top: 20px;
+    margin-left: 3px;
+    border: 2px solid black;
+    display: flex;
+    width: 40px; height: 40px;
+    background-color: grey;
+}

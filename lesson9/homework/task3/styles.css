@@ -1,0 +1,99 @@
+#header{
+    list-style-type: none;
+    list-style-image: url(image/mail.png);
+    margin-left: 20px;
+    margin-bottom: -20px;
+}
+#container{
+    margin-bottom: 20px;
+}
+#line_header{
+    width: 100%;
+}
+.message_line{
+    width: 100%;
+    float: left;
+    margin-top: -20px;
+}
+#container{
+    margin-top: -120px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+span{
+    position: relative;
+    top: -10px;
+}
+.li{
+    margin-top: 15px;
+}
+p{
+    position: relative;
+    top: -10px;
+}
+ul{
+    margin-left: 20px;
+}
+.my_acc{
+    float: right;
+    font-size: 20px;
+}
+#incoming{
+    list-style-type: none;
+    list-style-image: url(image/incom.png);
+}
+#out{
+    list-style-type: none;
+    list-style-image: url(image/outcom.png);
+}
+#drafts{
+    list-style-type: none;
+    list-style-image: url(image/draft.png);
+}
+#spam{
+    list-style-type: none;
+    list-style-image: url(image/spam.png);
+}
+.star_off{
+    list-style-type: none;
+    list-style-image: url(image/star1.svg);
+}
+.star_on{
+    list-style-type: none;
+    list-style-image: url(image/star2.svg);
+}
+.text_grey{
+    color: rgb(160, 159, 159);
+    position: relative;
+    top:0px;
+}
+.date{
+    list-style-type: none;
+    list-style-image: url(image/attach_26.png);
+    float: right;
+    margin-top: -45px;
+}
+.message_pos{
+    margin-left: 120px; margin-top: -8px;
+}
+.message{
+    width: 1200px; height: 20px;
+}
+li{
+    padding-right: -20px;
+}
+a{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 120px;
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    transition: all 0.5s;
+    margin-left: 10px;
+    background-color: rgba(202, 211, 23, 0.5);
+}
