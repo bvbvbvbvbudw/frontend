@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Gaps</title>
+<!--    <link rel="stylesheet" href="style.css">-->
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 100px 200px 300px;
+            grid-template-rows: 50px 150px 100px;
+            grid-gap: 10px;
+            /* grid-column-gap: 30px; */
+            /* grid-row-gap: 20px; */
+            /* grid-gap: 20px 30px; */
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #0d233d;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .grid div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.3em;
+            border-radius: 3px;
+            text-align: center;
+            background-color: #482880;
+            color: #ffffff;
+            font-size: 130%;
+            font-weight: bold;
+        }
+
+        .grid div:nth-child(odd) {
+            background-color: #1769aa;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item-1">1</div>
+        <div class="item-2">2</div>
+        <div class="item-3">3</div>
+        <div class="item-4">4</div>
+        <div class="item-5">5</div>
+        <div class="item-6">6</div>
+        <div class="item-7">7</div>
+        <div class="item-8">8</div>
+        <div class="item-9">9</div>
+    </div>
+</body>
+</html>

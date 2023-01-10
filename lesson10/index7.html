@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Gallery</title>
+<!--    <link rel="stylesheet" href="style.css">-->
+    <style>
+        .gallery {
+            width: 80%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 2vh;
+            grid-auto-flow: dense;
+        }
+
+        .gallery .image {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+
+        .gallery .image:first-child {
+            grid-column-start: span 2;
+            grid-row-start: span 2;
+        }
+
+        .gallery .image:nth-child(2n+1) {
+            grid-row-start: span 2;
+        }
+
+        .gallery .image:nth-child(4n+6) {
+            grid-column-start: span 2;
+            grid-row-start: span 2;
+        }
+
+
+        .gallery .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 2px;
+            filter: brightness(0.5) grayscale(1);
+            transition: 0.3s ease-in-out;
+        }
+
+        .gallery .image img:hover {
+            filter: brightness(1) grayscale(0);
+            transform: scale(1.1);
+        }
+
+
+        @media only screen and (min-width : 480px) and (max-width : 768px) {
+            .gallery {
+                display: grid;
+                grid-template-columns: auto auto auto;
+            }
+        }
+
+        @media only screen and (min-width : 320px) and (max-width : 480px) {
+            .gallery {
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            .gallery {
+                display: block;
+                max-width: 240px;
+            }
+
+            .gallery .image {
+                display: block;
+                margin: 2% 0;
+            }
+
+            .gallery .image img{
+                filter: brightness(1) grayscale(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1103088/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/235549/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/user/chuttersnap/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/user/brina_blum/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/user/kharaoke/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/user/mikeenerio/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/user/jontyson/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/user/joshkahen/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/user/jmvisuals/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/user/usamaa/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/user/jadlimcaco/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/user/remimullercha/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/user/aaronburden/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1190168/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1285462/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1194249/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1456499/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1758353/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1199299/800x600">
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/collection/1353730/800x600">
+        </div>
+    </div>
+</body>
+</html>
