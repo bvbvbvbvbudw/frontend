@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(160, 160, 238);
+}
+#main_container{
+    display: inline-grid;
+    grid-gap: 20px;
+    /* grid-auto-flow: dense; */
+    grid-template-columns:1fr 1fr 1fr ;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    /* grid-template-areas: 1fr 1fr; */
+}
+.container_info{
+    width: 350px;
+    background-color: white;
+}
+.text_container{
+    margin-top: -30px;
+    font-size: 25px;
+}
+.grid-5{
+    margin-top: -120px;
+}
+.grid-7{
+    margin-top: -260px;
+}
+.grid-8{
+    margin-top: -260px;
+}

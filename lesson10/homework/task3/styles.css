@@ -1,0 +1,82 @@
+body{
+    background-color: rgb(1,158,158);
+}
+header{
+    position: fixed;
+    background-color: rgb(0,139,139);
+    width: 103%;
+    height: 50px;
+    color: white;
+    margin-top: -65px;
+    margin-left: -15px;
+}
+h4{
+    margin-left: 20px;
+    font-size: 20px;
+}
+.text-header{
+    margin-left: 20px;
+}
+.mainmain-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin-top: 60px;
+}
+.to-do-container{
+    background-color: rgb(220,220,220);
+    width: 480px;
+    height: 630px;
+}
+.container-in-prog{
+    background-color: rgb(220,220,220);
+    width: 480px;
+    height: 630px;
+    overflow: scroll;
+}
+.container-test{
+    background-color: rgb(220,220,220);
+    width: 450px;
+    height: 630px;
+}
+.container-fix{
+    background-color: rgb(220,220,220);
+    width: 450px;
+    height: 630px;
+}
+.container-done{
+    background-color: rgb(220,220,220);
+    width: 450px;
+    height: 630px;
+}
+.first-place{
+    background-color: rgb(245,245,245);
+    width: 420px;
+    height: 150px;
+    position: relative;
+    top: 30px;
+    left: 15px;
+    border-radius: 10px;
+}
+#avatar{
+    margin-top:-20px ;
+    grid-column: 8;
+}
+.text{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: -20px;
+    font-size: 23px;
+}
+.grid p{
+   font-size: 20px;
+   margin-top: 4px;
+}
+.grid{
+    margin-top: 50px;
+    margin-left: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 40px 20px 30px 20px 30px 20px 120px 1fr;
+}
