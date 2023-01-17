@@ -1,0 +1,174 @@
+
+.inputs input{
+    height: 30px;
+}
+.valid-text-input{
+    border: 2px solid green;
+    color: green;
+    background-image: url(icons/valid.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 140px;
+}
+.invalid-text-input{
+    border: 2px solid red;
+    color: red;
+    background-image: url(icons/invalid.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 140px;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 25px;
+    background-color: white;
+    border: 2px solid green;
+    border-radius: 5px;
+  }
+.dot:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 26px;
+    left: -5px;
+    bottom: 4px;
+    border-radius: 5px;
+    background-color: green;
+    transition: .4s;
+}
+.check-box-container input:checked + .dot::before{
+    transform: translateX(26px);
+    background-color: #fff;
+}
+.dot{
+    position: absolute;
+    top: 8px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    transition: .4s;
+}
+.check-box{    
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+
+.switch-on{
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 25px;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+.check-box-on{
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.dot-on{
+    position: absolute;
+    top: 3px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    transition: .4s;
+    border-radius: 5px;
+}
+.dot-on::before{
+    position: absolute;
+    right: -26px;
+    top: -3px;
+    content: "";
+    background-color: red;
+    width: 26px;
+    height: 24px;
+    border-radius: 5px;
+    transition: .4s;
+}
+.check-box-on:checked + .dot-on::before{
+    transform: translateX(-24px);
+}
+
+
+.radio-btn input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+    position: relative;
+    top: 4px;
+}
+.radio-btn input:checked{
+    border: 6px solid black;
+    border-radius: 50%;
+}
+
+
+.buttons button{
+    width: 100px;
+    height: 30px;
+    color: white;
+}
+.btnn button{
+    width: 30px;
+    height: 30px;
+}
+.Active{
+    background-color: rgb(64,174,73);
+    border: none;
+}
+.Hover{
+    background-color: rgb(64,174,73);
+    border: none;
+    width: 30px;
+    transition: .5s;
+}
+.Hover:hover{
+    background-color: rgb(44,119,48);
+}
+.Danger{
+    background-color: rgb(228,64,97);
+    border: none;
+}
+.Hover-danger{
+    background-color: rgb(228,64,97);
+    border: none;
+    transition: .5s;
+}
+.Hover-danger:hover{
+    background-color: rgb(151,41,62);
+}
+.Disabled{
+    background-color: rgb(128,128,128);
+    border: none;
+}
+.plus{
+    background-color: rgb(72,170,70);
+    border: none;
+}
+.minus{
+    background-color: rgb(219,68,98);
+    border: none;
+}
+.minus, .plus{
+    border-radius: 50%;
+}
+
+textarea{
+    width: 200px;
+    height: 50px;
+}

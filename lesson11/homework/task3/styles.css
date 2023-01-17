@@ -1,0 +1,58 @@
+
+.container-main{
+    display: flex;
+    gap: 20px;
+    background-color: #c6c6c6;
+    width: 1000px;
+    height: 600px;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+.agree{
+    margin-top: -70px;
+    margin-left: 20px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.container-regis{
+    width: 500px;
+    height: 300px;
+}
+.container-pers , .container-regis{
+    margin-left: 20px;
+}
+#user-name, #user-email{
+    margin-left: -200px;
+    width: 400px;
+}
+.user-password-1{
+    width: 150px;
+    margin-left: -200px;
+}
+.user-password-2{
+    margin-left: -130px;
+    width: 150px;
+}
+.grid-pas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+button{
+    margin-left: 650px;
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    color: white;
+}
+input{
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    color: inherit;
+    outline: none;
+}

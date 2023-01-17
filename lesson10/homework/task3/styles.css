@@ -23,31 +23,24 @@ h4{
     gap: 50px;
     margin-top: 60px;
 }
-.to-do-container{
+.to-do-container, .container-test, .container-fix, .container-done{
     background-color: rgb(220,220,220);
     width: 480px;
     height: 630px;
+    border-radius: 10px;
 }
 .container-in-prog{
     background-color: rgb(220,220,220);
     width: 480px;
     height: 630px;
     overflow: scroll;
+    border-radius: 10px;
 }
-.container-test{
-    background-color: rgb(220,220,220);
-    width: 450px;
-    height: 630px;
-}
-.container-fix{
-    background-color: rgb(220,220,220);
-    width: 450px;
-    height: 630px;
-}
-.container-done{
-    background-color: rgb(220,220,220);
-    width: 450px;
-    height: 630px;
+.to-do-container span, .container-fix span, .container-done span{
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 40px 20px 30px 20px 30px 20px 120px 1fr;
 }
 .first-place{
     background-color: rgb(245,245,245);
@@ -65,13 +58,13 @@ h4{
 .text{
     position: relative;
     display: flex;
-    justify-content: center;
+    right: -8px;
     bottom: -20px;
-    font-size: 23px;
+    font-size: 21px;
 }
 .grid p{
    font-size: 20px;
-   margin-top: 4px;
+   margin-top: 5px;
 }
 .grid{
     margin-top: 50px;

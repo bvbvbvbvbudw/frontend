@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+</head>
+<style>
+    @media screen and (max-width:900px) and (min-width:600px) {
+        .container-main{
+            flex-direction: column;
+        }
+    }
+    @media screen and (max-width:600px) {
+        .container-main{
+            flex-direction: column;
+        }
+        .container-regis .grid{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+        .grid-pas{
+            grid-template-columns: 50px;
+            grid-template-rows: 30px 1fr;
+        }
+        .user-password-2{
+            margin-left:-200px;
+            margin-top: 20px;
+        }
+        .container-pers .grid{
+            grid-template-columns: 300px;
+            grid-template-rows: 1fr 1fr;
+        }
+        button{
+            margin-left: 340px;
+        }
+    }
+
+
+
+</style>
+<body><form>
+<div class="container-main">
+    <div class="container-regis">
+        <h3>Registration form</h3>
+            <div class="grid">
+                <img src="image/username.png"> 
+                <input id="user-name" type="text" placeholder="Username">
+                <img src="image/email.png">
+                <input id="user-email" type="email" placeholder="Email adress">
+                <img src="image/pswd.png">
+                    <div class="grid-pas">
+                        <input class="user-password-1" type="password" placeholder="Password">
+                        <input class="user-password-2" type="password" placeholder="Confirm password">
+                    </div>
+            </div>
+    </div>
+
+    <div class="container-pers">
+        <h3>Personal details</h3>
+        <form>
+            <div class="grid">
+                <input type="text" id="first-name" placeholder="First name">
+                <input type="text" id="last-name" placeholder="Last name">
+                <select id="select">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <input type="date">        
+            </div>
+        </form>
+    </div>
+</div>
+
+    <div class="agree">
+        <input type="checkbox">I want to recieve news and special offers<br>
+        <input type="checkbox">I agree with the Terms and Conditions
+    </div>
+    <button type="submit" value="Submit">Submit</button>
+</form>
+</body>
+</html>

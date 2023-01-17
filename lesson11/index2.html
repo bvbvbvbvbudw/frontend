@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .overlay{
+  position: absolute;
+  transition-duration: 2s;
+
+}
+input{
+    display: none;
+}
+a:hover input{
+    display: block;
+}
+.p-over{
+    position: absolute;
+}
+a:hover .overlay{
+    margin-top: -300px;
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+}
+
+</style>
+<body>
+        <a href="#">
+            <div class="overlay"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, illo?</p>
+            <input></div>Ссылка
+            </a>
+</html>

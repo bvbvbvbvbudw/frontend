@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+    background: yellow;
+}
+
+.choice-regis-1 {
+    height: 100vh;
+    width: 370px;
+    background: green;
+}
+
+.choice-regis-2{
+    height: 100vh;
+    width: 370px;
+    background: red;
+}
+.choice-regis-1, .choice-regis-2 {
+  display: none;
+}
+#choice-1:checked ~ .choice-regis-1,
+#choice-2:checked ~ .choice-regis-2{
+  display: block;
+}
+
+</style>
+<body>
+    <input type="radio" name="radio" id="choice-1" checked>
+<input type="radio" name="radio" id="choice-2">
+ 
+<div class="choice-regis-1">
+    <input>
+</div>
+
+<div class="choice-regis-2"> 
+<input type="image">
+</div>
+
+</body>
+</html>
