@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+.container-announcement{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1500px;
+}
+.announcement img{
+    position: relative;
+    top: 20px;
+    vertical-align: middle;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 110px;
+}
+.announcement{
+    background-color:rgba(204, 204, 204, 0.69);
+    
+    border-radius: 5px;
+    width: 800px;
+    height: 140px;
+
+    margin-top: 20px;
+    margin-left: 20px;
+
+    /* display: grid; */
+    grid-template-columns: 140px 630px 520px 520px 320px;
+    grid-template-rows:1fr 1fr;
+
+    z-index: -1;
+}
+.frame{
+    display: grid;
+    grid-template-columns: 560px 30px 120px 30px 720px;
+    grid-template-rows: 90px;
+}
+.right-side-announcement{
+    position: relative;
+    right: 0px;
+}
+.opis img{
+    margin-top: -45px;
+    margin-left: 0;
+    width: 15px;
+    height: 15px;
+}
+.opis{
+    text-decoration: none;
+    color: black;
+    width: 330px;
+    font-size: 22px;
+}
+.time{
+    width: 150px;
+    grid-column:1 ;
+    grid-row: 2;
+    font-size: 23px;
+    color: rgb(68, 66, 66);
+}
+.zp{
+    /* width: 270px; */
+    text-align: end;
+    font-size: 23px;
+}
+.feedback{
+    position: absolute;
+    right: 0px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+    border: 1px solid black;
+    background:#E6D7C6;
+    width: 205px;
+    height: 25px;
+    border-radius: 5px;
+    font-family: Arial,Helvetica,sans-serif;
+    transition-duration: 0.5s;
+    /* margin-top: 100px; */
+    
+}
+.feedback:hover{
+    background:#b9ab9c;
+}
+
+</style>
+<body>
+    <div class="announcement">
+        <img src="../image/Logotip-Citrus_1.png">
+        <div class="frame">
+
+            <a href="" class="opis">Ищем менеджера Цитрус(Черкассы<img src="../icons/Vector111.svg">)</a>
+            <p></p>
+
+            <p class="time">4 часа назад</p>
+
+
+            <a href="" class="like"></a>
+
+        </div>
+        <div class="right-side-announcement">
+            <p class="zp">от 10000 до 13000 грн</p>
+            <a href="" class="feedback">Откликнуться на вакансию</a>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -3,7 +3,7 @@
 }
 .image{
     list-style-type: none;
-    list-style-image: url(../icon/batman.png);
+    list-style-image: url(icon/batman.png);
     width: 20px; height: 20px;
 }
 #parent{

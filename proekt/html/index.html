@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        
+        </script>
     <link rel="shortcut icon" href="../image/image 10.png" type="image/x-icon">
     <script src="../js/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/styles.css">
@@ -9,11 +12,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WORKUA</title>
 </head>
+<style>
+    @media screen and (max-width:1024px) {
+        .header_text a, #heart{
+            display: none;
+        }
+        .icons{
+            display: grid;
+        }
+        #check-box{
+            display: grid;
+        }
+        .container-check-box a{
+            display: grid;
+            color: black;
+            text-decoration: none;
+            font-size: 30px;
+        }
+        #check-box img{
+            width: 40px;
+            height: 40px;
+        }
+        #language-icon{
+            display: flex;
+            /* text-align: end; */
+            justify-content: end;
+            position: absolute;
+            bottom: 150px;
+            right: 0px;
+            /* margin-top: 280px; */
+            /* align-items: flex-end; */
+        }
+        .search-div{
+            display: block;
+        }
+        .search-div a{
+            display: block;
+        }
+        .search{
+            display: none;
+        }
+        .announcement{
+            width: 100%;
+            grid-template-columns: 140px 0px 520px 520px 320px;
+
+        }
+        .feedback{
+            margin-left: 460px;
+        }
+        
+        .frame{
+            /* display: grid; */
+            grid-template-columns: 80px 30px 120px 90px 320px;
+            /* grid-template-rows: 90px; */
+        }
+    }
+    @media screen and (max-width:768px) {
+        .search-div{
+            margin-left: 80px;
+        }
+    }
+
+
+
+
+
+</style>
 <header>
     
     <div class="header">
         <div class="header_text">
+            <label id="check-box">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/hamburger-menu-icon.png" id="scr">
+            <input type="checkbox" name="choice-1" id="choice-1" onclick="Go()" />
+
+            <div class="container-check-box">
+                <a href="index.html"><b>Главная</b></a>
+                <a href="news.html"><b>Статьи и новости</b></a>
+                <a href="announcement.html"><b>Создать объявление</b></a>
+                <a href="review.html"><b>Мои отзывы</b></a>
+                <a href="favorites.html"><b>Мои избранные</b></a>
+                <a href="myacc.html"><b>Мой аккаунт</b></a>
+                <a href=""><b>Выйти с аккаунта</b></a>
+                <a href="" id="language-icon"><img src="../icons/image 14.svg"></a>
+                <a href=""></a>
+
+                    
+
+                    
+        
+            </div>
+        </label>
+
             <img src="../image/image 10.png" id="logo" alt="">
+            <div class="search-div">
+                <input type="search" id="search-table">
+                <a href="search.html"><img src="../icons/image 25.svg"></a>
+            </div>
             <a href="../html/index.html"><b>Главная</b></a>
             <p></p>            
             <a href="../html/news.html"><b>Статьи и новости</b></a>
@@ -22,25 +117,26 @@
             <p></p>
             <a href="review.html"><b>Мои отзывы</b></a>
             <p></p>
-            <img src="../icons/Vector-11.svg" alt="">
+            <img src="../icons/Vector-11.svg" alt="" id="heart">
             <a href="favorites.html"><b>Мои избранные</b></a>
             <p></p>
 
             <label class="search" for="inpt_search">
                 <input id="inpt_search" type="text">
             </label>
-
+        </div>
+        <div class="icons">
             <img src="../icons/image 14.svg" alt="">
-            
+        
             <a href="index.html" class="img">
             <img src="../icons/Vector-3.svg" alt=""></a>
             <a href="../html/login.html" class="img">
-            <img src="../icons/Vector-2.svg" alt=""></a>
+            <img src="../icons/Vector-2.svg" alt=""></a></div>
         </div>
-    </div>
+    
 </header>
 <body>
-
+<main>
 <div id="container-main-upp">
     <div id="container_main">       
          <p class="title-prof">Популярные профессии</p>
@@ -161,12 +257,15 @@
     
                 <p class="time">4 часа назад</p>
     
-                <p class="zp">от 10000 до 13000 грн</p>
     
                 <a href="" class="like"></a>
     
             </div>
-            <a href="" class="feedback">Откликнуться на вакансию</a>
+            <div class="right-side-announcement">
+                <p class="zp">от 10000 до 13000 грн</p>
+                <a href="" class="feedback">Откликнуться на вакансию</a>
+            </div>
+
         </div>
 
         <div class="announcement">
@@ -232,6 +331,7 @@
             <button>7</button>
             <button>8</button>
         </div>
+    </main>
 </body>
 <footer>
     <div class="footer-text">

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        let loading = document.querySelector('.loading');
+        let progress = 0;
+        let id = setInterval(frame, 10);
+        function frame() {
+          if (progress === 100) {
+            clearInterval(id);
+          } else {
+            progress++; 
+            loading.style.width = progress + '%'; 
+          }
+        }               
+        </script>
+    <meta charset="utf-8">
+    <title>Поиск работы</title>
+    <style type="text/css">
+
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin: 0 auto;
+            padding: 0;  }
+
+        #container { 
+            width: 960px; 
+            margin: 0 auto;  }
+
+        #header { 
+            background-color: #0099cc; 
+            height: 70px;  }
+
+        #logo { 
+            float: left;  }
+
+        #menu {   float: right;}
+
+        #menu ul li a {   color:#fff;}
+
+        #main_content {   padding-top: 20px;}
+
+        .job_listing {   margin-bottom: 15px;}
+
+        .job_listing h3{   color:#0099cc;}
+
+        .job_listing p{   line-height: 1.5em;}        
+
+    </style>                                                             </head>      <body>          <div id="container">              <div id="header">                  <div id="logo"><img src="logo.png" alt="" /></div>                  <div id="menu">                      <ul>                          <li><a href="#">Домой</a></li>                          <li><a href="#">О нас</a></li>                          <li><a href="#">Контакты</a></li>                      </ul>                  </div><!--end menu-->              </div><!--end header-->               <!--start main content-->              
+    <div id="main_content">     
+        <p class="loading"></p>             <!--start job listing-->                  <div class="job_listing">                      <h3><a href="#">Название вакансии</a></h3>                      <p><strong>Организация/компания :</strong><br/>                           Название организация/компания<br/>                           Адрес<br/>                           Телефон, Email<br/></p>                      <p><strong>Ответственные должность :</strong><br/>                           Нумеровать или охвучивать ответственные должность.</p >                      <p><strong > Для кого : </strong >< br / >                           Нумеровать / ochwuczivat 'dlya kogo'.</ p >                      <!--more job details-->                       <!--end more job details-->                  </div><!--end job listing-->                   <!--start job listing-->                  <!--more job listings-->                   <!--end more job listings-->              </div><!--end main content--->          </div ><!--end container--->      </body >      </html >

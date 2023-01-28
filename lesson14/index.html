@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="materialize.css">
+    <script src="materialize.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text-accent-2 teal pink-text">Hello wordl!</h1>
+    <div class="container">
+        <div class="row deep-purple lighten-2 white-text">
+            <div class="col s12 m6 l4 xl1">1</div>
+            <div class="col s12 m6 l4 xl1">2</div>
+            <div class="col s12 m6 l4 xl1">3</div>
+            <div class="col s12 m6 l4 xl1">4</div>
+            <div class="col s12 m6 l4 xl1">5</div>
+            <div class="col s12 m6 l4 xl1">6</div>
+            <div class="col s12 m6 l4 xl1">7</div>
+            <div class="col s12 m6 l4 xl1">8</div>
+            <div class="col s12 m6 l4 xl1">9</div>
+            <div class="col s12 m6 l4 xl1">10</div>
+            <div class="col s12 m6 l4 xl1">11</div>
+            <div class="col s12 m6 l4 xl1">12</div>
+        </div>
+    </div>
+    <div id="text-slider">
+        <script>  var slider = document.getElementById('test-slider');
+            noUiSlider.create(slider, {
+             start: [20, 80],
+             connect: true,
+             step: 1,
+             orientation: 'horizontal', // 'horizontal' or 'vertical'
+             range: {
+               'min': 0,
+               'max': 100
+             },
+             format: wNumb({
+               decimals: 0
+             })
+            });</script>
+    </div>
+</body>
+</html>

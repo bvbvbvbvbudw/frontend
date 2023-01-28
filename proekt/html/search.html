@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        
+        </script>
+    <link rel="shortcut icon" href="../image/image 10.png" type="image/x-icon">
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/search.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKUA</title>
+</head>
+<style>
+    @media screen and (max-width:1024px) {
+        .header_text a, #heart, .footer-text a{
+            display: none;
+        }
+        .icons{
+            display: grid;
+            margin-left: 830px;
+            justify-content: start;
+        }
+        #check-box{
+            display: grid;
+        }
+        .container-check-box a{
+            display: grid;
+            color: black;
+            text-decoration: none;
+            font-size: 30px;
+        }
+        #check-box img{
+            width: 40px;
+            height: 40px;
+        }
+        #language-icon{
+            display: flex;
+            /* text-align: end; */
+            justify-content: end;
+            position: absolute;
+            bottom: 150px;
+            right: 0px;
+            /* margin-top: 280px; */
+            /* align-items: flex-end; */
+        }
+        .search-test-div{
+            /* display: block; */
+            /* margin-top: 100px; */
+            /* position: relative; */
+            /* top: 80px */
+            /* margin-top: 30px; */
+        }
+        .search-test-div a{
+            /* display: block; */
+        }
+    }
+
+
+
+
+
+</style>
+<header>
+    
+    <div class="header">
+        <div class="header_text">
+            <label id="check-box">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/hamburger-menu-icon.png" id="scr">
+            <input type="checkbox" name="choice-1" id="choice-1" onclick="Go()" />
+
+            <div class="container-check-box">
+                <a href="index.html"><b>Главная</b></a>
+                <a href="news.html"><b>Статьи и новости</b></a>
+                <a href="announcement.html"><b>Создать объявление</b></a>
+                <a href="review.html"><b>Мои отзывы</b></a>
+                <a href="favorites.html"><b>Мои избранные</b></a>
+                <a href="myacc.html"><b>Мой аккаунт</b></a>
+                <a href=""><b>Тех. поддержка</b></a>
+                <a href=""><b>Условие пользование</b></a>
+                <a href=""><b>FAQ</b></a>
+                <a href=""><b>Выйти с аккаунта</b></a>
+                <a href="" id="language-icon"><img src="../icons/image 14.svg"></a>
+                <a href=""></a>
+            </div>
+        </label>
+
+            <img src="../image/image 10.png" id="logo" alt="">
+           
+            <a href="../html/index.html"><b>Главная</b></a>
+            <p></p>            
+            <a href="../html/news.html"><b>Статьи и новости</b></a>
+            <p></p>
+            <a href="announcement.html" id="new-add"><b>Создать объявление</b></a>
+            <p></p>
+            <a href="review.html"><b>Мои отзывы</b></a>
+            <p></p>
+            <img src="../icons/Vector-11.svg" alt="" id="heart">
+            <a href="favorites.html"><b>Мои избранные</b></a>
+            <p></p>
+
+            <!-- <label class="search" for="inpt_search">
+                <input id="inpt_search" type="text">
+            </label> -->
+        </div>
+        <div class="icons">
+            <img src="../icons/image 14.svg" alt="">
+        
+            <a href="index.html" class="img">
+            <img src="../icons/Vector-3.svg" alt=""></a>
+            <a href="../html/login.html" class="img">
+            <img src="../icons/Vector-2.svg" alt=""></a></div>
+        </div>
+    
+</header>
+<body>
+<main>
+    <div class="search-test-div">
+        <input type="search-test" id="search-table">
+        <a href="search.html"><img src="../icons/image 25.svg"></a>
+    </div>
+
+
+    <div class="main-container-">
+        <p>Популярные профессии</p>
+        <div class="double-container">
+            <div class="proffesion-container">
+            
+            <a href="">Водитель</a>
+            <a href="">Бармен</a>
+            <a href="">Юрист</a>
+            <a href="">Патрульный</a>
+            <a href="">IT</a>
+            <a href="">Строитель</a>
+            <a href="">Дизайнер</a>
+            <a href="">Медицина</a>
+            <a href="">Менеджер</a>
+            a
+            </div>
+            <p>Популярные города</p>
+            <div class="country-container">
+                
+                <a href="">Киев</a>
+                <a href="">Харьков</a>
+                <a href="">Одесса</a>
+                <a href="">Львов</a>
+                <a href="">Запорожье</a>
+                <a href="">Житомир</a>
+                <a href="">Винница</a>
+                <a href="">Кропивницкий</a>
+                a
+            </div>
+        </div>
+        <p>За компаниями</p>
+        <div class="company-container">
+            
+            <a href="">ROZETKA</a>
+            <a href="">SAMSUNG</a>
+            <a href="">Нова почта</a>
+            <a href="">WOG</a>
+            <a href="">EVA</a>
+            <a href="">UBER</a>
+            <a href="">BOLT</a>
+            <a href="">ЖЖУК</a>
+            <a href="">COMFY</a>
+            <a href="">АТБ</a>
+        </div>
+        <p>Для...</p>
+        <div class="for-container">
+            
+            <a href="">Студентов</a>
+            <a href="">Людей с инвалидностью</a>
+            <a href="">Дистанционно</a>
+            <a href="">Ветеранов</a>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="footer-text">
+        <p id="contact"><b>Обратная связь<br>+380505513578</b><br>
+            <img src="../icons/Vector (2).svg" alt="">
+            <img src="../icons/🦆 icon _facebook_.svg" alt="">
+            <img src="../icons/Vector-1 (2).svg" alt="">
+            <img src="../icons/🦆 icon _telegram plane_.svg" alt="">
+        </p>
+        <p></p>
+
+    <a href="#">
+        <div class="overlay"><p>Часто задаваемые вопросы</p>
+        </div><b>FAQ</b>
+        </a>
+        <p></p>
+
+        <a href="#">
+            <div class="overlay-1">
+                <p class="grid-inputs">Заполните форму чтобы продолжить
+                <input type="text" placeholder="Имя Фамилия" id="surname">
+                <input type="email" placeholder="E-MAIL">
+                <input type="text" placeholder="Тема...">
+                <input type="text" id="big-input" placeholder="Напишите о своей проблеме...">
+                <button type="submit">Отправить</button>
+            </p>
+            </div><b>Техническая поддержка</b>
+            </a>
+        <p></p>
+
+
+        <a href="temps.html"><b>Условие пользование</b></a>
+        <p></p>
+        <a href="offer.html"><b>Для предложений и идей</b></a>
+        <p></p>
+        <a href="temps.html"><b>Про нас</b></a>
+
+
+    </div>
+</main>
+</footer>
+</html>
