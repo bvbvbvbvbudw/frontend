@@ -1,0 +1,268 @@
+@indent:4vw;//отступ горизонтальный
+@indentV:1vh;//отступ вертикальный
+//переменные для цвета
+@bgDark:#ceb2ce;
+@fontDark:#928692;
+@bgLight:black(@bgDark, 60%);
+@fontLight:rgb(15, 1, 1);
+//переменная для шрифта
+@font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+//примесь для сброса стилей
+.reset(){
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+//примесь для темной темы
+.colorDark(){
+    background-color: @bgDark;
+    color:@bgLight;
+}
+//примесь для светлой темы
+.colorLight(){
+    background-color: @bgLight;
+    color:@fontDark;
+}
+//примесь для работы с flex
+.flex(@dir, @side){
+    display: flex;
+    flex-direction: @dir;
+    justify-content: @side;
+}
+//примесь для стилизации границы элемента
+.border(@col, @perc){
+    border: 2px solid @col;
+    border-radius: @perc 0;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    .reset();
+    .colorLight();
+    font-family: @font;
+    font-size: 18px;
+}
+header{
+    .flex(row, space-between);
+    .colorDark();
+    padding: @indentV @indent;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    a{
+        color: @fontLight;
+        text-decoration: none;
+        font-size: 2rem;
+    }
+    nav{
+        ul{
+            .reset();
+            li{
+                display: inline-block;
+                margin-left: @indentV;
+                a{
+                    display: block;
+                    font-size: 100%;
+                    padding: @indentV;
+                    text-transform: capitalize;
+                    .border(transparent, 20%);
+                    &:hover, &.active{
+                        .border(@fontLight, 20%);
+                    }
+                }
+            }
+        }
+    }
+}
+.home{
+    .flex(column, center);
+    height: 80vh;
+    padding: @indent;
+    background-image: url(images/bg_header.jpg);
+    background-size: cover;
+    background-position: center center;
+    div{
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        color: @fontLight;
+        text-shadow: 1px -1px 3px @fontDark;
+        position: relative;
+        z-index: 10;
+        font-size: 1.5rem;
+        h1{
+            text-transform: uppercase;
+        }
+        button{
+            background: none;
+            .border(@fontLight, 20%);
+            .colorDark();
+            padding: @indentV*2 @indentV*3;
+            text-transform: uppercase;
+            font-family: @font;
+            &:focus{
+                outline: transparent;
+                box-shadow: 1px -1px 3px @fontDark;
+            }
+        }
+    }
+}
+.services{
+    .reset();
+    .flex(column, center);
+    margin: @indentV @indent;
+    padding-top: @indent+@indentV;
+    h2{
+        text-align: center;
+    }
+    div{
+        .flex(row, space-around);
+        article{
+            .one:before{
+                content:"1. ";
+            }
+            .two:before{
+                content:"2. ";
+            }
+            .three:before{
+                content:"3. ";
+            }
+            img{
+                width: 80%;
+            }
+        }
+    }
+}
+.areas{
+    .colorDark();
+    .flex(column, space-around);
+    padding: @indent;
+    padding-top: 0;
+    h2{
+        text-align: center;
+    }
+    div{
+        .flex(row, space-around);
+        div{
+            .flex(column, space-around);
+            text-align: center;
+            .border(@fontLight, 20%);
+            padding: 2vw;
+            margin: 0 1%;
+            img{
+                width: 40%;
+                margin: 0 auto;
+                margin-bottom: 3vh;
+            }
+            strong{
+                font-size: 200%;
+            }
+        }        
+    }
+}
+.prices{
+    .flex(column, space-around);
+    margin: 0 @indent;
+    padding-top: @indent+@indentV;
+    h2{
+        text-align: center;
+    }
+    div{
+        .flex(row, center);
+        div{
+            .flex(column, space-around);
+            .border(@bgDark, 20%);
+            padding: @indentV*2;
+            margin: 0 1%;
+            &:hover{
+                .colorDark();
+                li{
+                    border-bottom: 1px solid @bgLight;
+                }
+                button{
+                    .colorLight();
+                }
+            }
+            h3{
+                text-align: center;
+            }
+            ul{
+                .reset();
+                li{
+                    text-align: center;
+                    margin: @indentV;
+                    padding-bottom: @indentV;
+                    border-bottom: 1px solid @bgDark;
+                }
+            }
+            button{
+                background: none;
+                .colorDark();
+                .border(@bgDark, 20%);
+                width: 60%;
+                margin: 0 auto;
+                margin-top: @indent;
+                padding: @indentV*2 @indentV;
+                text-transform: uppercase;
+                font-family: @font;
+                &:focus{
+                    outline: transparent;
+                }
+            }
+        }        
+    }
+}
+.contact{
+    .flex(column, space-around);
+    margin: 0 @indent;
+    padding-top: @indent+@indentV;
+    h2{
+        text-align: center;
+    }
+    form{
+        .flex(column, scenter);
+        width: 50%;
+        margin: 0 auto;
+        input, textarea{
+            background: none;
+            .colorLight();
+            .border(@bgDark, 20%);
+            margin-top: @indent;
+            padding: @indentV*3 @indentV;
+            font-size: 1rem;
+            &::placeholder{
+                color: @fontDark;
+                font-family: @font; 
+            }
+            &:focus{
+                outline: transparent;
+            }
+        }
+        input[type="submit"]{
+            background: none;
+            .colorDark();
+            .border(@bgDark, 20%);
+            width: 30%;
+            margin: 0 auto;
+            margin-top: @indent;
+            padding: @indentV*2 @indentV;
+            text-transform: uppercase;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            &:focus{
+                outline: transparent;
+            }
+        }
+    }
+}
+.footer{
+    .colorDark();
+    margin-top: @indent;
+    p, footer{
+        padding: @indentV @indent;
+        text-align: center;
+    }
+}

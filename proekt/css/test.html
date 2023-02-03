@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <style>
-
+/* 
 .container-announcement{
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
     margin-top: 20px;
     margin-left: 20px;
 
-    /* display: grid; */
+    display: grid;
     grid-template-columns: 140px 630px 520px 520px 320px;
     grid-template-rows:1fr 1fr;
 
@@ -68,7 +68,7 @@
     color: rgb(68, 66, 66);
 }
 .zp{
-    /* width: 270px; */
+    width: 270px;
     text-align: end;
     font-size: 23px;
 }
@@ -81,24 +81,73 @@
     justify-content: center;
     align-items: center;
     text-align: end;
-    border: 1px solid black;
-    background:#E6D7C6;
-    width: 205px;
-    height: 25px;
-    border-radius: 5px;
-    font-family: Arial,Helvetica,sans-serif;
-    transition-duration: 0.5s;
-    /* margin-top: 100px; */
+
+    margin-top: 100px;
     
 }
 .feedback:hover{
     background:#b9ab9c;
+} */
+.announcement{
+    background-color:rgba(204, 204, 204, 0.69);
+    
+    border-radius: 5px;
+    width: 90%;
+    height: 140px;
 }
-
+#logo_an{
+    width: 205px;
+    position: absolute;
+    top: 5%;
+}
+.opis img{
+    /* position: absolute; */
+    /* top: 20px; */
+    width: 10px;
+}
+.frame{
+    margin-left: 240px;
+    /* margin-top: 100px; */
+}
+.opis a{
+    width: 1px;
+    /* margin-top: 20px; */
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.right-side-announcement{
+    position: absolute;
+    right: 13%;
+    top: 0px;
+}
+.right-side-announcement p, .right-side-announcement a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.feedback{
+    border: 1px solid black;
+    background:#E6D7C6;
+    width: 205px;
+    height: 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: Arial,Helvetica,sans-serif;
+    transition-duration: 0.5s;
+}
+.feedback:hover{
+    background: #cfc2b3;
+}
+.time{
+    color: grey;
+    margin-top: 90px;
+    font-size: 19px;
+}
 </style>
 <body>
     <div class="announcement">
-        <img src="../image/Logotip-Citrus_1.png">
+        <img id="logo_an" src="../image/Logotip-Citrus_1.png">
         <div class="frame">
 
             <a href="" class="opis">Ищем менеджера Цитрус(Черкассы<img src="../icons/Vector111.svg">)</a>
