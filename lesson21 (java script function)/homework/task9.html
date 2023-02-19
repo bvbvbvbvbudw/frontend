@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        userSeconds = prompt("Введите секунды");
+
+        function userTime(a) {
+            userHour = 0;
+            userMinuts = 0;
+            userSeconds = a;
+            while (userSeconds >= 60) {
+                if (userSeconds >= 60) {
+                    userMinuts++;
+                    userSeconds -= 60;
+                }
+                if (userHour >= 24) {
+                    userHour -= 24;
+                }
+                if (userMinuts >= 60) {
+                    userHour++;
+                    userMinuts -= 60;
+                }
+            }
+            result = userHour + ":" + userMinuts + ":" + userSeconds;
+            return result;
+        }
+        result = userTime(userSeconds);
+        console.log(result);
+    </script>
+        <a href="task10.html">перейти к след заданию</a>
+        <a href="task8.html">перейти к пред заданию</a>
+        <p>условие : Написать функцию, которая принимает количество секунд,
+            переводит их в часы, минуты и секунды и возвращает в
+            виде строки «чч:мм:сс».</p>
+</body>
+
+</html>

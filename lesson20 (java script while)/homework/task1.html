@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        userNumber = prompt ("Введите диапазон (от/до) (слэш обязательный)")
+        parts = userNumber.split('/');
+        userOt = parseInt(parts[0]);
+        userDo = parseInt(parts[1])
+        sum = 0
+        i = userOt
+        for (i = userOt ; i <= userDo; i++){
+            sum += i
+        }
+        alert("Выбран диапазон от " + userOt + " до " + userDo + " Сума:" + sum)
+    </script>
+    <a href="task2.html">Перейти к след заданию</a>
+    <a href="task1.html">Перейти к пред заданию</a>
+    <p>Условие: Подсчитать сумму всех чисел в заданном пользователем
+        диапазоне.</p>
+</body>
+</html>

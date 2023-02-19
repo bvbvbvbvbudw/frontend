@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        userNumber = prompt ("Введите числа (первое/второе) (слэш обязательный)")
+        parts = userNumber.split('/');
+        numberFirst = parseInt(parts[0]);
+        numberSecond = parseInt(parts[1]);
+
+        while(numberSecond !== 0){
+            sum = numberFirst % numberSecond
+            numberFirst = numberSecond
+            numberSecond = sum
+        }
+        alert("Наибольший общий делитель: " + numberFirst)
+    </script>
+    <a href="task3.html">Перейти к след заданию</a>
+    <a href="task1.html">Перейти к пред заданию</a>
+    <p>Условие: Запросить 2 числа и найти только наибольший общий
+делитель</p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        alert("Загадайте число от 0 до 100")
+
+        high = 100
+        low = 0
+
+        while (true) {
+            userMid = Math.floor((high + low) / 2)
+            userNumber = prompt("Ваше число > " + userMid + ", < " + userMid + " или == " + userMid + "?")
+
+            if (userNumber === "==") {
+                alert("Ваше число: " + userMid);
+                break;
+            } else if (userNumber === ">") {
+                low = userMid + 1;
+            } else if (userNumber === "<") {
+                high = userMid - 1;
+            }
+        }
+    </script>
+
+<a href="task10.html">Перейти к след заданию</a>
+<a href="task9.html">Перейти к пред заданию</a>
+<p>Условие: Игра «Угадай число». Предложить пользователю загадать
+    число от 0 до 100 и отгадать его следующим способом:
+    каждую итерацию цикла делите диапазон чисел пополам,
+    записываете результат в N и спрашиваете у пользователя
+    «Ваше число > N,  N или == N?». В зависимости от того
+    что указал пользователь, уменьшаете диапазон. Начальный
+    диапазон от 0 до 100, поделили пополам и получили 50.
+    Если пользователь указал, что его число > 50, то изменили
+    диапазон на от 51 до 100. И так до тех пор, пока пользователь не выберет == N.</p>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        userMoney = prompt("Введите кол-во долларов")
+        userChoice = prompt ("Выберите в какой валюте? (euro ; uan ; azn (Писать как в скобках))")
+
+        const euro = 0.93
+        const uan = 36.72
+        const azn = 1.7
+
+        if (userChoice === "euro"){
+            alert(userMoney * euro + " euro")
+                if (userChoice === "uan"){
+                    alert(userMoney * uan + " uan")
+                }
+                    if (userChoice === "azn"){
+                    alert(userMoney * azn + " azn")
+                    } 
+            }  
+        else{
+            alert("Вы ввели неправильную или недоступную валюту")
+        }
+
+    </script>
+    <a href="task7.html">Перейти к след заданию</a>
+    <a href="task5.html">Перейти к пред заданию</a>
+</body>
+</html>

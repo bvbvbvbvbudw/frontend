@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        do{
+            userNumberFirst = parseInt(prompt("Введите первое число"))
+            userChoice = prompt("Что с ним сделать? (+; -; *; /)")
+            userNumberSecond =parseInt(prompt("Введите второе число"))
+
+            if(userChoice == "+"){
+                sum = parseInt(userNumberFirst + userNumberSecond) 
+            } else{
+                if(userChoice == "-"){
+                    sum = userNumberFirst - userNumberSecond
+                }
+            }
+
+            if(userChoice == "*"){
+                sum = userNumberFirst * userNumberSecond
+            } else{
+                if(userChoice == "/"){
+                    sum = userNumberFirst / userNumberSecond
+                }
+            }
+            alert(sum)
+            userRepeat = prompt ("Хотите ещё? (y/n)")
+        }while(userRepeat == "y")
+    </script>
+    <a href="task7.html">Перейти к след заданию</a>
+    <a href="task5.html">Перейти к пред заданию</a>
+    <p>Условие: Зациклить калькулятор. Запросить у пользователя 2 числа
+        и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока
+        пользователь не откажется
+    </p>
+</body>
+</html>

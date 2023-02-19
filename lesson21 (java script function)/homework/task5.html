@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        userNumber = +prompt("Введите число чтобы проверить совершенное оно или нет");
+
+        function userNumberResult(a) {
+            j = 0;
+
+            for (i = 1; i <= a / 2; i++) {
+                if (a % i === 0) {
+                    j += i;
+                }
+            }
+            result = j === a;
+            return result;
+        }
+        result = userNumberResult(userNumber);
+        result == true ? alert( userNumber + " совершенное число") : alert (userNumber + " не совершенное число");
+    </script>
+        <a href="task6.html">перейти к след заданию</a>
+        <a href="task4.html">перейти к пред заданию</a>
+        <p>условие : Написать функцию, которая проверяет, является ли переданное ей число совершенным. Совершенное число – это
+            число, равное сумме всех своих собственных делителей.</p>
+</body>
+
+</html>

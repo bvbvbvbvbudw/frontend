@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ymova
+        // for ( i=1; i<5; i++) { // цикл 
+            // vse dii`
+        // }
+
+        // цикл с проверкой умовы
+        // i = 4
+        // while (i < 5) {
+        //     console.log(i)
+        //     i++
+        // }
+
+        // do цикл с чем=то
+        // i = 0;
+        // do {
+        //     // vse dii`
+        //     console.log(i)
+        //     i++
+        // } while ( i < 5 )
+
+        // var1 = 4 // цикл пока два числа не будут одинаковые
+        // do {
+        //     var2 = Math.round(Math.random() * 10) 
+        //     console.log(var2)
+        //     i++
+        // } while (var2 != var1)
+        // console.log("iterations: " + i)
+
+        // do{ // делаем команду "сделай мне"
+        //     tmp = Math.random() * 10; // генерируем число от 0 до 10
+        //     console.log(tmp) // выводим число
+        //     var2 = Math.round(tmp , 0) // 0 округление до целых, если вводить другое число то число после запятой
+        //     console.log(var2)
+        //     i++ // добавляем к переменной +1
+        // } while (var2 != var1) // делаем цикл пока вар2 не будет равняться к вар1
+        // console.log("iterations: " + i)
+
+        // operators kotorie ostanavl while
+        // break
+        // continue
+
+        var1 = 4;
+        i = 1;
+
+        do {
+            tmp = Math.random() * 10;
+            console.log(tmp);
+            var2 = Math.round(tmp);
+            console.log(var2);
+
+            if (i === 2) {
+                continue; // цикл не останавливаем , но останаваливаем то что под низом
+            }
+
+            i++;
+
+            // if (i === 3) {
+            //     break; // когда нужно полностью выйти с цикла
+            // }
+        } while (var2 != var1)
+        console.log("a: " + i)
+
+    </script>
+</body>
+</html>

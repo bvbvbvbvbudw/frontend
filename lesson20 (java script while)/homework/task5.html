@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        positive = 0
+        negative = 0
+        zero = 0
+        even = 0
+        odd = 0
+    
+        for(i=0; i<10; i++){
+            userNumber = prompt("Введите в одну строку одно число чтобы определить положительное или нет, ноль или нет, четное или нет")
+
+            if(userNumber == 0){
+                zero++
+            }
+            if(userNumber >= 1){
+                positive++
+            } else{
+                negative++
+            }
+            if(userNumber % 2 === 0){
+                even++
+            } else{
+                odd++
+            }
+        }
+
+        alert("Положительных чисел: "+ positive + " Отрицательных чисел: " + negative + " Нулей: " + zero + " Четных чисел: " + even + " Нечетных чисел: " + odd);
+    </script>
+
+    <a href="task6.html">Перейти к след заданию</a>
+    <a href="task4.html">Перейти к пред заданию</a>
+    <p>Условие: Запросить у пользователя 10 чисел и подсчитать, сколько
+        он ввел положительных, отрицательных и нулей. При этом
+        также посчитать, сколько четных и нечетных. Вывести
+        статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.
+    </p>
+
+</body>
+</html>

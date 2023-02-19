@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        userHour = +prompt ("Введите часы");
+        userMinuts = +prompt ("Введите минуты");
+        userSeconds = +prompt ("Введите секунды");
+
+        function userTime(hour,minuts,seconds){
+            result = ((hour * 3600) + (minuts * 60) + seconds);
+            return result;
+
+        }
+        result = userTime(userHour,userMinuts,userSeconds);
+        alert(result + " секунд");
+    </script>
+        <a href="task9.html">перейти к след заданию</a>
+        <a href="task7.html">перейти к пред заданию</a>
+        <p>условие : Написать функцию, которая принимает часы, минуты и
+            секунды и возвращает это время в секундах.</p>
+</body>
+</html>

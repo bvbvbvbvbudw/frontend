@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        userNumber = prompt ("Введите пятиразрядное число:")
+
+
+        if(userNumber.toString().length === 5){
+            if ( userNumber[0] == userNumber[4] && userNumber[1] == userNumber [3]){
+            alert(userNumber + " является палиндромом")
+        } else{
+            alert(userNumber + " не является палиндромом")
+        }
+        }
+        else{
+            alert("Вы ввели неправильное число")
+        }
+    </script>
+    <a href="task6.html">Перейти к след заданию</a>
+    <a href="task4.html">Перейти к пред заданию</a>
+</body>
+</html>

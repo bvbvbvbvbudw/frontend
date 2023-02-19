@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        userNumber = prompt ("Введите число для факториала");
+
+        function factorial(a){
+            result = 1;
+            while(a){
+                result *= a--;
+            }
+            return result;
+        }
+        result = factorial(userNumber);
+        alert("Ваше число: " + result);
+    </script>
+    <a href="task3.html">перейти к след заданию</a>
+    <a href="task1.html">перейти к пред заданию</a>
+    <p>условие : Написать функцию, которая вычисляет факториал переданного ей числа</p>
+</body>
+</html>

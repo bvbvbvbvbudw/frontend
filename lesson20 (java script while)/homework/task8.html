@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        daysOfWeek = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+        i = 0
+
+        userChoice = true;
+        while(userChoice = "y"){
+            day = daysOfWeek[i]
+            userChoice = prompt ("Сегодня " + day + ". Хотите узнать следующий день? (y/n)")
+            if(userChoice === "n"){
+                break;
+            }
+            i = (i + 1) % daysOfWeek.length;
+        }
+    </script>
+        <a href="task9.html">Перейти к след заданию</a>
+        <a href="task7.html">Перейти к пред заданию</a>
+        <p>Условие: вывести день недели, и спросить пользователя хочет ли он увидеть след день
+        </p>
+</body>
+</html>

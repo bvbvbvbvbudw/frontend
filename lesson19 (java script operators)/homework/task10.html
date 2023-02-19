@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        userDate = prompt ("Введите дату : dd/mm/yyyy")
+
+        parts = userDate.split('/');
+        day = parseInt(parts[0]);
+        month = parseInt(parts[1]);
+        year = parseInt(parts[2]);
+
+        if( month == 2){
+            if (year % 4 == 0){
+                if(day >= 29){
+                    day = 1
+                    month = 3
+                } else {
+                    day++
+                }
+            } else {
+                if ( day >= 28){
+                    day = 1
+                    month = 3
+                }
+            }
+        }
+        if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10){
+            if(day == 31){
+                day = 1
+                month++
+            }
+        } else{
+            if(day == 30){
+                day = 1
+                month++
+            } else{
+                day++
+            }
+        }
+        if(month == 13){
+            year++
+        }
+        alert("Next date: " + day + "/" + month + "/" + year);
+
+
+
+
+
+    </script>
+</body>
+</html>

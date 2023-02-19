@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#fill {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  /* transition: 0.5s ease-in-out; */
+}
+#fill::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+#fill:hover::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(10);
+  opacity: 1;
+}
+
+
+#target {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  transition: background-color 1s;
+}
+
+#target:hover {
+  background-color: red;
+}
+
+
+
+</style>
+<body>
+    <!-- <div id="fill"></div> -->
+    <script>
+const fill = document.getElementById("fill");
+
+fill.addEventListener("mouseenter", function() {
+  fill.style.backgroundColor = "linear-gradient(to right, blue, red)";
+});
+
+fill.addEventListener("mouseleave", function() {
+  fill.style.backgroundColor = "green";
+});
+
+    </script>
+
+
+<div id="target">Hover over me!</div>
+<script>
+const target = document.getElementById("target");
+
+target.addEventListener("mousemove", function(e) {
+  const x = e.clientX - target.offsetLeft;
+  const y = e.clientY - target.offsetTop;
+  target.style.background = `radial-gradient(red, red), 
+                             radial-gradient(blue, blue, 
+                             at ${x}px ${y}px, blue)`;
+});
+
+target.addEventListener("mouseout", function() {
+  target.style.background = `radial-gradient(blue, blue)`;
+});
+
+</script>
+
+</body>
+</html>

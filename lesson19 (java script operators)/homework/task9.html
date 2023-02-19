@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        first = prompt ("1. Сколько различных целых решений уравнения x^2 + 2x + 1 = 0 имеется? (0 ; 4 ; 2)")
+        second = prompt ("2. Какое число является суммой кубов двух целых чисел?(210 ; 153 ; 235)")
+        third = prompt ("3. Какой коэффициент при x^2 в уравнении (x+1)(x+2)(x+3) = 0? (-1 ; 2 ; 3) ")
+        userScore = 0
+
+        if (first === "0"){
+            userScore += 2
+        }
+        if ( second === "153"){
+            userScore += 2
+        }
+        if ( third === "-1"){
+            userScore += 2
+        }
+
+        if (userScore == 0){
+            alert("Ваше кол-во баллов: " + userScore + " Ваш IQ: его нет")
+        }
+        if (userScore == 2){
+            alert("Ваше кол-во баллов: " + userScore + " Ваш IQ: довольно низкий")
+        }
+        if(userScore == 4){
+            alert("Ваше кол-во баллов: " + userScore + " Ваш IQ: средний")
+        }
+        if(userScore == 6){
+            alert("Ваше кол-во баллов: " + userScore + " Ваш IQ: Высокий ")
+        }
+    </script>
+    <a href="task10.html">Перейти к след заданию</a>
+    <a href="task8.html">Перейти к пред заданию</a>
+</body>
+</html>

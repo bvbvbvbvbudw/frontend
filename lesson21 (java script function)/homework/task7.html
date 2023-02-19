@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        userHour = +prompt("Введите часы");
+        userMinuts = +prompt("Введите минуты");
+        userSeconds = +prompt("Введите секунды");
+
+        function userTime(hour, minuts, seconds) {
+
+            if( hour == ""){
+                hour = "00";
+            }
+            if( minuts == ""){
+                minuts = "00";
+            }
+            if( seconds == ""){
+                seconds = "00";
+            }
+
+            if (hour >= 24) {
+                hour -= 24;
+            }
+            if (minuts >= 60) {
+                hour++;
+                minuts -=60;
+            }
+            if (seconds >= 60) {
+                minuts++;
+                seconds -= 60;
+            }
+            result = hour + ":" + minuts + ":" + seconds;
+            return result;
+        }
+        result = userTime(userHour, userMinuts, userSeconds);
+        console.log(result);
+    </script>
+        <a href="task8.html">перейти к след заданию</a>
+        <a href="task6.html">перейти к пред заданию</a>
+        <p>условие : Написать функцию, которая принимает время (часы, минуты, секунды) и выводит его на экран в формате «чч:мм:сс».
+            Если при вызове функции минуты и/или секунды не были
+            переданы, то выводить их как 00.</p>
+</body>
+
+</html>

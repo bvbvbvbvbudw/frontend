@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        userPrice = prompt("Ваша сумма покупки?")
+        if(userPrice >= 200){
+            if ( userPrice >= 200 && userPrice <= 300){
+            sum = ( parseInt((userPrice / 100) * 3))
+            price = userPrice - sum
+            alert ( "Стоимость со скидкой :" + price + " Скидка: " + sum)
+        }
+        if ( userPrice > 300 && userPrice < 500){
+            sum = ( parseInt((userPrice / 100) * 5))
+            price = userPrice - sum
+            alert ( "Стоимость со скидкой: " + price + " Скидка: " + sum)
+        }
+        if ( userPrice > 500){
+            sum = ( parseInt((userPrice / 100) * 7))
+            price = userPrice - sum
+            alert ( "Стоимость со скидкой: " + price + " Скидка: " + sum)
+        }
+        } else{
+            alert("Окончательная стоимость: " + userPrice + " Скидка: меньше 200 не применяется")
+        }
+
+    </script>
+    <a href="task8.html">Перейти к след заданию</a>
+    <a href="task6.html">Перейти к пред заданию</a>
+</body>
+</html>

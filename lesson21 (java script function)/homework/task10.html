@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        firstDate = prompt("Введите первую дату (чч:мм:сс)");
+        secondDate = prompt("Введите вторую дату(чч:мм:сс)");
+
+        function userDate(userFirstDate, userSecondDate) {
+
+            parstfirst = userFirstDate.split(":");
+            parstsecond = userSecondDate.split(":");
+
+            hoursfirst = parseInt(parstfirst[0]);
+            minutsfirst = parseInt(parstfirst[1]);
+            secondsfirst = parseInt(parstfirst[2]);
+
+            hourssecond = parseInt(parstsecond[0]);
+            minutssecond = parseInt(parstsecond[1]);
+            secondssecond = parseInt(parstsecond[2]);
+
+            resultfirst = ((hoursfirst * 3600) + (minutsfirst * 60) + secondsfirst);
+            resultsecond = ((hourssecond * 3600) + (minutssecond * 60) + secondssecond);
+            sum = resultfirst - resultsecond;
+
+            userHour = 0;
+            userMinuts = 0;
+            userSeconds = sum;
+            while (userSeconds >= 60) {
+                if (userSeconds >= 60) {
+                    userMinuts++;
+                    userSeconds -= 60;
+                }
+                if (userHour >= 24) {
+                    userHour -= 24;
+                }
+                if (userMinuts >= 60) {
+                    userHour++;
+                    userMinuts -= 60;
+                }
+            }
+
+            result = userHour + ":" + userMinuts + ":" + userSeconds + " разница";
+            return result;
+        }
+        
+        result = userDate(firstDate,secondDate);
+        alert(result);
+    </script>
+        <a href="task10.html">перейти к след заданию</a>
+        <a href="task9.html">перейти к пред заданию</a>
+        <p>условие : Написать функцию, которая считает разницу между датами.
+            Функция принимает 6 параметров, которые описывают 2
+            даты, и возвращает результат в виде строки «чч:мм:сс». При
+            выполнении задания используйте функции из предыдущих 2-х заданий: сначала обе даты переведите в секунды,
+            узнайте разницу в секундах, а потом разницу переведите
+            обратно в «чч:мм:сс».</p>
+</body>
+
+</html>

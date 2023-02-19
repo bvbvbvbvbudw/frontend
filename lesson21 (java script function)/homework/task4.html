@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        firstNumber = prompt("Введите ширину прямоугольника(или квадрата)");
+        secondNumber = prompt("Введите длинну прямоугольника");
+        
+        function userNumber(a,b){
+            result = 0;
+            if(a > 0 && b > 0){
+                result = a * b;
+                return result;
+            } else{
+                result = a * 4;
+                return result;
+            }
+        }
+        result = userNumber(firstNumber, secondNumber);
+        alert(result + " см² площадь");
+    </script>
+        <a href="task5.html">перейти к след заданию</a>
+        <a href="task3.html">перейти к пред заданию</a>
+        <p>условие : Написать функцию, которая принимает длину и ширину
+            прямоугольника и вычисляет его площадь. Если в функцию
+            передали 1 параметр, то она вычисляет площадь квадрата.</p>
+</body>
+</html>
