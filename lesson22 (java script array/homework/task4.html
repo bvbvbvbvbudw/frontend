@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        academy = [
+            { name: "Аудитория 200", seats: 15, faculty: "Факультет информационных технологий" },
+            { name: "Аудитория 201", seats: 19, faculty: "Факультет экономики" },
+            { name: "Аудитория 202", seats: 14, faculty: "Факультет экономики" },
+            { name: "Аудитория 203", seats: 18, faculty: "Факультет менеджмента" },
+            { name: "Аудитория 204", seats: 13, faculty: "Факультет менеджмента" },
+            { name: "Аудитория 205", seats: 10, faculty: "Факультет информационных технологий" },
+            { name: "Аудитория 206", seats: 20, faculty: "Факультет экономики" },
+        ]
+        printAcedemy(academy);
+        printAcedemyFaculty(academy);
+        printAcedemyAuditories(academy);
+        printAcedemySortSeats(academy);
+        printAcedemySortAlphabet(academy);
+
+
+
+        function printAcedemy(list) {
+            console.log("Список аудиторий:");
+            items = [];
+            for (i = 0; i < list.length; i++) {
+                item = list[i];
+                items.push(item.name + "| кол-во посад. мест: " + item.seats + "| Факультет: " + item.faculty);
+            }
+            console.log(items.join("\n"));
+        }
+
+        function printAcedemyFaculty(list) {
+            console.log("Список аудиторий для указанного факультета:");
+            items = [];
+
+            for (i = 0; i < list.length; i++) {
+                item = list[i];
+                if ("Факультет экономики" === item.faculty) {
+                    items.push(item.name + "| кол-во посад. мест: " + item.seats + "| Факультет: " + item.faculty);
+                }
+            }
+            console.log(items.join("\n"));
+        }
+
+        function printAcedemyAuditories(list) {
+            console.log("Список аудиторий которые подходят для менеджмента и мест больше 13:");
+            items = [];
+
+            for (i = 0; i < list.length; i++) {
+                item = list[i];
+                if (item.faculty == "Факультет менеджмента") {
+                    if (item.seats >= 13) {
+                        items.push(item.name + "| кол-во посад. мест: " + item.seats + "| Факультет: " + item.faculty);
+                    }
+                }
+            }
+            console.log(items.join("\n"));
+        }
+
+        function printAcedemySortSeats(list) {
+            console.log("Список аудиторий по убыванию:");
+            list.sort((a, b) => b.seats - a.seats);
+            items = [];
+            for (i = 0; i < list.length; i++) {
+                item = list[i];
+                items.push(item.name + "| кол-во посад. мест: " + item.seats + "| Факультет: " + item.faculty);
+            }
+            console.log(items.join("\n"));
+        }
+
+
+        function printAcedemySortAlphabet(list) {
+            console.log("Список аудиторий по алфавитному порядку")
+            list.sort((a, b) => a.faculty.localeCompare(b.faculty)); // честно, намучался с сортировкой этой , и спустя часа 3-4 получилось всё
+            items = [];
+            for (i = 0; i < list.length; i++) {
+                item = list[i];
+                items.push(item.name + "| кол-во посад. мест: " + item.seats + "| Факультет: " + item.faculty);
+            }
+            console.log(items.join("\n"));
+        }
+
+    </script>
+
+    <a href="task5.html">перейти к след заданию</a>
+    <a href="task3.html">перейти к пред заданию</a>
+    <p>
+        условие:Создать массив аудиторий академии. Объект-аудитория состоит из названия, количества посадочных мест (от
+        10 до 20) и
+        названия факультета, для которого она предназначена.
+        Написать несколько функций для работы с ним.
+        1. Вывод на экран всех аудиторий.
+        2. Вывод на экран аудиторий для указанного факультета.
+        3. Вывод на экран только тех аудиторий, которые подходят для
+        переданной группы. Объект-группа состоит из названия,
+        количества студентов и названия факультета.
+        4. Функция сортировки аудиторий по количеству мест.
+        5. Функция сортировки аудиторий по названию (по алфавиту).
+    </p>
+</body>
+
+</html>

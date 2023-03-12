@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document#bd0dbd</title>
+</head>
+<style>
+    #hint1 {
+        height: 40px;
+        width: 50px;
+        background-color: transparent;
+        color: white;
+    }
+
+    #hint2 {
+        height: 40px;
+        width: 50px;
+        background-color: transparent;
+        color: white;
+    }
+
+    #btn1 {
+        position: relative;
+        top: 100px;
+    }
+
+    #btn2 {
+        position: relative;
+        top: 30px;
+        right: 0px;
+    }
+
+    .container {
+        display: flex;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div>
+            <button id="btn1">Button1</button>
+            <p id="hint1">Tool Tip1</p>
+        </div>
+
+        <div>
+            <button id="btn2">Button2</button>
+            <p id="hint2">Tool Tip1</p>
+        </div>
+
+        <div>
+            <a href="task5.html">Перейти к пред заданию</a>
+            <a href="task7.html">Перейти к след заданию</a>
+
+            <p>Условие: Создать html-страницу с несколькими кнопками.
+                При наведении на кнопку, должна появляться подсказка с текстом. По умолчанию – подсказка появляется
+                сверху от кнопки. Но
+                если она не помещается сверху от кнопки, тогда отображается снизу.
+            </p>
+        </div>
+
+
+    </div>
+    <script>
+
+        // если делать через display:block; то он вообще не появляется, понять не могу что надо сделать
+
+        btn1 = document.getElementById('btn1');
+        btn2 = document.getElementById('btn2');
+        hint1 = document.getElementById('hint1');
+        hint2 = document.getElementById('hint2')
+
+        coordsBtn1 = btn1.getBoundingClientRect()
+        coordsBtn2 = btn2.getBoundingClientRect()
+
+        btn1.addEventListener('mouseover', function (e) {
+            if (coordsBtn1.y > hint1.offsetHeight) {
+                hint1.style.marginTop = coordsBtn1.y - 75 + 'px';
+                hint1.style.marginLeft = (coordsBtn1.x - 0) + 'px'
+                hint1.style.backgroundColor = '#bd0dbd'
+            } else {
+                hint1.style.marginLeft = (coordsBtn1.x - 70) + 'px'
+                hint1.style.marginTop = coordsBtn1.y + 0 + 'px';
+                hint1.style.backgroundColor = '#bd0dbd'
+
+            }
+        })
+        btn1.addEventListener('mouseout', function (e) {
+            hint1.style.backgroundColor = 'transparent'
+
+        })
+
+        btn2.addEventListener('mouseover', function (e) {
+            if (coordsBtn2.y > hint2.offsetHeight) {
+                hint2.style.marginRight = (coordsBtn2.x - 70) + 'px'
+                hint2.style.marginTop = coordsBtn2.y - 75 + 'px';
+                hint2.style.backgroundColor = '#bd0dbd'
+            } else {
+                hint2.style.marginLeft = (coordsBtn2.x - 70) + 'px'
+                hint2.style.marginTop = coordsBtn2.y + 0 + 'px';
+                hint2.style.backgroundColor = '#bd0dbd'
+
+            }
+        })
+        btn2.addEventListener('mouseout', function (e) {
+            hint2.style.backgroundColor = 'transparent'
+
+        })
+    </script>
+</body>
+
+</html>

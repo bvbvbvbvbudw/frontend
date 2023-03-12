@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+  <script>
+
+
+      class HtmlElement {
+        name;
+        content;
+        isSimple = false;
+
+        attributes = [];
+        styles = [];
+        children = [];
+
+        constructor(name, content, isSimple) {
+          this.name = name;
+          this.isSimple = isSimple;
+          if (isSimple !== true) {
+            this.content = content;
+          }
+        }
+
+        addAttribute(name, value) {
+          this.attributes[name] = value;
+        }
+
+          addStyle(name, value) {
+              this.styles[name] = value;
+          }
+
+          getHtml() {
+            // відкрили тег
+            let result = "<";
+            // приліпили назву тегу
+            result += this.name;
+
+              Object.keys(this.attributes).forEach(key => {
+                  // console.log(key, array[key]);
+                  result += " " + key + "=\"" + this.attributes[key] + "\"";
+                  // result += ' ' + key + '="' + array[key] + '"';
+              });
+
+
+              let countOfArray = Object.keys(this.styles).length;
+              console.log("countOfArray: " + countOfArray);
+              if (countOfArray > 0) {
+                  result += ' style="';
+                  Object.keys(this.styles).forEach(key => {
+                      result += key + ': ' + this.styles[key] + ';';
+                  });
+                  result += '"';
+              }
+
+            // закриваєм формування тега
+            result += ">";
+
+
+            // і якщл це не одиночний тег - вкладаєм контент
+            // і закриваєм тег
+            if (this.isSimple !== true) {
+                result += this.content;
+
+                this.children.forEach(function (child) {
+                    result += child.getHtml();
+                });
+
+                result += "</" + this.name + ">";
+            }
+
+            return result;
+          }
+
+          addChildElement(element) {
+              this.children.unshift(element);
+          }
+          addChildElementToEnd(element) {
+              this.children.push(element);
+          }
+      }
+
+
+      // element = new HtmlElement("img", "", true);
+      div = new HtmlElement("div", "Some text", false);
+      // console.log(element);
+      div.addAttribute("id", "firstDiv");
+      div.addAttribute("class", "firstDivClass secondClass");
+      console.log(div);
+      console.log(div.attributes);
+
+      // array = element.attributes;
+      // Object.keys(array).forEach(key => {
+      //     console.log(key, array[key]);
+      // });
+
+      div.addStyle("color", "red");
+      div.addStyle("background-color", "gray");
+
+
+      img = new HtmlElement("img", "", true);
+    //   img.addAttribute("src", "img_3.jpg");
+
+      span = new HtmlElement("span", "span text", false);
+
+      div.addChildElement(img);
+      div.addChildElementToEnd(span);
+      div.addChildElementToEnd(img);
+
+      console.log(div);
+      console.log(div.getHtml());
+
+      document.write(div.getHtml())
+
+
+  </script>
+
+
+</body>
+</html>

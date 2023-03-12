@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="userNumber"></p>
+    <script>
+        // workArry = []
+        // for (i = 0; i < 10; i++) {
+        //     workArry[i] = Math.round(Math.random() * 10)
+        // }
+        // console.log(workArry);
+
+        // function userNumberFunction(a) {
+        //     for (i = 0; i < a.length; i++) {
+        //         document.getElementById("userNumber").innerHTML += (i + 1) + " : " + a[i] + "<br> ";
+
+        //     }
+        // }
+        // userNumberFunction(workArry)
+
+
+        workArry = []
+        for (i = 0; i < 50; i++) {
+            workArry[i] = Math.round(Math.random() * 10)
+        }
+        console.log(workArry);
+        function userNumberFunctionOdd(a){
+            for (i = 0; i < a.length; i++) {
+                if(a[i] % 2 == 0){
+                    document.getElementById("userNumber").innerHTML += (i + 1) + " : " + a[i] + "<br> ";
+                }
+            }
+        }
+        userNumberFunctionOdd(workArry)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <div style="background-color: #f8860b;width: 200px;height: 100px;">
+        Random number:
+        <br>
+        <br>
+        <span id="number" style="font-weight: bold;"></span>
+        <br>
+        <br>
+        <button id="generate">Generate random number</button>
+    </div>
+    <hr>
+    <div style="background-color: #85f80b;width: 200px;height: 100px;">
+        Random number:
+        <br>
+        <br>
+        <span id="number2" style="font-weight: bold;"></span>
+        <br>
+        <br>
+        <button id="generate2">Generate random number</button>
+    </div>
+
+    <script>
+        // Way 1
+        ////////////////////////////////////////////////
+        generate.onclick = function () {
+            tmp = Math.round(100 * Math.random());
+            number.innerHTML = tmp;
+        };
+        // Way 2
+        ////////////////////////////////////////////////
+        div = document.getElementById("generate2");
+        div.addEventListener("click", function () {
+            tmp = Math.round(100 * Math.random());
+            document.getElementById("number2").innerHTML = tmp;
+        });
+  ////////////////////////////////////////////////
+    </script>
+
+</body>
+
+</html>

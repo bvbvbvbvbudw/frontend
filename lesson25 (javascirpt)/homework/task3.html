@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="employeesTable"></p>
+    <script>
+        class Employee {
+            constructor(salary, place, name) {
+                this.salary = salary;
+                this.place = place;
+                this.name = name;
+            }
+
+            getHtml() {
+                let html = "<table>\n";
+                html += "<tr><th>name</th><th>place</th><th>salary</th></tr>\n";
+
+                for (let i = 0; i < this.employees.length; i++) {
+                    html += "<tr><td>" + this.employees[i].name + "</td><td>" + this.employees[i].place + "</td><td>" + this.employees[i].salary + "</td></tr>"
+                }
+                html += "</table>"
+                return html
+            }
+        }
+
+        let employees = [
+            { name: "Bob Smith", place: "manager", salary: 6000 },
+            { name: "John Doe", place: "developer", salary: 4000 },
+            { name: "Jane Smith", place: "developer", salary: 4500 },
+            { name: "Alice Johnson", place: "secretary", salary: 3000 },
+        ]
+
+        let empTable = new Employee("", "", "");
+        empTable.employees = employees;
+        document.getElementById("employeesTable").innerHTML = empTable.getHtml();
+    </script>
+    <a href="task2.html">Перейти к пред заданию</a>
+    <a href="task4.html">Перейти к след заданию</a>
+
+    <p>Реализовать класс Employee, описывающий работника, и создать массив работников банка.
+        Реализовать класс EmpTable для генерации html кода таблицы
+        со списком работников банка. Массив работников необходимо
+        передавать через конструктор, а получать html код с помощью
+        метода getHtml().
+        Создать объект класса EmpTable и вывести на экран результат
+        работы метода getHtml().</p>
+</body>
+
+</html>

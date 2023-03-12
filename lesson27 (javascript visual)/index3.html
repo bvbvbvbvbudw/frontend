@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PZ</title>
+</head>
+
+<body>
+    <p>
+        Дано select з вибором статі людини і форми з полями. При виборі статі:
+        - Якщо чол, то один тип полів,
+        - Якщо жін, то інтий тип полів.
+    </p>
+    <form action="">
+        <select name="" id="vybor">
+            <option value="1">Чол</option>
+            <option value="2">Жін</option>
+        </select>
+        <input class="man" type="text" name="bear" placeholder="bear">
+        <input class="man" type="text" name="wisky" placeholder="wisky">
+        <input class="woman" type="text" name="martini" placeholder="martini">
+        <input class="woman" type="text" name="wine" placeholder="wine">
+    </form>
+    <script>
+        let select = document.getElementById('vybor');
+        // Виклик функції при загрузкі сторінки
+        document.addEventListener("DOMContentLoaded", function (event) {
+            mainLogic();
+        });
+        // Виклик функції при зміні селектора
+        select.addEventListener('change', function () {
+            mainLogic();
+        });
+        // Функція вибору потрібних полів
+        function mainLogic() {
+            let woman = document.getElementsByClassName('woman');
+            let man = document.getElementsByClassName('man');
+            if (select.value == 1) {
+                // console.log('mans');
+                // console.log(document.getElementsByClassName('woman'));
+                for (let i = 0; i < woman.length; i++) {
+                    woman[i].style.display = 'none';
+                }
+                for (let i = 0; i < man.length; i++) {
+                    man[i].style.display = 'block';
+                }
+                // document.getElementsByClassName('woman').style.display = 'none';
+            }
+            if (select.value == 2) {
+                for (let i = 0; i < woman.length; i++) {
+                    woman[i].style.display = 'block';
+                }
+                for (let i = 0; i < man.length; i++) {
+                    man[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

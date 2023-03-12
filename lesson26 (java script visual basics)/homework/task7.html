@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text-normal {
+            font-weight: normal;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+
+        .open-close {
+            display: none;
+        }
+
+        .open {
+            display: block;
+        }
+
+        .click-for-open {
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>This PC</li>
+        <ul>
+            <li class="click-for-open text-normal">Local Disk (C:)</li>
+            <ul class="open-close">
+                <li>Program Files</li>
+                <li>Users</li>
+                <li>Windows</li>
+            </ul>
+            <li class="click-for-open text-normal">Local Disk (D:)</li>
+            <ul class="open-close">
+                <li>New Folder 1</li>
+                <li>New Folder 2</li>
+                <li>New Folder 3</li>
+            </ul>
+            <li>Local Disk (E:)</li>
+        </ul>
+    </ul>
+
+    <div>
+        <a href="task6.html">Перейти к пред заданию</a>
+        <a href="task8.html">Перейти к след заданию</a>
+
+        <p>Условие: Создать html-страницу с несколькими кнопками.
+            При наведении на кнопку, должна появляться подсказка с текстом. По умолчанию – подсказка появляется
+            сверху от кнопки. Но
+            если она не помещается сверху от кнопки, тогда отображается снизу.
+        </p>
+    </div>
+
+    <script>
+        const openClose = document.querySelectorAll('.open-close');
+        const clickForOpen = document.querySelectorAll('.click-for-open');
+
+        function openAndClose() {
+            for (let i = 0; i < clickForOpen.length; i++) {
+                clickForOpen[i].addEventListener('click', function () {
+                    const sibling = this.nextElementSibling;
+
+                    for (let j = 0; j < openClose.length; j++) {
+                        if (openClose[j] !== sibling) {
+                            openClose[j].classList.remove('open');
+                            this.classList.remove('text-bold');
+                            this.classList.add('text-normal');
+                        } else {
+                            this.classList.add('text-bold');
+                        }
+                    }
+
+                    sibling.classList.toggle('open');
+                    this.classList.toggle('text-bold');
+                    this.classList.toggle('text-normal');
+                });
+            }
+        }
+
+        openAndClose();
+    </script>
+</body>
+
+</html>

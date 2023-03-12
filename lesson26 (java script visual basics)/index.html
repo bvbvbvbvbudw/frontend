@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        background-color: navy;
+        height: 50px;
+        width: 100px;
+    }
+</style>
+
+<body>
+    <div onclick="alert('div have been clicked')">click me !</div>
+    <a href="#" onclick="alert('link have been clicked')">click me ! a</a>
+    <div onclick="console.log('dsdawda')">click me !</div>
+    <a href="#" onclick="clickFunction()">click me function</a>
+
+    <div class="clickableDiv">click me class</div>
+
+
+    <script>
+        element = document.getElementById("clickableDiv")
+        if (element) {
+            element.onclick = function () {
+                alert("div have been clicked")
+            }
+        } else {
+            console.log("element not found(")
+        }
+
+
+
+        function clickFunction() {
+            alert("function click!")
+        }
+
+        clickableDiv.onclick = function () {
+            alert("div have been clicked")
+        }
+
+
+        clickableDiv.addEventListener("click", function () {
+            alert("div have been clicked")
+        })
+    </script>
+
+
+
+
+    <ul>
+        <li><a class="nav" id="home">home</a></li>
+        <li><a class="nav" id="about">about</a></li>
+        <li><a class="nav" id="contacts">contacts</a></li>
+    </ul>
+
+
+    <div id="clickableDiv" onclick="alert('Click clickableDiv')"></div>
+    <br>
+    <div id="clickableDiv2"></div>
+    <br>
+    <div id="clickableDiv3"></div>
+    <script>
+        clickableDiv2.onclick = function (element) {
+            alert('DIV clickableDiv2 have been clicked')
+        }
+
+        clickableDiv3.addEventListener("click",
+            function () {
+                alert('DIV clickableDiv3 have been clicked')
+            })
+    </script>
+</body>
+
+</html>

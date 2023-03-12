@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main-container {
+        display: flex;
+        gap: 5px;
+        border: 2px solid grey;
+        width: 210px;
+        border-radius: 30px;
+    }
+
+    #main-container div {
+        border: 2px solid black;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    #next{
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border:none;
+        border-left: 2px solid black;
+    }
+</style>
+
+<body>
+    <div id="main-container">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+
+        <button id="next">Next</button>
+    </div>
+
+    <div>
+        <a href="task3.html">Перейти к пред заданию</a>
+        <a href="task5.html">Перейти к след заданию</a>
+
+        <p>Условие: Создать html-страницу со светофором и кнопкой, которая
+            переключает светофор на следующий цвет.
+        </p>
+    </div>
+    <script>
+        circles = document.querySelectorAll('#main-container div')
+        next = document.getElementById('next')
+        current = 2
+
+        next.addEventListener('click', function () {
+            circles[current].style.backgroundColor = 'transparent'
+            current = (current + 1) % circles.length
+            circles[current].style.backgroundColor = nextColor()
+            console.log(circles[0])
+        })
+
+        // 1 вариант по очереди цвета
+        // function nextColor() {
+        //     if (current === 0) {
+        //         return 'red';
+        //     } else if (current === 1) {
+        //         return 'yellow';
+        //     } else {
+        //         return 'green';
+        //     }
+        // }
+
+        // 2 вариант как светофор
+        function nextColor() {
+            if (current === 0) {
+                return 'red';
+            } else if (current === 1) {
+                circles[0].style.backgroundColor = 'red'
+                return 'yellow';
+            } else {
+                circles[0].style.backgroundColor = 'transparent'
+                return 'green';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

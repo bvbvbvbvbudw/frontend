@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    class ExtentedArray extends Array {
+        getString(separator) {
+            return this.join(separator);
+        }
+
+        getHtml(tagName) {
+            let string = "";
+            let startTag = "<" + tagName + ">";
+            let endTag = "</" + tagName + ">";
+
+            if (tagName === "li") {
+                string = "<ul>";
+            }
+
+            this.forEach(function (element) {
+                string += startTag + element + endTag;
+            });
+
+            if (tagName === "li") {
+                string += "</ul>";
+            }
+
+            return string;
+        }
+    }
+
+    myArray = new ExtentedArray();
+    myArray.push("www");
+    myArray.push("yyy");
+    myArray.push("xxx");
+
+    console.log(myArray);
+    console.log(myArray.getString(","));
+    console.log(myArray.getString("-"));
+    console.log(myArray.getString(" "));
+    console.log(myArray.getHtml("div"));
+    console.log(myArray.getHtml("li"));
+</script>
+
+</body>
+</html>

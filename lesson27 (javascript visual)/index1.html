@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+
+    <p>
+        Дано textarea і при введені тексту внизу потрибно
+        зображати доступний залишок символів.
+        Максимум по символам = 255.
+    </p>
+
+    <textarea id="textarea">
+
+    </textarea>
+
+    <p id="symbolsLeft">
+
+    </p>
+</body>
+<script>
+    // Make a limit for a symbols in an input. Show how much symbols is left
+
+    // Max lenght: 255;
+
+    const maxLenght = 12;
+    // знаходим потрібний елемент
+    let textArea = document.getElementById("textarea");
+    console.log(textArea);
+
+    textArea.oninput = function ()
+    // document.getElementById("textarea").oninput = function()
+    {
+        // обрізаєм лишнє
+        textAreaValue = textArea.value.trim();
+        console.log(textAreaValue.length);
+        // перевіряємо довжину текста на умови задачі
+        if (textAreaValue.length > maxLenght) {
+            // якщо текст більше ніж дозволено - обрізаєм
+            console.log(textAreaValue.substring(0, maxLenght - 1));
+            textArea.value = textAreaValue.substring(0, maxLenght - 1);
+            console.log(textArea.value);
+        }
+        // формуєм рядок із повідомленням скільки залишку
+        let output = "symbols left " + (maxLenght - textAreaValue.length);
+        if (maxLenght - textAreaValue.length <= 0)
+            output = "no symbols left";
+
+        document.getElementById("symbolsLeft").innerHTML = output;
+    }
+</script>
+
+</html>

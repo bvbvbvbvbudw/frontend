@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    div p {
+        font-size: 20px;
+    }
+    #buttons{
+        background-color:rgb(219, 181, 205);
+        border: 1px solid black;
+        width: 90px;
+        height: 20px;
+    }
+    input{
+        border: 2px solid black;
+        background-color: rgb(255, 255, 255);
+    }
+</style>
+
+<body>
+    <div>
+        <p>Enter your name(name can`t contain digits):</p>
+        <input type="text" id="inputTest">
+        <button id="buttons">click me</button>
+    </div>
+
+    <div>
+        <a href="task1.html">Перейти к пред заданию</a>
+        <a href="task2.html">Перейти к след заданию</a>
+
+        <p>Условие: Создать html-страницу для ввода имени пользователя.
+            Необходимо проверять каждый символ, который вводит пользователь.
+            Если он ввел цифру, то не отображать ее в input.</p>
+    </div>
+    <script>
+        input = document.getElementById('inputTest');
+        button = document.getElementById('buttons');
+
+        buttons.onclick = function () {
+            var val = document.getElementById('inputTest').value;
+            array = '';
+
+            for (i = 0; i < val.length; i++) {
+                if (isNaN(parseInt(val[i]))) {
+                    array += val[i];
+                }
+            }
+            input.value = array;
+        }
+
+    </script>
+</body>
+
+</html>

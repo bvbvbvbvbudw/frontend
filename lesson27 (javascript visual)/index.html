@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .active {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li class="active">Book #1</li>
+        <li class="">Book #2</li>
+        <li class="">Book #3</li>
+        <li class="">Book #4</li>
+        <li class="">Book #5</li>
+        <li class="">Book #6</li>
+        <li class="">Book #7</li>
+    </ul>
+
+    <script>
+        // знаходим всі потрібні елементи
+        tags = document.getElementsByTagName("li");
+        array = Array.from(tags);
+
+        // кожному елементу навішуємо слухача за подією кліка
+        array.forEach(function (tag) {
+            tag.addEventListener("click", function () {
+                // передаєм слухачу яку функцію викликати
+                // і набір параметрів для функції
+                activeBook(tag, array);
+            });
+        });
+
+        function activeBook(currentTag, array) {
+            // гасим всі бекграунди
+            array.forEach(function (tag) {
+                tag.setAttribute("class", "");
+            });
+            // а поточному (вибраному) елементу назначаєм бекграунд
+            currentTag.setAttribute("class", "active");
+        }
+    </script>
+</body>
+
+</html>

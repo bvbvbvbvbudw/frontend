@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<span id="span"></span>
+
+
+<script>
+
+    // Задание 1
+    // Реализовать класс PrintMaсhine, которой состоит из:
+    // ■ размерашрифта;
+    // ■ цветашрифта;
+    // ■ семействашрифта;
+    // ■ метода print(), который принимает текст и печатает его соответствующим шрифтом с помощью document.write().
+    // Создать объект такого класса и продемонстрировать работу метода.
+
+    class PrintMaсhine {
+        // public attributes
+        // fontSize = 36;
+        // fontColor = "grey";
+        // fontFamily = "Inter";
+        
+        // private attributes
+        #fontSize = 36;
+        #fontColor = "grey";
+        #fontFamily = "Inter";
+
+        set fontSize(fontSize) {
+            this.#fontSize = fontSize;
+        }
+        set fontColor(fontColor) {
+            this.#fontColor = fontColor;
+        }
+        set fontFamily(fontFamily) {
+            this.#fontFamily = fontFamily;
+        }
+
+        // constructor(fontSize, fontColor, fontFamily) {
+        //   this.fontSize = fontSize;
+        //   this.fontColor = fontColor;
+        //   this.fontFamily = fontFamily;
+        // }
+
+        print(text) {
+            // 1 варіант
+            // var span = document.getElementById("span");
+            // span.style.fontSize = this.fontSize + "px";
+            // span.style.fontFamily = this.fontFamily;
+            // span.style.color = this.fontColor;
+            // span.innerHTML = text;
+
+            // 2 варіант
+            // document.write('<span id="span">' + text + "</span>");
+            // var span = document.getElementById("span");
+            // span.style.fontSize = this.fontSize + "px";
+            // span.style.fontFamily = this.fontFamily;
+            // span.style.color = this.fontColor;
+
+            // 3.1 варіант // public attributes
+            // document.body.style.fontFamily = this.fontFamily;
+            // document.body.style.fontSize = this.fontSize + "px";
+            // document.body.style.color = this.fontColor;
+            // document.write(text);
+            
+            // 3.2 варіант // private attributes
+            document.body.style.fontFamily = this.#fontFamily;
+            document.body.style.fontSize = this.#fontSize + "px";
+            document.body.style.color = this.#fontColor;
+            document.write(text);
+        }
+    }
+
+
+    // machine = new PrintMaсhine(30, "red", "Arial");
+    machine = new PrintMaсhine();
+    machine.fontColor = "red";
+    machine.fontSize = "36";
+    machine.fontFamily = "Times New Roman";
+
+
+    machine.print("Some text of news!" + "<br>" + "Але чогось не вистачає?" + "<br>");
+
+
+</script>
+
+</body>
+</html>

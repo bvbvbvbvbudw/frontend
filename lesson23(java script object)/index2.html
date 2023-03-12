@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // // объектно ориентированние чототам
+        // // инкапсуляция
+        // // наследование
+        // // полиморфизм
+
+        // // class Car {
+        // //     color;
+        // //     fuelType;
+        // //     engineType;
+
+        // // }
+        // // function someFunction(color, fuelType, engineType) {
+        // //     result = null;
+        // //     // logic
+        // //     return;
+        // // }
+
+
+        // class Car {
+        //     color;
+        //     fuelType;
+        //     engineType;
+        //     tank;
+
+        //     constructor(color, fuelType, engineType, tank) {
+        //         this.color = color; // обращаемся только к цвету 
+        //         this.fuelType = fuelType;
+        //         this.engineType = engineType;
+        //         this.tank = tank
+        //     }
+
+        //     // console.log(car);
+
+        //     // method`s
+        //     run() {
+        //         if (this.tank === 0) {
+        //             return false;
+        //         }
+        //         return true;
+        //         // return false
+        //     }
+        //     drive() {
+        //         if (this.run()) {
+        //             return true;
+        //         }
+        //         return false;
+        //     }
+
+
+        // }
+        // car = new Car("red", "diesel", "2.0", 40);
+        // console.log("run(): " + car.run())
+        // console.log("drive(): " + car.drive())
+
+        // car2 = new Car("red", "diesel", "2.0", 0);
+        // console.log("run(): " + car2.run())
+        // console.log("drive(): " + car2.drive())
+
+        // // colorr = prompt ("color");
+        // // typee = prompt ("type");
+        // // enginee = prompt("engine")
+        // // tankk = +prompt ("tank")
+
+        // // car3 = new Car(colorr, typee, enginee, tankk);
+        // // console.log("run(): " + car3.run())
+        // // console.log("drive(): " + car3.drive())
+        // // console.log(car3)
+
+
+
+
+        // class Mercedes extends Car{
+        //     //
+        // }
+
+        // class Lanos extends Car{
+
+        // }
+        // mers = new Mercedes("black");
+        // console.log(mers)
+        // lanos = new Lanos;
+        // console.log(lanos)
+        function someFunction(param1, param2) {
+            result = null;
+            // logic
+            return result;
+        }
+
+        // інкапсуляція
+        // наслідування
+        // поліморфізм
+
+        class Car {
+            color = "white";
+            fuelType = "petrol";
+            engineType = "1.5";
+            tank = 0;
+            #gasolineUse = 5; // 5/100
+            #id;
+
+            //undefined
+            constructor(color, fuelType, engineType, tank) {
+                if (color) {
+                    if (typeof color !== "string") {
+                        // alert("WTF????");
+                        throw new Error("WTF????");
+                    }
+                    this.color = color;
+                }
+                if (fuelType) {
+                    this.fuelType = fuelType;
+                }
+                if (engineType) {
+                    this.engineType = engineType;
+                }
+                if (tank) {
+                    this.tank = tank;
+                }
+
+                this.#id = Math.floor(Math.random() * 10e6);
+
+                // this.color = color;
+                // this.fuelType = fuelType;
+                // this.engineType = engineType;
+                // this.tank = tank;
+            }
+            run() {
+                if (this.tank === 0) {
+                    return false;
+                }
+                return true;
+            }
+            drive() {
+                if (this.run()) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            get id() {
+                return this.#id;
+            }
+
+            get gasolineUse() {
+                return this.#gasolineUse;
+            }
+
+            set gasolineUse(value) {
+                this.#gasolineUse = value;
+            }
+
+            set tank(value) {
+                this.tank = value;
+            }
+        }
+
+        // car = new Car();
+        car = new Car("red", "diesel", "2.0", 0);
+        console.log(car);
+        console.log("run(): " + car.run());
+        console.log("drive(): " + car.drive());
+
+        car2 = new Car("red", "diesel", "2.0", 3);
+        console.log(car2);
+        console.log("run(): " + car2.run());
+        console.log("drive(): " + car2.drive());
+
+
+        // car3 = new Car(
+        //     prompt("color"),
+        //     prompt("fuelType"),
+        //     prompt("engineType"),
+        //     prompt("tank"),
+        // );
+        // console.log(car3);
+        // console.log("run(): " + car3.run());
+        // console.log("drive(): " + car3.drive());
+
+        class Mercedes extends Car {
+            //
+        }
+        class Lanos extends Car {
+            run() {
+                if (this.tank === 0) {
+                    return "pchyhhhhhhhhh";
+                }
+                return "guuuuuuuuuuuuu";
+            }
+        }
+
+        console.log("----------");
+        mers = new Mercedes("black");
+        console.log(mers);
+        console.log("mers id: " + mers.id);
+        console.log("mers color: " + mers.color);
+        console.log("mers gasolineUse: " + mers.gasolineUse);
+
+        mers.gasolineUse = 7;
+        mers.color = "35";
+        console.log("mers color: " + mers.color);
+        mers.tank = 35;
+        mers.id = 351111111111;
+        console.log("mers id: " + mers.id);
+
+        console.log("mers gasolineUse: " + mers.gasolineUse);
+        console.log("mers tank: " + mers.tank);
+        console.log(mers.run());
+        console.log(mers.drive());
+
+
+        console.log("----------");
+        lanos = new Lanos();
+        lanos.tank = 10;
+        console.log(lanos);
+        console.log(lanos.run());
+        console.log(lanos.drive());
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #forMan {
+        display: none;
+    }
+
+    #forWoman {
+        display: none;
+    }
+</style>
+
+<body>
+    <form action="">
+        <select name="" id="select">
+            <option value="1" selected>man</option>
+            <option value="2">woman</option>
+        </select>
+
+        <div id="forMan">
+            <input type="text" name="bear" placeholder="bear">
+            <input type="text" name="wisky" placeholder="wisky">
+
+        </div>
+
+        <div id="forWoman">
+            <input type="text" name="martini" placeholder="martini">
+            <input type="text" name="wine" placeholder="wine">
+        </div>
+
+    </form>
+    <script>
+        select = document.getElementById("select");
+        forMan = document.getElementById('forMan');
+        forWoman = document.getElementById('forWoman');
+
+        document.addEventListener('DOMContentLoader', function (event) {
+            select.value = '1'
+        })
+
+        select.addEventListener('change', function () {
+            if (select.value == "1") {
+                forWoman.style.display = 'none';
+                forMan.style.display = 'block';
+            } else {
+                forMan.style.display = 'none';
+                forWoman.style.display = 'block';
+            }
+        })
+    </script>
+</body>
+
+</html>

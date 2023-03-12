@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+</head>
+
+<body>
+
+    <h1 id="title">title</h1>
+
+    <p id="date" style="font-size: 12px">date</p>
+
+    <p id="message">message</p>
+
+    <p id="tags">tags</p>
+
+    <script>
+
+        // Реализовать класс, описывающий новость (заголовок, текст, массив тегов, дата публикации).
+        // В классе необходимо реализовать один метод print, который выводит всю информацию в таком виде,
+        // как на рисунке 1.
+        // Обратите внимание на то, как выводится дата:
+        //     ■ если с даты публикации прошло менее дня, то выводится«сегодня»;
+        //     ■ если с даты публикации прошло менее недели, то выво- дится «N дней назад»;
+        //     ■ востальныхслучаях,полнаядатавформате«дд.мм.гггг».
+
+        class Post {
+            title;
+            message;
+            #tags = [];
+            publishedAt;
+
+            constructor(title, message, publishedAt) {
+                this.title = title;
+                this.message = message;
+                this.publishedAt = publishedAt;
+            }
+
+            set tags(tags) {
+                this.#tags = tags;
+            }
+
+            print() {
+                // шукаємо елементи на сторінці
+                let tagOfTitle = document.getElementById("title");
+                let tagOfMessage = document.getElementById("message");
+                let tagOfTags = document.getElementById("tags");
+                let tagOfDate = document.getElementById("date");
+
+                // передаємо значення знайденим тегам
+                // console.log(this.#tags)
+                tagOfTitle.innerText = this.title;
+                tagOfMessage.innerHTML = this.message;
+                tagOfTags.innerText = this.#tags.join(" ");
+                tagOfDate.innerText = this.#getStringOfDate();
+            }
+
+            #getStringOfDate() {
+                let string = "";
+                let date = new Date(this.publishedAt);
+                let currentDate = new Date();
+                let diffTime = Math.abs(currentDate - date);
+                let diffDays = (Math.ceil(diffTime / (1000 * 60 * 60 * 24)) - 1);
+                // console.log(diffDays + " days");
+
+                if (date.toLocaleDateString() === currentDate.toLocaleDateString()) {
+                    // if (diffDays == 0) {
+                    string = "today";
+                }
+                if (diffDays > 0 && diffDays < 7) {
+                    string = diffDays + " days ago";
+                }
+                if (diffDays >= 7) {
+                    string = date.toLocaleDateString();
+                }
+
+                return string;
+            }
+        }
+
+        let post = new Post(
+            prompt("Title of news"),
+            prompt("Here is a long text"),
+            prompt("2023-02-27")
+        );
+
+        tagString = prompt("Set tags divide by space");
+        // #1 #2 #3 #4
+        post.tags = tagString.split(" ");
+        // post.tags = ["#tag1", "#tag2", "#tag3"];
+        post.print();
+
+    </script>
+
+</body>
+
+</html>

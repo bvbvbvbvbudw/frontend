@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #pool {
+        width: 900px;
+        height: 600px;
+    }
+
+    img {
+        position:absolute;
+        top: 0px;
+        left: 0px;
+        width: 100px;
+        transition: .5s;
+    }
+    .pool{
+        width: 900px;
+        height: 600px;
+    }
+</style>
+
+<body>
+    <div id="pool">
+        <img src="image/depositphotos_20060343-stock-photo-soccer-field-or-football-field.jpg" class="pool" alt="">
+        <img src="image/football_PNG1080.png" id="ball" alt="">
+    </div>
+
+    <div>
+        <a href="task2.html">Перейти к пред заданию</a>
+        <a href="task4.html">Перейти к след заданию</a>
+
+        <p>Условие: Создать html-страницу с футбольным полем, которое занимает всю ширину и высоту экрана, и мячом
+            размером 100 на 100
+            пикселей.
+            Сделать так, чтобы при клике мышкой по полю, мяч плавно
+            перемещался на место клика. Учтите: необходимо, чтобы центр
+            мяча останавливался именно там, где был совершен клик мышкой.
+            Также предусмотрите, чтобы мяч не выходил за границы поля.</p>
+    </div>
+    <script>
+        pool = document.getElementById('pool');
+        ball = document.getElementById('ball');
+
+        pool.addEventListener('click', function (e) {
+            coordsX = e.pageX - ball.offsetWidth / 2;
+            coordsY = e.pageY - ball.offsetWidth / 2; // немного подсмотрел как отцентрировать 
+            ball.style.top = coordsY + "px";
+            ball.style.left = coordsX + "px";
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        varArray = [
+            1,
+            4,
+            6,
+            9,
+            3,
+        ];
+        console.log(typeof varArray);
+        console.log(varArray);
+
+        // varArray2 = varArray.sort();
+        varArray2 = varArray.sort((a, b) => b - a) // a - b
+        console.log(varArray2)
+
+        varArray3 = varArray2.reverse()
+        console.log(varArray3)
+
+        varArray3.forEach(function (item) {
+            console.log(item);
+        }); // перебирается каждый элемент с которым можно работать по отдельности, расскладывает короче
+
+        for (i = 0; i < varArray3.length; i++) {
+            console.log(varArray3)
+        }
+
+        varArray4 = [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9],
+            [10,11,12],
+            [13,14,15],
+        ]; // вывод никак не поменяеться 
+        varArray4[3].sort()
+
+        varArray4.forEach(function(item){
+            for (i = 0; i < varArray4.length; i++) {
+            console.log(item[i])
+        }
+        })
+
+
+        
+    </script>
+</body>
+
+</html>

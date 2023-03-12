@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        varArray = [];
+        console.log(typeof varArray);
+        console.log(varArray);
+
+        console.log("=------------------")
+
+        varArray2 = ["dwa", 2, "three"];
+        console.log(typeof varArray2);
+        console.log(varArray2);
+
+        console.log("=------------------")
+
+        varArray3 = [];
+
+        varArray3[0] = "str 0";
+        varArray3[1] = "str 1";
+        varArray3[2] = "str 2";
+        varArray3[20] = "str 20";
+
+        console.log(typeof varArray3);
+        console.log(varArray3);
+
+        console.log("=------------------")
+
+        varArray4 = [];
+
+        varArray4[0] = "str 0";
+        varArray4[1] = "str 1";
+        varArray4["str2"] = "str 2";
+        varArray4["str20"] = "str 20";
+        varArray4["str20"] = varArray3;
+
+        console.log(typeof varArray4);
+        console.log(varArray4);
+
+        console.log("=------------------")
+
+        varArray5 = {
+            0: "string0",
+            1: "string1",
+            2: "string2",
+            "subArray": {
+                0: "string0",
+                1: "string1",
+                2: "string2",
+            }
+        };
+
+        console.log(typeof varArray4);
+        console.log(typeof varArray5.prototype)
+        console.log(varArray4);
+
+        console.log("--------------------")
+
+        console.log(typeof Math);
+        console.log("ceil " + Math.ceil(1.2))
+        console.log("fl " + Math.floor(1.2))
+        console.log("floor " + Math.floor(1.5))
+        console.log("round " + Math.round(1.4))
+        console.log("round " + Math.round(1.5))
+        console.log("random " + Math.random());
+        console.log("random " + Math.round(Math.random() * 10))
+        console.log("max " + Math.max(1,2))
+        console.log("min " + Math.min(1,2))
+        console.log("fround" + Math.fround(3))
+    </script>
+</body>
+
+</html>

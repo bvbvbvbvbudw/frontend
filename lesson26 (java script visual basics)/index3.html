@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #myDiv {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: grey;
+    }
+</style>
+
+<body>
+    <div id="myDiv">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+
+    </div>
+    <script>
+        div = document.getElementById('myDiv');
+        div.addEventListener('mousemove', function (e) {
+
+            document.getElementById('span1').innerHTML = 'x: ' + e.pageX
+            document.getElementById('span2').innerHTML = 'y: ' + e.pageY
+        })
+        div.addEventListener('mousedown', function (e) {
+            console.log(e)
+
+            document.getElementById('span3').innerHTML = 'button: ' + e.button
+        })
+    </script>
+</body>
+
+</html>

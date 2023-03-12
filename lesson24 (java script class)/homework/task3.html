@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class cssClass {
+            constructor(nameCss) {
+                this.nameCss = nameCss;
+                this.style = [];
+            }
+            setStyle(property, value) {
+                const style = property + value
+                this.style.push(style)
+            }
+
+            removeStyle(property) {
+                this.styles = this.stylesfilter(style => !style.includes(property))
+            }
+            getCss() {
+                const styles = this.styles
+                return this.name + styles
+            }
+        }
+
+        const myClass = new cssClass('my-class');
+        myClass.setStyle('color', 'red');
+        console.log(myClass.getCss())
+    </script>
+</body>
+
+</html>

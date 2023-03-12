@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p {
+        font-size: 30px;
+    }
+</style>
+
+<body>
+
+
+    <script>
+        class ExtendedDate extends Date {
+
+            toText() {
+                const format = { day: "2-digit", month: "long" };
+                const parts = this.toLocaleString("ua-UA", format).split(" ");
+                const day = parts[0];
+                const month = parts[1];
+                return day + month;
+            }
+
+            isLeapYear() {
+                const year = this.getFullYear()
+                if (year % 4 === 0) {
+                    return " високосный год"
+                } else {
+                    return " не високосный год"
+                }
+            }
+            futureOrNot() {
+                const now = new Date();
+                if (this.getTime() >= now.getTime()) {
+                    return " будущее"
+                } else {
+                    return " прошлое"
+                }
+                return this.getTime() >= now.getTime();
+            }
+            nextDate() {
+                const nextDate = new Date(this);
+                nextDate.setDate(nextDate.getDate() + 1);
+                const format = { day: "2-digit", month: "long" };
+                const parts = nextDate.toLocaleString("ua-UA", format).split(" ");
+                const day = parts[0];
+                const month = parts[1]
+                return day + month;
+            }
+            printText() {
+                const date = this.toText();
+                const leapOrNot = this.isLeapYear();
+                const future = this.futureOrNot();
+                const next = this.nextDate();
+                document.write('<p>' + "Текущая дата: " + date + " | " + leapOrNot + " | " + future + "| след дата: " + next + '</p>')
+            }
+        }
+
+        output = new ExtendedDate()
+        output.printText()
+    </script>
+    <a href="task1.html">Перейти к пред заданию</a>
+    <a href="task3.html">Перейти к след заданию</a>
+
+    <p>Реализуйте класс ExtendedDate, унаследовав его от стандартного класса Date и добавив следующие возможности:
+        ■ метод для вывода даты (числа и месяца) текстом;
+        метод для проверки – это прошедшая дата или будущая
+        (если прошедшая, то метод возвращает false; если будущая или текущая, то true);
+        ■ метод для проверки – високосный год или нет;
+        ■ метод, возвращающий следующую дату.
+        Создайте объект класса ExtendedDate и выведите на экран
+        результаты работы новых методов.</p>
+</body>
+
+</html>

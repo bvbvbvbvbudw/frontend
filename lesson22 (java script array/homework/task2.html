@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        shopReceipt = [
+            { name: "Хлеб", quantity: 2, price: 23 },
+            { name: "Молоко", quantity: 2, price: 27 },
+            { name: "Масло", quantity: 3, price: 40 },
+            { name: "Вода", quantity: 5, price: 22 },
+            { name: "Торт", quantity: 1, price: 80 },
+            { name: "Пакет", quantity: 3, price: 2 },
+        ]
+
+        printList(shopReceipt);
+        sumList(shopReceipt);
+        maxPrice(shopReceipt);
+        averagePrice(shopReceipt);
+
+        function printList(list) {
+            console.log("Чек:");
+            items = [];
+
+            for (i = 0; i < list.length; i++) {
+                item = list[i];
+                items.push("- " + item.name + "| кол-во " + item.quantity + "| цена за одну " + item.price + " грн" + " | сумма: " + (item.quantity * item.price));
+            }
+            console.log(items.join("\n"));
+        }
+
+        function sumList(list) {
+            sum = [];
+
+            for (i = 0; i < list.length; i++) {
+                item = list[i];
+                sum.push(item.quantity * item.price);
+            }
+            sumPrice = sum.reduce((accumulator, currentValue) => accumulator + currentValue, 0); // пришлось в интернете полазить чтобы найти сумму в массиве
+            console.log("В сумме: " + sumPrice + " грн");
+        }
+
+        function maxPrice(list) {
+            sum = [];
+
+            for (i = 0; i < list.length; i++) {
+                item = list[i];
+                sum.push(item.quantity * item.price);
+            }
+            // for (i = 1; i < list.length; i++) {
+            //     if(list[i].price > max.price){
+            //         max = list[i]
+            //     }
+            //     return max
+            // }
+            // чтобы найти максимальнон значение надо Math.max()
+            // потом с этого значения сопоставить с позицией в чеке
+            // вывести на экран
+            // maxPriceNumber = Math.max(...sum);
+            // sum = list.name[i]
+            // // maxPriceNumber = list[i]
+            // console.log(list[4].name)
+            // maxItemName = sum[i]
+            // list[i] = sum[i]
+            // console.log(list[i])
+            // короче тут я сам не понял что я сделал, но оно начало работать, а то только и писало undefined вместо названия дорогого продукта
+            maxPriceNumber = Math.max(...sum);
+            positionsMaxPrice = sum.indexOf(maxPriceNumber);
+            console.log("Самая дорогая ваша покупка: " + list[positionsMaxPrice].name + " " + maxPriceNumber + " грн");
+        }
+
+        function averagePrice(list) {
+            sum = [];
+
+            for (i = 0; i < list.length; i++) {
+                item = list[i];
+                sum.push(item.quantity * item.price);
+            }
+            sumPrice = sum.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            sumPriceUser = Math.round(sumPrice / i);
+            console.log("Средняя цена покупок в чеке: " + sumPriceUser + " грн");
+        }
+    </script>
+
+    <a href="task3.html">перейти к след заданию</a>
+    <a href="task1.html">перейти к пред заданию</a>
+    <p>
+        условие:Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара,
+        количества и цены за
+        единицу товара. Написать следующие функции.
+        1. Распечатка чека на экран.
+        2. Подсчет общей суммы покупки.
+        3. Получение самой дорогой покупки в чеке.
+        4. Подсчет средней стоимости одного товара в чеке.
+    </p>
+</body>
+
+</html>

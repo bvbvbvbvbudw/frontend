@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        shoppingList = [
+            { name: "Яблоки", quantity: 2, bought: false },
+            { name: "Молоко", quantity: 1, bought: true },
+            { name: "Хлеб", quantity: 3, bought: false },
+            { name: "Сыр", quantity: 1, bought: false },
+            { name: "Жижа", quantity: 0, bought: false }
+        ]; // делаем массив с списком покупок
+
+        function printList(list) {
+            console.log("Список покупок:");
+            boughtItems = [];
+            notBoughtItems = []; // создаем два пустых массива для того чтобы отсортировать купленные и некупленные покупки
+
+            for (let i = 0; i < list.length; i++) { // делаем цикл для проверки всех значений массива
+                item = list[i];
+                if (item.bought) {
+                    boughtItems.push("- " + item.name + " кол-во " + item.quantity); // .push добавляет к массиву новое значение
+                } else {
+                    notBoughtItems.push("- " + item.name + " кол-во " + item.quantity);
+                }
+            } // делаем сортировку куплен или нет
+
+            console.log(notBoughtItems.concat(boughtItems).join("\n")); // выводим список с сортировкой \n новая строка .concat добавляет новый массив к уже существующему
+        }
+
+        function addItem(list, item, quantity) {
+            for (i = 0; i < list.length; i++) {
+                if (list[i].name === item) {
+                    list[i].quantity += quantity;
+                    return;
+                }
+            } // функция добавления нового элемента продукта если он отсутствует в списке
+
+            list.push({ name: item, quantity: quantity, bought: false }); // вывод
+        }
+
+        function buyItem(list, item) {
+            for (i = 0; i < list.length; i++) {
+                if (list[i].name === item) {
+                    list[i].bought = true;
+                    return;
+                }
+            }
+        } // функция для покупки продукта 
+
+        printList(shoppingList);
+        console.log("-------------------------");
+        addItem(shoppingList, "Шоколад", 2);
+        printList(shoppingList);
+        console.log("-------------------------");
+        buyItem(shoppingList, "Хлеб");
+        printList(shoppingList);
+
+    </script>
+
+    <a href="task2.html">перейти к след заданию</a>
+    <a href="task1.html">перейти к пред заданию</a>
+    <p>
+        условие:Создать массив «Список покупок». Каждый элемент массива
+        является объектом, который содержит название продукта, необходимое количество и куплен или нет. Написать
+        несколько функций для работы с таким массивом.
+        1. Вывод всего списка на экран таким образом, чтобы сначала
+        шли некупленные продукты, а потом – купленные.
+        2. Добавление покупки в список. Учтите, что при добавлении
+        покупки с уже существующим в списке продуктом, необходимо увеличивать количество в существующей покупке,
+        а не добавлять новую.
+        3. Покупка продукта. Функция принимает название продукта
+        и отмечает его как купленный
+    </p>
+</body>
+
+</html>

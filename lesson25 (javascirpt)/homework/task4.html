@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="employeesTable"></p>
+    <script>
+        class Employee {
+            constructor(salary, place, name) {
+                this.salary = salary;
+                this.place = place;
+                this.name = name;
+            }
+
+            getHtml() {
+                let html = "<table>\n";
+                html += "<tr><th>name</th><th>place</th><th>salary</th></tr>\n";
+
+                for (let i = 0; i < this.employees.length; i++) {
+                    html += "<tr><td>" + this.employees[i].name + "</td><td>" + this.employees[i].place + "</td><td>" + this.employees[i].salary + "</td></tr>"
+                }
+                html += "</table>"
+                return html
+            }
+        }
+
+        class StyledEmpTable extends Employee {
+            constructor(salary, place, name, employees, color) {
+                super(salary, place, name)
+                this.color = color
+                this.employees = employees
+            }
+            getStyles(color,border) {
+                let html = '<table style = "color: ' + color + ';border: 2px solid ' + border + '">';
+                html += '<tr><th>name</th><th>place</th><th>salary</th></tr>\n';
+
+                for (let i = 0; i < this.employees.length; i++) {
+                    html += "<tr><td>" + this.employees[i].name + "</td><td>" + this.employees[i].place + "</td><td>" + this.employees[i].salary + "</td></tr>"
+                }
+                html += "</table>"
+                return html
+            }
+        }
+
+        let employees = [
+            { name: "Bob Smith", place: "manager", salary: 6000 },
+            { name: "John Doe", place: "developer", salary: 4000 },
+            { name: "Jane Smith", place: "developer", salary: 4500 },
+            { name: "Alice Johnson", place: "secretary", salary: 3000 },
+        ]
+
+        let styles = new StyledEmpTable("", "", "", employees);
+        document.getElementById("employeesTable").innerHTML = styles.getStyles('red','black');
+    </script>
+
+    <a href="task3.html">Перейти к пред заданию</a>
+    <a href="task4.html">Перейти к след заданию</a>
+
+    <p>Реализовать класс StyledEmpTable, который наследуется от
+        класса EmpTable. Добавить метод getStyles(), который возвращает
+        строку со стилями для таблицы в тегах style. Переопределить
+        метод getHtml(), который добавляет стили к тому, что возвращает
+        метод getHtml() из родительского класса.
+        Создать объект класса StyledEmpTable и вывести на экран
+        результат работы метода getHtml().
+    
+        (я не знал какие именно стили нужно добавить , добавил color & border)
+    </p>
+</body>
+
+</html>

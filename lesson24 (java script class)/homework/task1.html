@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Circle { // создаем класс
+            constructor(radius) { // в конструкторе записываем значения окружности радиус радиус
+                this._radius = radius;
+            }
+
+            get radius() {
+                return this._radius; // возращаем радиус через гет и сохраняем значения в радиус
+            }
+
+            set radius(value) { // задаем радиусу какое-либо значение
+                this._radius = value;
+            }
+
+            get diameter() { // задаем диаметр с помощью гет
+                return this._radius * 2;
+            }
+
+            get area() {
+                return 3.14 * Math.pow(this._radius, 2); // метод вычисляющий площадь окружности
+            }
+
+            get CircleLength() {
+                return 2 * 3.14 * this._radius; // метод вычисляющий длинну окружности
+            }
+        }
+
+        const circle = new Circle(5);
+        console.log("radius: " + circle.radius + " см");
+        // circle.radius = 7;
+        console.log("diameter: " + circle.diameter + " см");
+        console.log("area: " + circle.area + " см");
+        console.log("circle length: " + circle.CircleLength + " см");
+    </script>
+</body>
+
+</html>

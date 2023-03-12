@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #text {
+        list-style-type: decimal;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .active {
+        background-color: rgba(187, 255, 0, 0.466);
+    }
+</style>
+
+<body>
+    <div>
+        <ul id="text">
+            <li class="active">"JavaScript for Kids: A Playful Introducrion to Programming" by Nick Morgan</li>
+            <li>"ELoquent JavaScript: A Modern Introducrion to Programming" by Marijn Haverbeke</li>
+            <li>"JavaScript: The Good Parts" by Douglas Crockford</li>
+            <li>"Programming JavaScript Applications: Robust Web Archirecture with Node, HTML5, and Moderns JS
+                Libraries" by Eric Elliott</li>
+            <li>"Effectvive JavaScript: 68 Specific Ways to Harness the Power of JavaScript" by David Herman</li>
+            <li>"JavaScript: The Definitive Guide" by Dabid Flanagan</li>
+            <li>"You Don`t Know JS" by Kyle Simpson</li>
+        </ul>
+    </div>
+
+    <div>
+        <a href="task4.html">Перейти к пред заданию</a>
+        <a href="task6.html">Перейти к след заданию</a>
+
+        <p>Условие: Создать html-страницу со списком книг.
+            При щелчке на книгу, цвет фона должен меняться на оранжевый.
+            Учтите, что при повторном щелчке на другую книгу, предыдущей –
+            необходимо возвращать прежний цвет
+        </p>
+    </div>
+    <script>
+        // oneText = document.querySelectorAll("#text li");
+
+        // oneText.forEach(item => {
+        //     item.addEventListener('click', () => {
+        //         item.style.backgroundColor = 'rgba(207, 182, 35, 0.281)';
+        //     })
+        // })
+
+        //код ваш который мы делали на занятии, просто добавил функцию чтобы убирать бэкграунд по двойному клику
+
+        tags = document.getElementsByTagName("li");
+        array = Array.from(tags);
+
+        array.forEach(function (tag) {
+            tag.addEventListener("click", function () {
+                activeBook(tag, array);
+                tag.addEventListener('dblclick', function () {
+                    disabledBook(tag, array)
+                })
+            });
+        });
+
+        function activeBook(currentTag, array) {
+            array.forEach(function (tag) {
+                tag.setAttribute("class", "");
+            });
+            currentTag.setAttribute("class", "active");
+        }
+
+        function disabledBook(tag,array){
+            array.forEach(function(tag){
+                tag.setAttribute('class', '')
+            })
+        }
+    </script>
+</body>
+
+</html>

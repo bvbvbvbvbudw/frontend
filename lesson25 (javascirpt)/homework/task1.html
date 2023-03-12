@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Marker {
+            color;
+            amount;
+            constructor(color, amount) {
+                this.color = color;
+                this.amount = amount;
+            }
+            print(text) {
+                if (this.getCount(text) <= this.amount) {
+                    this.amount -= this.getCount(text);
+                    return '<div style = " color: ' + this.color + ';">' + text + '</div>';
+                }
+            }
+            getCount(text) {
+                let tmp = text.replaceAll(' ', '');
+                return tmp.length / 2;
+            }
+        }
+        mark = new Marker('red', 100);
+        console.log(mark);
+        let text = 'qw ertyui op';
+        while (mark.amount >= mark.getCount(text)) {
+            document.write(mark.print(text));
+
+            if (mark.amount <= mark.getCount(text)) {
+                reload = prompt("у вас осталось " + mark.amount + " процентов, хотели ли вы перезаправить на 100%? (y/n)")
+
+                if (reload == "y") {
+                    mark = new Marker(mark.color, 100)
+                }
+            }
+        }
+
+
+        console.log('Залишок чорнила' + mark.amount);
+    </script>
+
+    <a href="task1.html">Перейти к пред заданию</a>
+    <a href="task2.html">Перейти к след заданию</a>
+
+    <p>Реализовать класс, описывающий простой маркер. В классе
+        должны быть следующие компоненты:
+        ■ поле, которое хранит цвет маркера;
+        ■ поле, которое хранит количество чернил в маркере (в процентах);
+        ■ метод для печати (метод принимает строку и выводит
+        текст соответствующим цветом; текст выводится до тех
+        пор, пока в маркере есть чернила; один не пробельный
+        символ – это 0,5% чернил в маркере).
+        Реализовать класс, описывающий заправляющийся маркер,
+        унаследовав его от простого маркера и добавив метод для заправки
+        маркера.
+        Продемонстрировать работу написанных методов.</p>
+</body>
+
+</html>
