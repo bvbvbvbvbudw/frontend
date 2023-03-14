@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        border: 2px solid black;
+        width: 100px;
+    }
+
+    #minus,
+    #plus {
+        display: flex;
+        height: 20px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p id="number">0</p>
+        <button id="minus">-</button>
+        <button id="plus">+</button>
+    </div>
+
+    <script>
+        sum = 0;
+        number = document.getElementById('number');
+
+        plus.onclick = function () {
+            Plus();
+        }
+        minus.onclick = function () {
+            Minus();
+        }
+
+        function Plus() {
+            sum += 1;
+            document.getElementById('number').innerHTML = sum;
+        }
+        function Minus() {
+            sum -= 1;
+            document.getElementById('number').innerHTML = sum;
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <table border="2px; black" width="200px">
+    <tr>
+      <td rowspan="2" id="total">0</td>
+      <td id="plusItem">+</td>
+    </tr>
+    <tr>
+      <td id="minusItem">-</td>
+    </tr>
+  </table>
+
+
+  <script>
+
+    plusItem.onclick = function () {
+      calculate("plus");
+    }
+    minusItem.onclick = function () {
+      calculate("minus");
+    }
+    function calculate(action) {
+      if (action === "plus") {
+        total.innerText++;
+      } else {
+        total.innerText--;
+      }
+
+
+      // let value = total.innerText;
+      // if (action === "plus") {
+      //   value = Number(value) + 1;
+      // } else {
+      //   value -= 1;
+      // }
+      //
+      // total.innerText = value;
+    }
+
+  </script>
+</body>
+</html> -->

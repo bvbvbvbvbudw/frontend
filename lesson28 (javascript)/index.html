@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     console.log(window.navigator.appVersion);
+        //
+        //     if (window.navigator.appVersion == '5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36') {
+        //         alert("redirect");
+        //         window.location = "https://m.site.com";
+        //     }
+        // });
+
+        const getMethods = (obj) => {
+            let properties = new Set()
+            let currentObj = obj
+            do {
+                Object.getOwnPropertyNames(currentObj).map(item => properties.add(item))
+            } while ((currentObj = Object.getPrototypeOf(currentObj)))
+            return [...properties.keys()].filter(item => typeof obj[item] === 'function')
+        }
+
+        console.log(getMethods(document.documentElement));
+    </script>
+
+
+</body>
+</html>
