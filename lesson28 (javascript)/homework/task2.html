@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    button {
+        width: 60px;
+        height: 100px;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .imgDisabled {
+        display: none;
+    }
+
+    .btnActive{
+        background-color: green;
+    }
+
+    .btnDisabled {
+        background-color: rgba(56, 55, 55, 0.212);
+        border: none;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <button id="back" class="btnDisabled"> back </button>
+        <img class="active" src="image/istockphoto-533872725-612x612.jpg" alt="">
+        <img class="imgDisabled" src="image/istockphoto-475251515-612x612.jpg" alt="">
+        <img class="imgDisabled" src="image/depositphotos_34119619-stock-photo-3d-golden-number-collection-3.jpg" alt="">
+        <button id="forward" class="btnActive">forward</button>
+    </div>
+
+    <a href="task1.html">
+        перейти к пред заданию
+    </a>
+    <a href="task3.html">
+        перейти к след заданию
+    </a>
+    <p>условие:Создать html-страницу с галереей. 
+        В один момент времени на экране отображается одно изображение и две кнопки: Назад и Вперед. При нажатии на кнопки 
+        изображения должны переключатся в указанном порядке. Когда 
+        следующего/предыдущего изображения нет, то соответствующую 
+        кнопку необходимо блокировать. Изображения хранить в заранее 
+        подготовленном массиве.
+        </p>
+
+    <script>
+        container = document.getElementById("container");
+        back = document.getElementById('back');
+        forward = document.getElementById('forward');
+        img = document.querySelectorAll('#container img');
+
+        current = 0;
+
+        forward.addEventListener("click", function () {
+            if (current < img.length - 1) {
+                img[current].classList.remove("active");
+                img[current].classList.add("imgDisabled");
+                current++;
+                img[current].classList.remove("imgDisabled");
+                img[current].classList.add("active");
+                back.classList.remove("btnDisabled");
+                back.disabled = false;
+                back.classList.add("btnActive");
+            }
+            if (current == img.length - 1) {
+                forward.classList.remove("btnActive");
+                forward.disabled = true;
+                forward.classList.add("btnDisabled");
+            }
+        });
+
+        back.addEventListener("click", function () {
+            if (current > 0) {
+                img[current].classList.remove("active");
+                img[current].classList.add("imgDisabled");
+                current--;
+                img[current].classList.remove("imgDisabled");
+                img[current].classList.add("active");
+                forward.classList.remove("btnDisabled");
+                forward.disabled = false;
+                forward.classList.add("btnActive");
+            }
+            if (current == 0) {
+                back.classList.remove("btnActive");
+                back.disabled = true;
+                back.classList.add("btnDisabled");
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <input type="text" id="display">
+        </tr>
+
+        <tr>
+            <td onclick="document.getElementById('display').value += '7'">7</td>
+            <td onclick="document.getElementById('display').value += '8'">8</td>
+            <td onclick="document.getElementById('display').value += '9'">9</td>
+            <td onclick="document.getElementById('display').value += '+'">+</td>
+        </tr>
+
+        <tr>
+            <td onclick="document.getElementById('display').value += '4'">4</td>
+            <td onclick="document.getElementById('display').value += '5'">5</td>
+            <td onclick="document.getElementById('display').value += '6'">6</td>
+            <td onclick="document.getElementById('display').value += '-'">-</td>
+        </tr>
+
+        <tr>
+            <td onclick="document.getElementById('display').value += '1'">1</td>
+            <td onclick="document.getElementById('display').value += '2'">2</td>
+            <td onclick="document.getElementById('display').value += '3'">3</td>
+            <td onclick="document.getElementById('display').value += '*'">*</td>
+        </tr>
+
+        <tr>
+            <td onclick="document.getElementById('display').value += '0'">0</td>
+            <td colspan="2" onclick="result(document.getElementById('display').value)">==</td>
+            <td onclick="document.getElementById('display').value += '/'">/</td>
+        </tr>
+    </table>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

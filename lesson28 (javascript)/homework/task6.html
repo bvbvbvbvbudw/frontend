@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href="http://google.com">http://google.com</a></li>
+        <li><a href="https://itstep.org">https://itstep.org</a></li>
+        <li><a href="https://mystat.itstep.org">https://mystat.itstep.org</a></li>
+        <li><a href="/images/cat.jpg">/images/cat.jpg</a></li>
+        <li><a href="/local/path">/local/path</a></li>
+    </ul>
+
+    <a href="task3.html">
+        перейти к пред заданию
+    </a>
+    <a href="task7.html">
+        перейти к след заданию
+    </a>
+    <p>условие:Создать html-страницу со списком ссылок. 
+        Ссылки на внешние источники (которые начинаются с http://) 
+        необходимо подчеркнуть пунктиром. 
+        Искать такие ссылки в списке и устанавливать им дополнительные стили необходимо с помощью JS.
+    </p>
+
+    <script>
+        list = document.getElementsByTagName('a')
+        console.log(list)
+        for (i = 0; i < list.length; i++) {
+            let link = list[i].getAttribute('href');
+            if(link.startsWith('http://') || link.startsWith('https://')){
+                list[i].style.borderBottom = 'dashed'
+            }
+        }
+    </script>
+</body>
+
+</html>

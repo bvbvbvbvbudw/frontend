@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #limit {
+        border: 2px solid black;
+        block-size: 6px;
+        inline-size: 150px;
+        position: relative;
+    }
+
+    #slider {
+        border: 2px solid black;
+        block-size: 15px;
+        inline-size: 5px;
+        background-color: red;
+        position: absolute;
+        inset-block-start: -6px;
+        inset-inline-start: 0;
+    }
+
+    #slider:active {
+        cursor: grabbing;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="limit">
+            <div id="slider"></div>
+        </div>
+    </div>
+
+    <a href="task1.html">
+        перейти к пред заданию
+    </a>
+    <a href="task2.html">
+        перейти к след заданию
+    </a>
+    <p>условие:Создать html-страницу с трекбаром. 
+        Предоставить пользователю возможность изменять положение 
+        синего указателя.</p>
+
+    <script>
+        var limit = document.getElementById('limit');
+        var slider = document.getElementById('slider');
+        var isDragging = false;
+        var startX, sliderX, offsetX;
+
+        slider.addEventListener('mousedown', function (e) {
+            isDragging = true;
+            slider.style.cursor = 'grabbing';
+            startX = e.pageX - limit.offsetLeft;
+            sliderX = slider.offsetLeft;
+            offsetX = startX - sliderX;
+        });
+
+        document.addEventListener('mousemove', function (e) {
+            if (isDragging) {
+                var newSliderX = e.pageX - limit.offsetLeft - offsetX;
+                if (newSliderX >= 0 && newSliderX <= limit.offsetWidth - slider.offsetWidth) {
+                    slider.style.left = newSliderX + 'px';
+                }
+            }
+        });
+
+        document.addEventListener('mouseup', function (e) {
+            if (isDragging) {
+                isDragging = false;
+            }
+        });
+    </script>
+</body>
+
+</html>

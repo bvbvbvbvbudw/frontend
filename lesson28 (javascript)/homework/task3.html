@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            background-color: rgb(81, 140, 187);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            margin: 0;
+            transition: 0.3s ease-in-out;
+        }
+
+
+        .content {
+            display: none;
+            padding: 10px;
+            background-color: rgb(181, 220, 233);
+            border: 1px solid #cccccc;
+            margin-bottom: 10px;
+        }
+
+        .content.open {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Заголовок 1</h2>
+    <div class="content">
+        <p>Содержимое блока информации 1</p>
+    </div>
+    <h2>Заголовок 2</h2>
+    <div class="content">
+        <p>Содержимое блока информации 2</p>
+    </div>
+    <h2>Заголовок 3</h2>
+    <div class="content">
+        <p>Содержимое блока информации 3</p>
+    </div>
+
+
+    <a href="task2.html">
+        перейти к пред заданию
+    </a>
+    <a href="task4.html">
+        перейти к след заданию
+    </a>
+    <p>условие:оздать html-страницу с блоками информации, которые открываются по щелчку на заголовок. В один момент
+        времени может
+        быть развернут только один блок информации
+    </p>
+
+
+    <script>
+        var headers = document.querySelectorAll('h2');
+        var contents = document.querySelectorAll('.content');
+
+        headers.forEach(function (header) {
+            header.addEventListener('click', function () {
+                contents.forEach(function (content) {
+                    content.classList.remove('open');
+                });
+                this.nextElementSibling.classList.add('open');
+            });
+        });
+    </script>
+</body>
+
+</html>

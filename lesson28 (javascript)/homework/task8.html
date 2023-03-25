@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        border: 2px solid black;
+        inline-size: 200px;
+    }
+</style>
+
+<body>
+    <div>Press Ctrl + E to edite<br>Press Ctrl + S to save</div>
+    <div id="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores iure praesentium itaque consequuntur dolorum
+        repellendus nulla, optio quo quaerat tempora veritatis provident voluptatibus eveniet voluptatem natus soluta
+        quos nam nostrum.
+    </div>
+
+
+
+    <a href="task7.html">
+        перейти к пред заданию
+    </a>
+    <a href="task8.html">
+        перейти к след заданию
+    </a>
+    <p>условие: Создать html-страницу для отображения/редактирования текста.
+        При открытии страницы текст отображается с помощью тега
+        div. При нажатии Ctrl+E, вместо div появляется textarea с тем
+        же текстом, который теперь можно редактировать. При нажатии
+        Ctrl+S, вместо textarea появляет div с уже измененным текстом.
+        Не забудьте выключить поведение по умолчанию для этих сочетаний клавиш.
+    </p>
+
+
+    <script>
+        const container = document.getElementById('container');
+        let textArea;
+        let text;
+        let isDivVisible = true;
+        let isTextAreaVisible = false;
+
+        document.addEventListener('keydown', function (event) {
+            if (event.ctrlKey && event.key === 'e') {
+                if (isDivVisible) {
+                    textArea = document.createElement('textarea');
+                    text = container.innerText;
+                    textArea.innerText = text;
+                    textArea.style.width = container.offsetWidth + 'px';
+                    textArea.style.height = container.offsetHeight + 'px';
+                    container.parentNode.replaceChild(textArea, container);
+                    isDivVisible = false;
+                    isTextAreaVisible = true;
+                    event.preventDefault();
+                }
+            } else if (event.ctrlKey && event.key === 's') {
+                if (isTextAreaVisible) {
+                    text = textArea.value;
+                    container.innerText = text;
+                    textArea.parentNode.replaceChild(container, textArea);
+                    isDivVisible = true;
+                    isTextAreaVisible = false;
+                    event.preventDefault();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
