@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        width: 100px;
+        height: 100px;
+        /* display: none; */
+    }
+
+    .active {
+        display: block;
+    }
+
+    .container {
+        border: 2px solid black;
+        width: 120px;
+        height: 140px;
+        overflow: hidden;
+    }
+    .gallery{
+        transition-duration: 1s;
+        display: flex;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <button id="prev">prev</button>
+
+        <div class="gallery" id="gallery">
+            <img src="image/Без названия.png" alt="" class="active">
+            <img src="image/Без названия (1).png" alt="">
+            <img src="image/3.png" alt="">
+            <img src="image/4.png" alt="">
+        </div>
+
+        <button id="next">next</button>
+    </div>
+
+    <script>
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        const gallery = document.getElementById('gallery');
+        let margin = 0;
+
+        next.addEventListener('click', function () {
+            gallery.style.marginLeft = (120-margin) + 'px';
+        });
+        prev.addEventListener('click', function () {
+            gallery.style.marginLeft = (120+margin) + 'px'; 
+        });
+    </script>
+</body>
+</html>
