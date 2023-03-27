@@ -15,10 +15,10 @@ $(document).ready(function () {
     if ($('#text-change').hasClass('fromTopToDown')) {
       $('#start-stop').html('x');
       if (!intervalId) {
-        if (i === 0) {
-          $('#text-change').html(text[i])
-          i++
-        }
+        // if (i === 0) {
+        //   $('#text-change').html(text[i])
+        //   i++
+        // }
         intervalId = setInterval(function () {
           $('#text-change').html(text[i]);
           i++;
