@@ -6,11 +6,16 @@
 
     </script>
     <link rel="stylesheet" href="../css/_lazyload.scss">
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
     <link rel="shortcut icon" href="../image/image 10.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
     <title>WORKUA</title>
 </head>
 <header>
@@ -19,7 +24,7 @@
         <div class="header_text">
             <label id="check-box">
                 <img src="../icons/hamburger-menu-462145.webp" id="scr">
-                <div class="container-check-box active" id="container-check-box">
+                <div class="container-check-box closeAnimateDiv" id="container-check-box">
                     <a href="index.html"><b>Главная</b></a>
                     <a href="news.html"><b>Статьи и новости</b></a>
                     <a href="announcement.html"><b>Создать объявление</b></a>
@@ -99,24 +104,22 @@
                 </div>
             </div>
 
-            <label id="grid-add">
-                <div class="owl-carousel owl-theme">
-                    <img src="https://muizre.ru/_dr/90/19550860.jpg" alt="" class="owl-lazy">
-                    <img src="https://biz.liga.net/images/general/2019/10/07/thumbnail-tw-20191007121839-1690.jpg?v=1570445299"
-                        alt="" class="owl-lazy">
-                    <img src="https://autogrodno.by/images/stories/public7/Avtoidei-6-20.jpg" alt="" class="owl-lazy">
-                    <img src="https://www.rwr.ru/files/photos/vovan.iv/samsung-22-12-17.jpg" alt="" class="owl-lazy">
-                    <img src="https://timerek.ru/wp-content/uploads/2020/02/reklama-noutbukov-huawei-matebook-2020.jpg"
-                        alt="" class="owl-lazy">
-                </div>
-            </label>
+            <!-- <label id="grid-add"> -->
+            <div class="custom1 owl-carousel owl-theme">
+                <img src="../image/maxresdefault (1).jpg" alt="" class="item">
+                <img src="../image/maxresdefault (2).jpg" alt="" class="item">
+                <img src="../image/maxresdefault (3).jpg" alt="" class="item">
+                <img src="../image/maxresdefault.jpg" alt="" class="item">
+                <!-- <img src="https://timerek.ru/wp-content/uploads/2020/02/reklama-noutbukov-huawei-matebook-2020.jpg" alt="" class="item"> -->
+            </div>
+            <!-- </label> -->
         </div>
 
         <div class="container-announcement">
             <div class="announcement">
                 <img src="../image/image3.png">
                 <div class="frame">
-                    <a href="" class="opis">Ищем водителя Rozetka(Борисполь<img src="../icons/Vector111.svg">)</a>
+                    <a href="" class="opis">Ищем водителя Rozetka(Борисполь<img class="location" src="../icons/Vector111.svg">)</a>
 
                     <p class="time">3 часа назад</p>
 
@@ -125,7 +128,7 @@
                 </div>
                 <div class="right-side-announcement">
                     <p class="zp">З/П не указана</p>
-                    <a href="" class="feedback">Откликнуться на вакансию</a>
+                    <a class="feedback">Откликнуться на вакансию</a>
                 </div>
             </div>
 
@@ -133,7 +136,7 @@
                 <img src="../image/image4.png">
                 <div class="frame">
 
-                    <a href="" class="opis">Ищем кассира<br> АТБ(Тернополь<img src="../icons/Vector111.svg">)</a>
+                    <a href="" class="opis">Ищем кассира<br> АТБ(Тернополь<img class="location" src="../icons/Vector111.svg">)</a>
                     <p></p>
 
                     <p class="time">2 часа назад</p>
@@ -144,8 +147,10 @@
                 </div>
                 <div class="right-side-announcement">
                     <p class="zp">от 6000 до 10000 грн</p>
-                    <a href="" class="feedback">Откликнуться на вакансию</a>
+                    <a class="feedback">Откликнуться на вакансию</a>
                 </div>
+
+
             </div>
 
             <div class="announcement">
@@ -164,7 +169,7 @@
                 </div>
                 <div class="right-side-announcement">
                     <p class="zp">от 18000 до 20000 грн</p>
-                    <a href="" class="feedback">Откликнуться на вакансию</a>
+                    <a class="feedback">Откликнуться на вакансию</a>
                 </div>
             </div>
 
@@ -185,7 +190,7 @@
                 </div>
                 <div class="right-side-announcement">
                     <p class="zp">от 8000 до 20000 грн</p>
-                    <a href="" class="feedback">Откликнуться на вакансию</a>
+                    <a class="feedback">Откликнуться на вакансию</a>
                 </div>
             </div>
 
@@ -193,7 +198,7 @@
                 <img src="../image/Logotip-Citrus_1.png">
                 <div class="frame">
 
-                    <a href="" class="opis">Ищем менеджера Цитрус(Черкассы<img src="../icons/Vector111.svg">)</a>
+                    <a href="" class="opis">Ищем менеджера Цитрус(Черкассы<img class="location" src="../icons/Vector111.svg">)</a>
                     <p></p>
 
                     <p class="time">4 часа назад</p>
@@ -204,7 +209,7 @@
                 </div>
                 <div class="right-side-announcement">
                     <p class="zp">от 10000 до 13000 грн</p>
-                    <a href="" class="feedback">Откликнуться на вакансию</a>
+                    <a class="feedback">Откликнуться на вакансию</a>
                 </div>
 
             </div>
@@ -213,7 +218,7 @@
                 <img src="../image/1280px-Eldorado.ua_logo.svg.png">
                 <div class="frame">
 
-                    <a href="" class="opis">Ищем консультанта Eldorado(Львов<img src="../icons/Vector111.svg">)</a>
+                    <a href="" class="opis">Ищем консультанта Eldorado(Львов<img class="location" src="../icons/Vector111.svg">)</a>
                     <p></p>
 
                     <p class="time">1 час назад</p>
@@ -224,7 +229,7 @@
                 </div>
                 <div class="right-side-announcement">
                     <p class="zp">от 7000 до 8000 грн</p>
-                    <a href="" class="feedback">Откликнуться на вакансию</a>
+                    <a class="feedback">Откликнуться на вакансию</a>
                 </div>
             </div>
 
@@ -244,7 +249,7 @@
                 </div>
                 <div class="right-side-announcement">
                     <p class="zp">от 18000 до 20000 грн</p>
-                    <a href="" class="feedback">Откликнуться на вакансию</a>
+                    <a class="feedback">Откликнуться на вакансию</a>
                 </div>
             </div>
 
@@ -252,7 +257,7 @@
                 <img src="../image/Silpo_logo.svg.png">
                 <div class="frame">
 
-                    <a href="" class="opis">Ищем мерчендайзера Сильпо(Кривой Рог<img src="../icons/Vector111.svg">)</a>
+                    <a href="" class="opis">Ищем мерчендайзера Сильпо(Кривой Рог<img class="location" src="../icons/Vector111.svg">)</a>
                     <p></p>
 
                     <p class="time">1 день назад</p>
@@ -263,7 +268,7 @@
                 </div>
                 <div class="right-side-announcement">
                     <p class="zp">от 9000 до 12000 грн</p>
-                    <a href="" class="feedback">Откликнуться на вакансию</a>
+                    <a class="feedback">Откликнуться на вакансию</a>
                 </div>
             </div>
 
@@ -321,9 +326,8 @@
 
     </div>
 </footer>
-<script src="../js/owl.carousel.min.js"></script>
+
 <script src="../js/owl.lazyload.js"></script>
-<script src="../js/jquery-3.6.4.min.js"></script>
 <script src="../js/script.js"></script>
 
 </html>

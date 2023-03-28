@@ -386,7 +386,7 @@ main {
 
 #container-main-upp {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 900px 900px;
 }
 
 #container_main {
@@ -464,6 +464,7 @@ main {
 
 
 .container-announcement {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -471,13 +472,18 @@ main {
 }
 
 .announcement img {
-    position: relative;
-    top: 20px;
+    /* position: relative; */
+    /* top: 20px; */
     vertical-align: middle;
     align-items: center;
     margin-top: 10px;
     margin-left: 10px;
     width: 110px;
+    /* z-index: 0; */
+}
+
+.location{
+    margin-bottom:-40px;
 }
 
 .announcement {
@@ -494,7 +500,7 @@ main {
     grid-template-columns: 140px 630px 520px 520px 320px;
     grid-template-rows: 1fr 1fr;
 
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .frame {
@@ -545,6 +551,7 @@ main {
 }
 
 .feedback {
+
     text-decoration: none;
     color: black;
     display: flex;
@@ -588,29 +595,78 @@ main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+.owl-carousel img {
+    width: 300px;
+    height: 230px;
+}
+
+.owl-carousel{
+    margin-top: 30px;
+    height: 200px;
+}
+
 #check-box{
     display: none;
 }
 
 
-.active{
-    display: none;
-    opacity: 0;
-    transition-duration: 2s;
+.closeAnimateDiv{
+    animation-name: closeAnimateDiv;
+    animation: closeAnimateDiv .3s;    
+}
+.openAnimateDiv{
+    animation-name: openAnimateDiv;
+    animation: openAnimateDiv .3s;
+ }
+
+@keyframes openAnimateDiv {
+    0%{
+        opacity: 0;
+        display: none;
+    }
+    50%{
+        display: block;
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes closeAnimateDiv {
+    0% {
+        opacity: 1;
+        display: block;
+    }
+    50% {
+        display: none;
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        display: block;
+    }
 }
 
+
 .container-check-box {
-    /* display: block; */
-    opacity: 1;
     position: fixed;
     left: 0px;
     width: 720px;
     height: 100%;
     background: rgba(204, 204, 204, 0.85);
     margin-top: 70px;
-    /* margin-left: -900px; */
-    transition-duration: 1s;
-    z-index: 1;
+    z-index: 999;
+    display: none;
 }
 
 
@@ -644,13 +700,11 @@ main {
 
     #language-icon {
         display: flex;
-        /* text-align: end; */
         justify-content: end;
         position: absolute;
         bottom: 150px;
         right: 0px;
-        /* margin-top: 280px; */
-        /* align-items: flex-end; */
+
     }
 
     .search-div {
@@ -676,9 +730,10 @@ main {
     }
 
     .frame {
-        /* display: grid; */
         grid-template-columns: 80px 30px 120px 90px 320px;
-        /* grid-template-rows: 90px; */
+    }
+    .right-side-announcement{
+        margin-right: -90px;
     }
 }
 
