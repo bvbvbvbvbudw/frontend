@@ -1,0 +1,100 @@
+    /* styles header */
+
+    body {
+        margin: 0;
+        background-color: rgb(209, 203, 203);
+    }
+
+    #logo {
+        display: flex;
+        padding-left: 20px;
+    }
+
+    #logo img {
+        height: 65px;
+    }
+
+    header {
+        background-color: rgb(51, 59, 126);
+        color: white;
+        display: flex;
+        align-items: center;
+        height: 60px;
+
+    }
+
+    #hamburger-icon{
+        display: none;
+        font-size: 35px;
+        cursor: pointer;
+    }
+    .hamburger{
+        white-space: nowrap;
+        display: none;
+        flex-direction: column;
+        gap: 25px;
+        width: 170px;
+        height: 350px;
+        padding:20px 20px;
+        margin-left: 70%;
+        margin-top: 400px;
+        /* border: 2px solid black; */
+        background-color: rgb(134, 132, 132);
+    }
+    .active-hamburger{
+        display: flex;
+    }
+    .navigation-header {
+        padding-left: 20px;
+        /* display: flex; */
+        /* gap: (100%,3); */
+        width: 100%;
+    }
+
+    .container-header {
+        display: flex;
+        gap: calc(60%/6);
+    }
+
+    .container-header a {
+        white-space: nowrap;
+        display: flex;
+        /* vertical-align: middle; */
+        text-align: center;
+        align-items: center;
+    }
+
+    .icons-header {
+        display: flex;
+        gap: 15px;
+    }
+
+    .icons-header i {
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+
+    /* hover header */
+
+    .container-header a:hover {
+        cursor: pointer;
+        color: rgb(247, 232, 232);
+    }
+
+
+    /* media screen */
+
+    @media screen and (max-width:1024px) {
+        #hamburger-icon{
+            display: flex;
+        }
+    }
+
+    @media screen {}
+
+    /* keyframes */
+
+    @keyframes identifier {}
+
+    @keyframes identifier {}
