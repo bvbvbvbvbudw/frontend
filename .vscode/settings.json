@@ -1,4 +1,5 @@
 {
     "editor.bracketPairColorization.enabled": true,
-    "editor.matchBrackets": "never"
+    "editor.matchBrackets": "never",
+    "livePreview.defaultPreviewPath": "/lesson33 (java script)/books/book]/books/books.html"
 }
