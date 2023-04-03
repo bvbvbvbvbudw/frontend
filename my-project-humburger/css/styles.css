@@ -669,7 +669,41 @@ main {
     display: none;
 }
 
-
+.popup-wrapper{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid black;
+    width: 400px;
+    height: 200px;
+}
+.popup-inner{
+    padding-left: 40px;
+    padding-top: 50px;
+    display: flex;
+    gap: 30px;
+}
+.popup-close{
+    font-size: 30px;
+    position:absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+}
+.checkbox-popup-container{
+    display: flex;
+    /* white-space: nowrap; */
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+.active{
+    display: none;
+}
 
 @media screen and (max-width:1024px) {
 

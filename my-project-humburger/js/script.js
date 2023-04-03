@@ -25,4 +25,15 @@ $('.custom1').owlCarousel({
   stagePadding: 30,
   smartSpeed: 450
 });
+
+$('body').click(popupShow);
+function popupShow(evt){
+  // evt.preventDefault(); с ней после того как попап закрыт, никуда больше не нажимается
+
+  $('#popup').removeClass('active');
+
+  $('.popup-close').click(function(){
+    $(this).closest('#popup').fadeOut(400)
+  })
+}
 });
