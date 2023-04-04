@@ -1,0 +1,26 @@
+.active{
+    color: aqua;
+}
+.container{
+    border: 2px solid black;
+    background-color: #c0bebe;
+    display: flex;
+    gap: 100px;
+}
+.folow{
+    display: flex;
+    gap: 20px;
+}
+.container-right{
+    /* display: flex; */
+}
+.container-left{
+
+}
+.followers{
+    display: flex;
+    gap: 30px;
+}
+img{
+    width: 130px;
+}
