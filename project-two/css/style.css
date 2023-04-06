@@ -1,0 +1,23 @@
+/* search */
+.search-section{
+    text-align: center;
+    /* padding-top: 30px; */
+    /* margin: 0px auto; */
+}
+#search{
+    /* padding-bottom: -30px */
+    margin-top: 30px;
+    /* border: none; */
+    border-radius: 10px;
+    width: 500px; height: 35px;
+    /* background-image: url(); */
+}
+#background-search{
+    width: 100%; height: 300px;
+    background-image: url(../image/bgc-photo-search.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* background-attachment: fi    xed; */
+    /* background-position: center center; */
+    background-size: cover;
+}

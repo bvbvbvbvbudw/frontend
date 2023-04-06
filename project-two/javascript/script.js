@@ -21,5 +21,11 @@ $(document).ready(function () {
   })
 
 
-  // 
+  // choise-language
+  $('#choise-language').click(function(){
+    $('#window-language').toggleClass('active')
+    $('#window-language p').click(function(){
+      $('#window-language').addClass('active')
+    })
+  })
 })
