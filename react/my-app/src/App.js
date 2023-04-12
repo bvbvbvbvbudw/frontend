@@ -9,16 +9,19 @@ import ComponentPropsThree from './lesson35-react/ComponentPropsThree';
 import Main from './lesson35-react/Main';
 import MainTwo from './lesson35-react/MainTwo';
 import MainThree from './lesson35-react/MainThree';
+import RandomText from './homework/RandomText';
 
 function App() {
   return (
     <div className="App">
-      <ComponentProps text="dwadaw"/>
-      <ComponentPropsTwo color="black"/>
-      <ComponentPropsThree/>
-      <Main/>
-      <MainTwo/>
-      <MainThree/>
+      {/* <ComponentProps text="dwadaw"/> */}
+      {/* <ComponentPropsTwo color="black"/> */}
+      {/* <ComponentPropsThree/> */}
+      {/* <Main/> */}
+      {/* <MainTwo/> */}
+      {/* <MainThree/> */}
+      {/* <p>dwadwad</p> */}
+      <RandomText/>
     </div>
   );
 }

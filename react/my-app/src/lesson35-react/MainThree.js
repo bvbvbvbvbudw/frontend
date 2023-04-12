@@ -1,8 +1,10 @@
 import React from 'react';
 
+
 class Button extends React.Component {
     render() {
         const handlerClickMain = () => {
+
             this.props.onClickAct(this.props.btnText)
         }
         return (
