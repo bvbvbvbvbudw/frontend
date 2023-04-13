@@ -3,13 +3,15 @@
 import './App.css';
 // import Mycompnonent from './Mycomponent';
 // import Button from './Button';
-import ComponentProps from './lesson35-react/ComponentProps';
-import ComponentPropsTwo from './lesson35-react/ComponentPropsTwo';
-import ComponentPropsThree from './lesson35-react/ComponentPropsThree';
-import Main from './lesson35-react/Main';
-import MainTwo from './lesson35-react/MainTwo';
-import MainThree from './lesson35-react/MainThree';
+// import ComponentProps from './lesson35-react/ComponentProps';
+// import ComponentPropsTwo from './lesson35-react/ComponentPropsTwo';
+// import ComponentPropsThree from './lesson35-react/ComponentPropsThree';
+// import Main from './lesson35-react/Main';
+// import MainTwo from './lesson35-react/MainTwo';
+// import MainThree from './lesson35-react/MainThree';
 import RandomText from './homework/RandomText';
+import MagicBall from './homework/MagicBall';
+// import magic from './homework/magic-ball-img-two-removebg-preview.png'
 
 function App() {
   return (
@@ -21,7 +23,13 @@ function App() {
       {/* <MainTwo/> */}
       {/* <MainThree/> */}
       {/* <p>dwadwad</p> */}
+
+
+      <div className='container-image-magic-ball'>
+        <MagicBall/>
+      </div>
       <RandomText/>
+
     </div>
   );
 }
