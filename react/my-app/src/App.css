@@ -93,3 +93,10 @@
   background-repeat: no-repeat;
   background-image:url(../src/homework/magic-ball-img-two-removebg-preview.png);
 }
+
+.light{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
