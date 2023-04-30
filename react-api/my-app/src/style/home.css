@@ -1,0 +1,41 @@
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+.container-home-content{
+    display: flex;
+}
+.container-home-content button {
+    border-radius: 20px;
+    border: none;
+
+}
+.container-button {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.img-home{
+    width: 600px;
+}
+
+.container-reviews-home-content{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.reviews {
+    background-color: rgb(219, 217, 217);
+    border-radius: 20px;
+}
+.avatar-reviews{
+    float: left;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 300px;
+}
+
+

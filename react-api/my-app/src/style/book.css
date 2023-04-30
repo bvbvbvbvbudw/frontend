@@ -1,0 +1,27 @@
+.container-books-api{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.book-api {
+    border: 1px solid rgb(226, 205, 205);
+}
+.choise-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 23px;
+    cursor: pointer;
+}
+.choise-content p {
+    transition-duration: .5s;
+}
+.choise-content p:hover {
+    scale: 1.1;
+    color: rgb(43, 42, 42);
+}
+.logo-book-content {
+    width: 181px;
+    height: 271px;
+}

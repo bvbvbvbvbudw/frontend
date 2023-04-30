@@ -1,0 +1,61 @@
+ТЗ:
+
+Страницы:
+    1) Home(pages component Home.js);
+    2) Book(pages component Book.js); // название зависит от Апи!
+    3) About Us(pages component About.js);
+    4) Blog(pages component Blog.js);
+    5) Contact(pages component Contact.js);
+
+Структура проекта: 
+    1) Components; лежит в src;
+        a) header;
+            1) Header.js;
+                2) Logo.js; // должны подключены к Header.js
+                3) Menu.js;
+                4) Search.js;
+
+        b) content;
+            1) Main.js;
+            2) Sidebar.js; // за желанием
+
+        c) footer;
+            1) Footer.js;
+                2) Logo.js;
+                3) Copyright.js;
+                4) Icon.js
+
+    2) Elements;(small object(logo, itd)); лежит в src;
+        a) Button.js;
+        b) Icon.js;
+        c) Img.js;
+        (все мелкие детали проекта например иконки и тд)
+
+    3) Layout(dlatego co może byc biala albo czorna tema); лежит в src;
+        a) Layout.js
+        ...
+    4) images // src
+
+Обязательно использовать з функционала:
+    Пишем при помощи функ. компоненетов!
+        a) useState();
+        b) useEffect();
+        c) ref={uRef}; // form;
+        d) onClick={};
+        e) onClickAct={};
+        f) Route , Link;
+
+Тема проекта: 
+    работа с посторонным ресурсом API.
+
+Стили проекта: свободный выбор;
+можно использовать bootstrap;
+
+наполнение страниц - минимум 3 блока не считая header and footer
+
+элементы:
+    а) слайдер
+    б) форма с валидацией
+    в) модальные окна
+    г) информационные блоки
+    д) поиск(фильма книги и тд, зависит от выбранного api)

@@ -1,11 +1,10 @@
 import React from 'react';
 
-export default function Logo () {
-
+export default function Sitebar () {
 
     return(<>
     
-    <h2>Logo-footer</h2>
+    Sitebar
     
     </>)
 }

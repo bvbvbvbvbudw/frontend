@@ -3,12 +3,12 @@ import Layout from './Layout';
 import Effect from './Effect';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function Home () {
+export default function Nintendo () {
 
 
     return(<>
     <Layout>
-        Home
+        Nintendo
         <Effect/>
     </Layout>
     
