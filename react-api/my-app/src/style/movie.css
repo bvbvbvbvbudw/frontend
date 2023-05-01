@@ -7,3 +7,9 @@
 .movie-logo {
     width: 200px;
 }
+.links-movie{
+    background-color: rgb(146, 153, 179);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}

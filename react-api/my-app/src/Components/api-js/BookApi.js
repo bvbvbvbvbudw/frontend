@@ -5,7 +5,7 @@ import '../../style/book.css'
 export default function BookApi() {
 
     const [books, setBooks] = useState([]);
-    const [selectedGenre, setSelectedGenre] = useState('');
+    const [selectedGenre, setSelectedGenre] = useState('mystery_and_detective_stories');
 
     const handleClick = (event) => {
         setSelectedGenre(event.target.id);
@@ -42,7 +42,7 @@ export default function BookApi() {
                         <h2>{book.title}</h2>
                         <p>Автор: {book.authors[0].name}</p>
                         <p>Рік першого видання: {book.first_publish_year}</p>
-                        <a href={`https://openlibrary.org/subjects/${book.cover_edition_key}`}>Читати зараз!</a>
+                        <a href={`https://openlibrary.org/subjects/${book.cover_edition_key}`} className='links-book'>Читати зараз!</a>
                     </div>
                 ))}
             </div>

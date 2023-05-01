@@ -6,7 +6,7 @@ import '../../style/movie.css'
 export default function MovieApi() {
 
     const [movies, setMovies] = useState([]);
-    const [selectedGenre, setSelectedGenre] = useState('');
+    const [selectedGenre, setSelectedGenre] = useState('comics');
 
     const handleClick = (event) => {
         setSelectedGenre(event.target.id);
@@ -53,11 +53,11 @@ export default function MovieApi() {
 
                         {selectedGenre === 'creators' ? `${movie.fullName}` : ''}
                         {['comics', 'creators', 'events', 'series'].includes(selectedGenre) ? (
-                            <a href={movie.urls[0].url}><br />Читати зараз!<br /></a>
+                            <a href={movie.urls[0].url} className='links-movie'><br />Читати зараз!<br /></a>
                         ) : (
-                            <a href={movie.urls[movie.urls.length - 1].url}>Комікси з цим героєм!</a>
+                            <a href={movie.urls[movie.urls.length - 1].url} className='links-movie'>Комікси з цим героєм!</a>
                         )}
-                        {selectedGenre === 'comics' ? `${movie.prices[0].price === 0 ? 'Ціну не вказано' : `${movie.prices[0].price} $`}` : ''}
+                        {selectedGenre === 'comics' ? (movie.prices && movie.prices[0].price === 0 ? 'Ціну не вказано' : movie.prices && movie.prices[0].price + '$') : ''}
                     </div>
                 ))}
             </div>
