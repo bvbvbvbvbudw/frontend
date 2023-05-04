@@ -1,23 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header/Header';
+import Intro from './Components/Content/Intro';
+import About from './Components/Content/About';
+import Statistics from './Components/Content/Statistics';
+import Services from './Components/Content/Services';
+import Devices from './Components/Content/Devices';
+import WeDo from './Components/Content/WeDo';
+import Reviews from './Components/Content/Reviews';
+import Teams from './Components/Content/Teams';
+import Brands from './Components/Content/Brands';
+import Gallery from './Components/Content/Gallery';
+import PeopleSay from './Components/Content/PeopleSay';
+import LatestBlog from './Components/Content/LatestBlog';
+import Map from './Components/Content/Map';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Intro />
+      <About />
+      <Statistics/>
+      <Services/>
+      <Devices/>
+      <WeDo/>
+      <Reviews/>
+      <Teams/>
+      <Brands/>
+      <Gallery/>
+      <Reviews/>
+      <PeopleSay/>
+      <LatestBlog/>
+      <Map/>
+      <Footer/>
     </div>
   );
 }
