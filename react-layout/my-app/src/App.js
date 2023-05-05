@@ -1,4 +1,5 @@
 import './App.css';
+import { Helmet } from 'react'
 import Header from './Components/Header/Header';
 import Intro from './Components/Content/Intro';
 import About from './Components/Content/About';
@@ -15,25 +16,31 @@ import LatestBlog from './Components/Content/LatestBlog';
 import Map from './Components/Content/Map';
 import Footer from './Components/Footer/Footer';
 
+
+
 function App() {
+
   return (
     <div className="App">
+
+      <i className="fas fa-search"></i>
+
       <Header />
       <Intro />
       <About />
-      <Statistics/>
-      <Services/>
-      <Devices/>
-      <WeDo/>
-      <Reviews/>
-      <Teams/>
-      <Brands/>
-      <Gallery/>
-      <Reviews/>
-      <PeopleSay/>
-      <LatestBlog/>
-      <Map/>
-      <Footer/>
+      <Statistics />
+      <Services />
+      <Devices />
+      <WeDo />
+      <Reviews />
+      <Teams />
+      <Brands />
+      <Gallery />
+      <Reviews />
+      <PeopleSay />
+      <LatestBlog />
+      <Map />
+      <Footer />
     </div>
   );
 }
