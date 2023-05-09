@@ -1,14 +1,9 @@
 import React from "react";
 
-import TitleH1 from '../../Elements/TitleH1';
 import TitleH2 from '../../Elements/TitleH2';
 import TitleH3 from '../../Elements/TitleH3';
 import Div from '../../Elements/Div';
-import Container from '../../Elements/Container';
-import A from '../../Elements/A';
-import P from '../../Elements/P';
 import Img from '../../Elements/Img';
-import Span from '../../Elements/Span';
 import Section from '../../Elements/Section';
 
 import PhotoOne from '../../images/services/photography.png';
@@ -22,13 +17,14 @@ import ServicesTextTitle from "../../Elements/ServicesTextTitle";
 
 
 import '../../styles/Default.css';
-import '../../styles/Services.css'
+import '../../styles/Services.css';
+import '../../styles/MediaScreen.css';
 
 export default function Services() {
 
 
     return (<>
-        <Section className="section">
+        <Section className="section" id={'service-scroll'}>
             <Div className="container">
 
                 <Div className="section__header">

@@ -44,7 +44,6 @@
     color: #fff;
 }
 
-/* Slider */
 .slider {
     width: 100%;
 
@@ -79,7 +78,7 @@
 .slider__item.active:before {
     content: "";
     display: block;
-    width: 70px;
+    width: 100%;
     height: 3px;
 
     background-color: #f38181;
@@ -94,6 +93,7 @@
     font-size: 24px;
     font-weight: 700;
 }
+
 
 .btn {
     display: inline-block;

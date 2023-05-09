@@ -1,18 +1,9 @@
 import React from "react";
 
-import TitleH1 from '../../Elements/TitleH1';
-import TitleH2 from '../../Elements/TitleH2';
-import TitleH3 from '../../Elements/TitleH3';
 import Div from '../../Elements/Div';
 import Container from '../../Elements/Container';
-import A from '../../Elements/A';
-import P from '../../Elements/P';
-import Img from '../../Elements/Img';
-import Span from '../../Elements/Span';
 import Section from '../../Elements/Section';
-import ReviewsTextAuthor from '../../Elements/ReviewsTextAuthor';
 import SectionHeader from "../../Elements/SectionHeader";
-
 import GalleryCol from "../../Elements/GalleryCol";
 
 import PhotoOne from '../../images/works/1.jpg';
@@ -25,6 +16,7 @@ import PhotoSeven from '../../images/works/7.jpg';
 
 import '../../styles/Default.css';
 import '../../styles/Works.css';
+import '../../styles/MediaScreen.css';
 
 export default function Gallery() {
 

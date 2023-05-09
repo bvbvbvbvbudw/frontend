@@ -5,7 +5,5 @@ export default function StatsCountText({classNameOne,classNameTwo, textOne, text
     return (<>
         <div className={classNameOne}>{textOne}</div>
         <div className={classNameTwo}>{textTwo}</div>
-
-
     </>)
 }

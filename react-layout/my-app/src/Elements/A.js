@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function A ({className , target , href , text}) {
+export default function A ({className , target , href , text, children, id}) {
 
     return(<>
-        <a className={className} target={target} href={href}>{text}</a>
+        <a className={className} id={id} target={target} href={href}>{text} {children}</a>
     </>)
 }

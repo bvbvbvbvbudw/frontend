@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Section from './Section';
-import Div from './Div';
 import TitleH2 from './TitleH2';
 import TitleH3 from './TitleH3';
 

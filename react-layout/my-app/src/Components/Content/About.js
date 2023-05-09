@@ -1,14 +1,11 @@
 import React from 'react';
 
-import TitleH1 from '../../Elements/TitleH1';
 import TitleH2 from '../../Elements/TitleH2';
 import TitleH3 from '../../Elements/TitleH3';
 import Div from '../../Elements/Div';
 import Container from '../../Elements/Container';
-import A from '../../Elements/A';
 import P from '../../Elements/P';
 import Img from '../../Elements/Img';
-import Span from '../../Elements/Span';
 import Section from '../../Elements/Section';
 
 import PhotoOne from '../../images/about/1.jpg';
@@ -16,12 +13,13 @@ import PhotoTwo from '../../images/about/2.jpg';
 import PhotoThird from '../../images/about/3.jpg';
 
 import '../../styles/Default.css';
-import '../../styles/About.css'
+import '../../styles/About.css';
+import '../../styles/MediaScreen.css';
 
 export default function About() {
 
     return (<>
-        <Section className={'section'}>
+        <Section className={'section'} id={'about-scroll'}>
             <Container className={'container'}>
 
                 <Div className={'section__header'}>
