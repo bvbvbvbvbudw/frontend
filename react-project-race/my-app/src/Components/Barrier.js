@@ -21,46 +21,56 @@ export default function Barrier(props) {
     const [barrierRectOne, setBarrierRectOne] = useState(0)
     const [barrierRectTwo, setBarrierRectTwo] = useState(0)
     const [barrierRectThree, setBarrierRectThree] = useState(0)
-
     useEffect(() => {
-        setBarrierRectOne(barrierRefOne?.current.getBoundingClientRect());
-        setBarrierRectTwo(barrierRefTwo?.current.getBoundingClientRect());
-        setBarrierRectThree(barrierRefThree?.current.getBoundingClientRect());
+        const intRect = setInterval(() => {
+            const rectOne = barrierRefOne.current.getBoundingClientRect();
+            const rectTwo = barrierRefTwo.current.getBoundingClientRect();
+            const rectThree = barrierRefThree.current.getBoundingClientRect();
+            setBarrierRectOne(rectOne);
+            setBarrierRectTwo(rectTwo);
+            setBarrierRectThree(rectThree);
+        }, 1000);
+
+        return () => {
+            clearInterval(intRect);
+        };
     }, []);
 
     useEffect(() => {
+        const intSend = setInterval(() => {
+            props.onChangeRectBar(barrierRectOne, barrierRectTwo, barrierRectThree)
+        }, 1000);
+
+    }, [barrierRectOne, barrierRectTwo, barrierRectThree]);
 
 
+
+
+
+
+    useEffect(() => {
         const interval = setInterval(() => {
-            const random = Math.floor(Math.random() * arr.length);
+            const arrLength = arr.length;
+            const random = Math.floor(Math.random() * arrLength);
             const randomPoss = Math.floor(Math.random() * 16) * 30 - 230;
+            const randomOne = Math.floor(Math.random() * arrLength);
+            const randomPossOne = Math.floor(Math.random() * 16) * 30 - 230;
+            const randomThree = Math.floor(Math.random() * arrLength);
+            const randomPossThree = Math.floor(Math.random() * 16) * 30 - 230;
+
             setPositionBarrier(randomPoss);
             setRandomNumber(random);
-            props.onPositionChange(positionBarrier, positionBarrierOne, positionBarrierTwo);
-        }, 6000);
-
-        const intervalOne = setInterval(() => {
-            const random = Math.floor(Math.random() * arr.length);
-            const randomPoss = Math.floor(Math.random() * 16) * 30 - 230;
-            setPositionBarrierOne(randomPoss);
-            setRandomNumberOne(random);
-            props.onPositionChange(positionBarrier, positionBarrierOne, positionBarrierTwo);
-        }, 6000);
-
-        const intervalTwo = setInterval(() => {
-            const random = Math.floor(Math.random() * arr.length);
-            const randomPoss = Math.floor(Math.random() * 16) * 30 - 230;
-            setPositionBarrierTwo(randomPoss);
-            setRandomNumberTwo(random);
-            props.onPositionChange(positionBarrier, positionBarrierOne, positionBarrierTwo);
+            setPositionBarrierOne(randomPossOne);
+            setRandomNumberOne(randomOne);
+            setPositionBarrierTwo(randomPossThree);
+            setRandomNumberTwo(randomThree);
         }, 6000);
 
         return () => {
             clearInterval(interval);
-            clearInterval(intervalOne);
-            clearInterval(intervalTwo);
         };
-    }, [props]);
+    }, []);
+    ;
 
 
     return (
@@ -88,7 +98,7 @@ export default function Barrier(props) {
                 style={{ left: positionBarrierTwo }}
                 ref={barrierRefThree}
             />
-            {props.onChangeRectBar && props.onChangeRectBar(barrierRectOne, barrierRectTwo, barrierRectThree)}
+            {/* {props.onChangeRefBar && props.onChangeRectBar(barrierRectOne, barrierRectTwo, barrierRectThree)} */}
 
         </>
     );
