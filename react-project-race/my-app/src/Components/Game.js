@@ -1,123 +1,174 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Barrier from "./Barrier";
 import Car from "./Car";
+import Road from "./Road";
 import "../Styles/style.css";
 
 export default function Game(props) {
-    // const [positionCar, setPositionCar] = useState(0);
-    // const handleChangePositionCar = (newPosition) => {
-    //     setPositionCar(newPosition);
-    // };
+  const containerWidth = 900;
+  const containerLeftMargin = (window.innerWidth - containerWidth) / 2;
+  const containerRightMargin = window.innerWidth - containerWidth - containerLeftMargin;
 
-    const [carRect, setCarRect] = useState(0);
-    const onChangeRectCar = (newCarRect) => {
-        setCarRect(newCarRect)
-    }
+  const [isCrashed, setIsCrashed] = useState('');
+  const [isCrashedImg, setIsCrashedImg] = useState('');
+  const [points, setPoints] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
+  const [displayRun, setDisplayRun] = useState('block');
+  const [textLose, setTextLose] = useState('');
+  const [timeLeft, setTimeLeft] = useState(90);
+  const [timeStart, setTimeStart] = useState(false);
+  const [loseOrWin, setLoseOrWin] = useState('');
+  const [crash, setIsCrash] = useState(false);
 
-    // const [barrier, setBarrier] = useState(0)
-    // const [barrier2, setBarrier2] = useState(0)
-    // const [barrier3, setBarrier3] = useState(0)
-    // const onPositionChange = (positionBarrier, positionBarrierOne, positionBarrierTwo) => {
-    //     setBarrier(positionBarrier)
-    //     setBarrier2(positionBarrierOne)
-    //     setBarrier3(positionBarrierTwo)
-    // }
+  const startGame = () => {
+    setIsCrash(false);
+    setIsCrashed('start');
+    setIsCrashedImg('activePng')
+    setIsRunning(true);
+    setDisplayRun('none');
+    setTextLose('');
+    setTimeStart(true);
+  }
 
-    const [barrierRectOne, setBarrierRectOne] = useState(0)
-    const [barrierRectTwo, setBarrierRectTwo] = useState(0)
-    const [barrierRectThree, setBarrierRectThree] = useState(0)
+  const [carRect, setCarRect] = useState(0);
+  const onChangeRectCar = (newCarRect) => {
+    setCarRect(newCarRect);
+  };
+  const [barrierRectOne, setBarrierRectOne] = useState(null);
+  const [barrierRectTwo, setBarrierRectTwo] = useState(null);
+  const [barrierRectThree, setBarrierRectThree] = useState(null);
+  const [barrierRectFour, setBarrierRectFour] = useState(null);
 
-    const onChangeRectBar = (newRectBarOne, newRectBarTwo, newRectBarThree) => {
-        setBarrierRectOne(newRectBarOne)
-        setBarrierRectTwo(newRectBarTwo)
-        setBarrierRectThree(newRectBarThree)
-    }
-    // const onChangeRectBar = (barrierRectOne, barrierRectTwo, barrierRectThree) => {
-    //     setBarrierRectOne(barrierRectOne)
-    //     setBarrierRectTwo(barrierRectTwo)
-    //     setBarrierRectThree(barrierRectThree)
-    //     console.log(barrierRectOne)
-    // }
-    const prom = 64;
+  const onChangeRectBar = (newRectBarOne, newRectBarTwo, newRectBarThree, newRectBarFour) => {
+    setBarrierRectOne(newRectBarOne);
+    setBarrierRectTwo(newRectBarTwo);
+    setBarrierRectThree(newRectBarThree);
+    setBarrierRectFour(newRectBarFour);
+  };
+
+  useEffect(() => {
     const intInfo = setInterval(() => {
-        // console.log(barrierRectOne)
-        // console.log(barrierRectTwo)
-        // console.log(barrierRectThree)
-            // console.log(carRect)
+      onChangeRectBar(
+        barrierRectOne,
+        barrierRectTwo,
+        barrierRectThree,
+        barrierRectFour
+      );
     }, 1000);
-    // console.log(barrierRectOne)
-    // useEffect(() => {
-    //     const timeoutId = setTimeout(() => {
-    //       const intervalPos = setInterval(() => {
-    //         setBarrierRectOne(barrierRefOne?.current.getBoundingClientRect());
-    //         setBarrierRectTwo(barrierRefTwo?.current.getBoundingClientRect());
-    //         setBarrierRectThree(barrierRefThree?.current.getBoundingClientRect());
-    //       }, 1000);
+    return () => clearInterval(intInfo);
+  }, [barrierRectOne, barrierRectTwo, barrierRectThree, barrierRectFour]);
 
-    //       return () => clearInterval(intervalPos);
-    //     }, 13000);
+  useEffect(() => {
+    if (timeStart) {
+      const intTime = setInterval(() => {
+        setTimeLeft(timeLeft - 1);
+      }, 1000);
+      return () => {
+        clearInterval(intTime);
+      };
+    }
+  },[timeLeft,timeStart])
 
-    //     return () => clearTimeout(timeoutId);
-    //   }, []);
-    // console.log(carRect)
+  useEffect(() => {
+    if (carRect && barrierRectOne) {
+      const distance = 10;
+      if (
+        carRect.left < barrierRectOne.right - distance &&
+        carRect.right > barrierRectOne.left + distance &&
+        carRect.top < barrierRectOne.bottom - distance &&
+        carRect.bottom > barrierRectOne.top + distance
+      ) {
+        setIsCrash(true);
+      }
+    }
+    if (carRect && barrierRectTwo) {
+      const distance = 10;
+      if (
+        carRect.left < barrierRectTwo.right - distance &&
+        carRect.right > barrierRectTwo.left + distance &&
+        carRect.top < barrierRectTwo.bottom - distance &&
+        carRect.bottom > barrierRectTwo.top + distance
+      ) {
+        setIsCrash(true);
+      }
+    }
+    if (carRect && barrierRectThree) {
+      const distance = 10;
+      if (
+        carRect.left < barrierRectThree.right - distance &&
+        carRect.right > barrierRectThree.left + distance &&
+        carRect.top < barrierRectThree.bottom - distance &&
+        carRect.bottom > barrierRectThree.top + distance
+      ) {
+        setIsCrash(true);
+      }
+    }
+    
 
-    useEffect(() => {
-        // console.log(carRect)
+    if (carRect.x > containerWidth + containerRightMargin || carRect.x < containerLeftMargin) {
+      setIsCrash(true);
+    };
+    if (timeLeft == 0) {
+      setTimeLeft(90);
+      setIsCrashed('');
+      setIsCrashedImg('');
+      setIsRunning(false);
+      setDisplayRun('block');
+      setLoseOrWin('text-win');
+      setTimeLeft(90);
+      setTimeStart(false);
+      setTextLose('Ви виграли!');
+      setPoints(0);
+    };
+    if(crash){
+      setIsCrash(false);
+      setIsCrashed('');
+      setIsCrashedImg('');
+      setIsRunning(false);
+      setDisplayRun('block');
+      setLoseOrWin('text-lose');
+      setTimeLeft(90);
+      setTimeStart(false);
+      setTextLose('Ви програли');
+      setPoints(0);
+    };
 
-    })
-    // useEffect(() => {
-    //     const timeoutId = setTimeout(() => {
-    //       const intervalId = setInterval(() => {
-    //         if (
-    //             barrierRectOne.left < carRect.right &&
-    //             barrierRectOne.right > carRect.left &&
-    //             barrierRectOne.top < carRect.bottom &&
-    //             barrierRectOne.bottom > carRect.top
-    //         ) {
-    //             alert("Intersection detected");
+    if (carRect && barrierRectFour) {
+      if (
+        carRect.left < barrierRectFour.right &&
+        carRect.right > barrierRectFour.left &&
+        carRect.top < barrierRectFour.bottom &&
+        carRect.bottom > barrierRectFour.top
+      ) {
+        setPoints(points + 1)
+      };
+    };
+  }, [carRect, barrierRectOne]);
+  return (
+    <>
+      <Road className={`track ${isCrashed}`}>
+        <Barrier
+          onChangeRectBar={onChangeRectBar}
+          isRunning={isRunning}
+          classNameOne={`barriers ${isCrashedImg}`}
+          classNameTwo={`barriers ${isCrashedImg}`}
+          classNameThree={`barriers ${isCrashedImg}`} />
+        <Car onChangeRectCar={onChangeRectCar}
+          isCrashed={isCrashed} />
+      </Road>
+      <div className="wrapper">
+        <p className="score">Рахунок: {points}</p>
+        <p className="time">Залишилось часу: {timeLeft}</p>
 
-    //         }
-    //       }, 1000);
+        <div className="container-start" style={{ display: displayRun }}>
+          <h2 className="title">Хочеш пограти в гру?</h2>
+          <button onClick={startGame} className="btn-start">Почати</button>
+          <p>Керування: на клавiшу "A" та "D", або кнопки якi внизу</p>
+          <p className={loseOrWin}>{textLose}</p>
+        </div>
+      </div>
 
-    //       return () => clearInterval(intervalId);
-    //     }, 2000);
 
-    //     return () => clearTimeout(timeoutId);
-    //   }, [barrierRectOne, barrierRectTwo, carRect]);
-
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-          if (
-            barrierRectOne.x < carRect.x + carRect.width &&
-            barrierRectOne.x + barrierRectOne.width > carRect.x &&
-            barrierRectOne.y < carRect.y + carRect.height &&
-            barrierRectOne.y + barrierRectOne.height > carRect.y &&
-            barrierRectTwo.x < carRect.x + carRect.width &&
-            barrierRectTwo.x + barrierRectTwo.width > carRect.x &&
-            barrierRectTwo.y < carRect.y + carRect.height &&
-            barrierRectTwo.y + barrierRectTwo.height > carRect.y
-          ) {
-            alert("Столкновение!");
-          }
-        }, 1000);
-
-        return () => clearInterval(intervalId);
-      }, [barrierRectOne, barrierRectTwo, carRect]);
-
-    // if(carRect.x)
-
-    // сделать логику столкновение, узнать как сделать чтобы было изнчально 0пх вместо того что оно отображает от размера окна
-    return (
-        <>
-            <Barrier
-                // onPositionChange={onPositionChange}
-                onChangeRectBar={onChangeRectBar}
-            />
-            <Car
-                // onChangePositionCar={handleChangePositionCar}
-                onChangeRectCar={onChangeRectCar}
-            />
-        </>
-    );
+    </>
+  );
 }
