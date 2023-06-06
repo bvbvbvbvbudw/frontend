@@ -9,25 +9,25 @@ export default function Game(props) {
   const containerLeftMargin = (window.innerWidth - containerWidth) / 2;
   const containerRightMargin = window.innerWidth - containerWidth - containerLeftMargin;
 
-  const [isCrashed, setIsCrashed] = useState('');
-  const [isCrashedImg, setIsCrashedImg] = useState('');
-  const [points, setPoints] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
+  const [startAnimation, setStartAnimation] = useState('');
+  const [startAnimationImg, setStartAnimationImg] = useState('');
   const [displayRun, setDisplayRun] = useState('block');
-  const [textLose, setTextLose] = useState('');
-  const [timeLeft, setTimeLeft] = useState(90);
-  const [timeStart, setTimeStart] = useState(false);
   const [loseOrWin, setLoseOrWin] = useState('');
+  const [textLose, setTextLose] = useState('');
+  const [points, setPoints] = useState(0);
+  const [timeLeft, setTimeLeft] = useState(90);
+  const [isRunning, setIsRunning] = useState(false);
+  const [timeStart, setTimeStart] = useState(false);
   const [crash, setIsCrash] = useState(false);
 
   const startGame = () => {
     setIsCrash(false);
-    setIsCrashed('start');
-    setIsCrashedImg('activePng')
     setIsRunning(true);
+    setTimeStart(true);
+    setStartAnimation('start');
+    setStartAnimationImg('activePng')
     setDisplayRun('none');
     setTextLose('');
-    setTimeStart(true);
   }
 
   const [carRect, setCarRect] = useState(0);
@@ -54,7 +54,7 @@ export default function Game(props) {
         barrierRectThree,
         barrierRectFour
       );
-    }, 1000);
+    }, 100);
     return () => clearInterval(intInfo);
   }, [barrierRectOne, barrierRectTwo, barrierRectThree, barrierRectFour]);
 
@@ -71,7 +71,7 @@ export default function Game(props) {
 
   useEffect(() => {
     if (carRect && barrierRectOne) {
-      const distance = 10;
+      const distance = 0.2;
       if (
         carRect.left < barrierRectOne.right - distance &&
         carRect.right > barrierRectOne.left + distance &&
@@ -110,27 +110,26 @@ export default function Game(props) {
     };
     if (timeLeft == 0) {
       setTimeLeft(90);
-      setIsCrashed('');
-      setIsCrashedImg('');
+      setPoints(0);
+      setTimeStart(false);
       setIsRunning(false);
+      setStartAnimation('');
+      setStartAnimationImg('');
       setDisplayRun('block');
       setLoseOrWin('text-win');
-      setTimeLeft(90);
-      setTimeStart(false);
       setTextLose('Ви виграли!');
-      setPoints(0);
     };
     if(crash){
       setIsCrash(false);
-      setIsCrashed('');
-      setIsCrashedImg('');
+      setTimeStart(false);
       setIsRunning(false);
+      setTimeLeft(90);
+      setPoints(0);
+      setStartAnimation('');
+      setStartAnimationImg('');
       setDisplayRun('block');
       setLoseOrWin('text-lose');
-      setTimeLeft(90);
-      setTimeStart(false);
       setTextLose('Ви програли');
-      setPoints(0);
     };
 
     if (carRect && barrierRectFour) {
@@ -146,15 +145,14 @@ export default function Game(props) {
   }, [carRect, barrierRectOne]);
   return (
     <>
-      <Road className={`track ${isCrashed}`}>
+      <Road className={`track ${startAnimation}`}>
         <Barrier
           onChangeRectBar={onChangeRectBar}
           isRunning={isRunning}
-          classNameOne={`barriers ${isCrashedImg}`}
-          classNameTwo={`barriers ${isCrashedImg}`}
-          classNameThree={`barriers ${isCrashedImg}`} />
-        <Car onChangeRectCar={onChangeRectCar}
-          isCrashed={isCrashed} />
+          classNameOne={`barriers ${startAnimationImg}`}
+          classNameTwo={`barriers ${startAnimationImg}`}
+          classNameThree={`barriers ${startAnimationImg}`} />
+        <Car onChangeRectCar={onChangeRectCar}/>
       </Road>
       <div className="wrapper">
         <p className="score">Рахунок: {points}</p>
@@ -167,8 +165,6 @@ export default function Game(props) {
           <p className={loseOrWin}>{textLose}</p>
         </div>
       </div>
-
-
     </>
   );
 }

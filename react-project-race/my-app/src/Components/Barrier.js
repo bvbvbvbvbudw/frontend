@@ -7,7 +7,9 @@ import humanOne from '../images/barrier/human1.png';
 import tree from '../images/barrier/tree.png';
 import humanTwo from '../images/barrier/human2.png';
 import humanThree from '../images/barrier/human3.png'
+
 export default function Barrier(props) {
+
     var arr = [barrier, human, house, humanOne, humanTwo,humanThree , tree];
     const [isRunning, setIsRunning] = useState(false);
     useEffect(() => {
@@ -15,8 +17,8 @@ export default function Barrier(props) {
     }, [props.isRunning]);
 
     const [randomNumber, setRandomNumber] = useState(0);
-    const [positionBarrier, setPositionBarrier] = useState(0)
     const [randomNumberOne, setRandomNumberOne] = useState(0);
+    const [positionBarrier, setPositionBarrier] = useState(0)
     const [positionBarrierOne, setPositionBarrierOne] = useState(0);
     const [randomNumberTwo, setRandomNumberTwo] = useState(0);
     const [positionBarrierTwo, setPositionBarrierTwo] = useState(0);
@@ -43,7 +45,7 @@ export default function Barrier(props) {
             setBarrierRectThree(rectThree);
             setBarrierRectFour(rectFour);
             setIsRectUpdated(true);
-        }, 1000);
+        }, 100);
 
         return () => {
             clearInterval(intRect);
@@ -119,3 +121,6 @@ export default function Barrier(props) {
         </>
     );
 }
+
+
+

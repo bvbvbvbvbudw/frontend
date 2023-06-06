@@ -1,0 +1,18 @@
+<h1>JSExpert Angular Chat Bot</h1>
+ 
+<ng-container *ngFor="let message of messages">
+  <div class="message" 
+     [ngClass]="{ 'from': message.author === 'bot',
+        'to': message.author === 'user' }">
+       {{ message.content }}
+  </div>
+</ng-container>
+ 
+<label *ngIf="messages.length == 0; else dialogInfo" for="nameField">Ваше повідомлення</label>
+ 
+<input [(ngModel)]="value" (keyup.enter)="sendMessage()" type="text">
+<button (click)="sendMessage()">Надіслати</button>
+ 
+<ng-template #dialogInfo>
+  <span [className]="'float-right'">Усього повідомлень: {{messages.length}}</span>
+</ng-template>

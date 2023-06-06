@@ -7,6 +7,7 @@
 
     #logo {
         display: flex;
+        padding-bottom: 20px;
         padding-left: 20px;
     }
 
@@ -19,8 +20,7 @@
         color: white;
         display: flex;
         align-items: center;
-        height: 60px;
-
+        height: 80px;
     }
 
     #hamburger-icon{
@@ -31,6 +31,7 @@
 
     .navigation-header {
         padding-left: 20px;
+        padding-bottom: 20px;
         width: 100%;
     }
 

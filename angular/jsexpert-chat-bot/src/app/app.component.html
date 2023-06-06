@@ -1,0 +1,14 @@
+<div class="row top-bar">
+  <div class="column column-25"></div>
+  <div class="column column-50">
+    <button class="button button-outline" *ngFor="let topLink of links" [routerLink]="topLink.path"
+      [routerLinkActive]="topLink.active">{{topLink.label}} </button>
+  </div>
+</div>
+<div class="row">
+  <div class="column"></div>
+  <div class="column column-50">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="column"></div>
+</div>
