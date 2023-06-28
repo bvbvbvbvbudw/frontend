@@ -1,0 +1,27 @@
+{
+  presets: [
+    '@babel/env',
+    [
+      '@babel/stage-2',
+      {
+        useBuiltIns: true,
+        decoratorsLegacy: true
+      }
+    ],
+    [
+      '@babel/react',
+      {
+        useBuiltIns: true,
+        decoratorsLegacy: true
+      }
+    ]
+  ],
+  plugins: [
+    [
+      '@babel/plugin-transform-runtime',
+      {
+        regenerator: true
+      }
+    ]
+  ]
+}
